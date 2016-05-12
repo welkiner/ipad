@@ -9,17 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var contentTitle: UILabel!
+    
+    @IBOutlet weak var leftBtnView: ImageButton!
+    @IBOutlet weak var rightBtnView: ImageButton!
+    
+    var currentIndex = 0 {
+        didSet {
+            leftBtnView.titleLabel.text = currentIndex == 0 ? "返  回" : "上一题"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.configUI()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func configUI() {
+        currentIndex = 0
+        leftBtnView.btn.addTarget(self, action: #selector(leftBtnClick), forControlEvents: .TouchUpInside)
     }
+    @objc func leftBtnClick() {
+        guard currentIndex != 0 else{
+            self.navigationController?.popViewControllerAnimated(true)
+            return
+        }
+        
+    }
+}
 
-
+extension ViewController{
+    
 }
 

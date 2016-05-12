@@ -16,11 +16,15 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(labels.debugDescription)")
+        for (index, label) in labels.enumerate() {
+            label.text = String(index)
+        }
         // Do any additional setup after loading the view.
     }
     @IBAction func clearBtnClick(sender: UIButton) {
-        
+        for label in labels {
+            label.text = "0"
+        }
     }
 
     @IBAction func backBtnClick(sender: UIButton) {

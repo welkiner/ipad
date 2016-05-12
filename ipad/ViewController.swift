@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var currentIndex = 0 {
         didSet {
             leftBtnView.titleLabel.text = currentIndex == 0 ? "返  回" : "上一题"
+            rightBtnView.titleLabel.text = currentIndex == 3 ? "提  交" : "下一题"
         }
     }
     
@@ -27,13 +28,22 @@ class ViewController: UIViewController {
     func configUI() {
         currentIndex = 0
         leftBtnView.btn.addTarget(self, action: #selector(leftBtnClick), forControlEvents: .TouchUpInside)
+        rightBtnView.btn.addTarget(self, action: #selector(rightBtnClick), forControlEvents: .TouchUpInside)
     }
-    @objc func leftBtnClick() {
+    func leftBtnClick() {
         guard currentIndex != 0 else{
             self.navigationController?.popViewControllerAnimated(true)
             return
         }
-        
+        currentIndex -= 1
+    }
+    
+    func rightBtnClick() {
+        if currentIndex == 3 {
+            self.navigationController?.popViewControllerAnimated(true)
+            return
+        }
+        currentIndex += 1
     }
 }
 

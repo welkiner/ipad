@@ -266,6 +266,27 @@
                     </view>
                     <navigationItem key="navigationItem" id="olL-ab-PU4"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outletCollection property="labels" destination="XxS-9k-l66" collectionClass="NSMutableArray" id="SdN-4y-ZLA"/>
+                        <outletCollection property="labels" destination="WVb-tg-BVK" collectionClass="NSMutableArray" id="4eJ-dH-dEq"/>
+                        <outletCollection property="labels" destination="Qml-ld-nE9" collectionClass="NSMutableArray" id="fPH-Vr-mmR"/>
+                        <outletCollection property="labels" destination="ufX-VO-FAW" collectionClass="NSMutableArray" id="5RR-0l-ouJ"/>
+                        <outletCollection property="labels" destination="6er-YQ-ohL" collectionClass="NSMutableArray" id="KGA-24-xaH"/>
+                        <outletCollection property="labels" destination="KGV-LL-4Dw" collectionClass="NSMutableArray" id="DS5-r9-N2g"/>
+                        <outletCollection property="labels" destination="zZX-wH-DSq" collectionClass="NSMutableArray" id="k4w-Vf-94D"/>
+                        <outletCollection property="labels" destination="719-Dr-6mv" collectionClass="NSMutableArray" id="j2d-tP-WED"/>
+                        <outletCollection property="labels" destination="Ou0-UO-Gto" collectionClass="NSMutableArray" id="z6x-n0-2JM"/>
+                        <outletCollection property="labels" destination="0km-7F-VYm" collectionClass="NSMutableArray" id="tvg-ze-cLB"/>
+                        <outletCollection property="labels" destination="9Zd-az-RRP" collectionClass="NSMutableArray" id="ejw-kc-cgC"/>
+                        <outletCollection property="labels" destination="kuB-qv-vu3" collectionClass="NSMutableArray" id="pPU-Ch-orJ"/>
+                        <outletCollection property="labels" destination="59P-77-1Tm" collectionClass="NSMutableArray" id="gVY-AA-0WG"/>
+                        <outletCollection property="labels" destination="gCA-vz-IZr" collectionClass="NSMutableArray" id="fRR-pv-3oj"/>
+                        <outletCollection property="labels" destination="Ke5-j0-7SM" collectionClass="NSMutableArray" id="yJa-NB-HUe"/>
+                        <outletCollection property="labels" destination="Aia-me-cDN" collectionClass="NSMutableArray" id="911-iH-FTW"/>
+                        <outletCollection property="labels" destination="UDM-dd-Wgj" collectionClass="NSMutableArray" id="DmM-nw-MYy"/>
+                        <outletCollection property="labels" destination="bcX-PD-3yp" collectionClass="NSMutableArray" id="5wt-df-xTC"/>
+                        <outletCollection property="labels" destination="SJl-n3-uUN" collectionClass="NSMutableArray" id="pin-NG-wKI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCL-9s-VHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

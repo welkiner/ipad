@@ -47,6 +47,16 @@ class ViewController: UIViewController {
     }
 }
 
+let titles = ["1、您更关注呼吸机的哪些使用特点?\n（可多选）",
+              "2、除Getinge Group的Maquet品牌外，\n您对其他哪个品牌的呼吸机最满意？",
+              "3、您最满意Getinge Group的哪项服务？",
+              "4、您觉得Getinge Group有哪些服务最需要改进？"]
+
+let answer = [["A：操作简单","B：性能稳定","C：感染控制","D：最新技术"],
+              ["A：Drager","B：PB","C：Hamilton","D：Carefusion","E：MIndray","F：其他"],
+              ["A：售后维修","B：临床培训","C：定期随访","D：都满意","E：都不满意"],
+              ["A：售后维修","B：临床培训","C：定期随访","都需要改进"]]
+
 extension ViewController{
     
 }

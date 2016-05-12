@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     }
     func configUI() {
         currentIndex = 0
+        self.reload()
         leftBtnView.btn.addTarget(self, action: #selector(leftBtnClick), forControlEvents: .TouchUpInside)
         rightBtnView.btn.addTarget(self, action: #selector(rightBtnClick), forControlEvents: .TouchUpInside)
         tableView.separatorStyle = .None
@@ -67,8 +68,8 @@ class ViewController: UIViewController {
     }
 }
 
-let titles = ["1、您更关注呼吸机的哪些使用特点?\n（可多选）",
-              "2、除Getinge Group的Maquet品牌外，\n您对其他哪个品牌的呼吸机最满意？",
+let titles = ["1、您更关注呼吸机的哪些使用特点?\n    （可多选）",
+              "2、除Getinge Group的Maquet品牌外，\n     您对其他哪个品牌的呼吸机最满意？",
               "3、您最满意Getinge Group的哪项服务？",
               "4、您觉得Getinge Group有哪些服务最需要改进？"]
 

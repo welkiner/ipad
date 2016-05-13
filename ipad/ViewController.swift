@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightBtnView: ImageButton!
     
     @IBOutlet weak var tableView: UITableView!
+    var oneAnswer = Answer()
     
     var currentIndex = 0 {
         didSet {
@@ -87,10 +88,12 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
-        
         cell.textLabel!.text = answer[currentIndex][indexPath.row]
         cell.textLabel!.font = UIFont.systemFontOfSize(25)
         return cell
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
 }
 

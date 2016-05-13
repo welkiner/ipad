@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		45DC6CEF1CE4D50200633559 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6CEE1CE4D50200633559 /* ImageButton.swift */; };
 		45DC6CF11CE4E21B00633559 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DC6CF01CE4E21B00633559 /* ResultViewController.swift */; };
+		7223362E1CE5EF4A00B9B5FD /* AnswerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7223362D1CE5EF4A00B9B5FD /* AnswerData.swift */; };
 		723069971CE4A2630091DF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723069961CE4A2630091DF47 /* AppDelegate.swift */; };
 		723069991CE4A2630091DF47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723069981CE4A2630091DF47 /* ViewController.swift */; };
 		7230699C1CE4A2630091DF47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7230699A1CE4A2630091DF47 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		45DC6CEE1CE4D50200633559 /* ImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		45DC6CF01CE4E21B00633559 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		7223362D1CE5EF4A00B9B5FD /* AnswerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerData.swift; sourceTree = "<group>"; };
 		723069931CE4A2630091DF47 /* 问卷调查.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "问卷调查.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		723069961CE4A2630091DF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		723069981CE4A2630091DF47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				723069981CE4A2630091DF47 /* ViewController.swift */,
 				45DC6CEE1CE4D50200633559 /* ImageButton.swift */,
 				45DC6CF01CE4E21B00633559 /* ResultViewController.swift */,
+				7223362D1CE5EF4A00B9B5FD /* AnswerData.swift */,
 				7230699A1CE4A2630091DF47 /* Main.storyboard */,
 				7230699D1CE4A2630091DF47 /* Assets.xcassets */,
 				7230699F1CE4A2630091DF47 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				723069991CE4A2630091DF47 /* ViewController.swift in Sources */,
+				7223362E1CE5EF4A00B9B5FD /* AnswerData.swift in Sources */,
 				45DC6CEF1CE4D50200633559 /* ImageButton.swift in Sources */,
 				723069971CE4A2630091DF47 /* AppDelegate.swift in Sources */,
 				45DC6CF11CE4E21B00633559 /* ResultViewController.swift in Sources */,

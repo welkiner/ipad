@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         tableView.separatorStyle = .None
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.scrollEnabled = false
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     func leftBtnClick() {
@@ -84,16 +85,35 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         return answer[currentIndex].count
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60
+        return 55
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
         cell.textLabel!.text = answer[currentIndex][indexPath.row]
-        cell.textLabel!.font = UIFont.systemFontOfSize(25)
+        cell.textLabel!.font = UIFont.systemFontOfSize(30)
+        switch currentIndex {
+        case 0:
+            for index in oneAnswer.one.choosedIndexs() {
+                cell.accessoryType = index == indexPath ?.Checkmark : .None
+            }
+        default: break
+            
+        }
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        switch currentIndex {
+        case 0:
+            oneAnswer.one.choose(indexPath.row)
+            print("\(oneAnswer.one)")
+        default:
+            break
+        }
+        tableView.reloadData()
     }
+}
+
+func == (left: NSIndexPath,right: NSIndexPath) -> Bool {
+    return left.row == right.row && left.section == right.section
 }
 

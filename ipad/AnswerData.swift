@@ -11,10 +11,20 @@ protocol CanGoNext {
     func canGoNext() -> Bool
     func singleChooes() -> Bool
     func choosedIndexs() -> [NSIndexPath]
+    mutating func choose(index: NSInteger)
 }
 extension CanGoNext{
     func singleChooes() -> Bool {
         return true
+    }
+    mutating func cleanData(){
+        
+    }
+    private mutating func changeValue(inout value: Int) -> () -> Void{
+        
+        return{
+            value = (value + 1) % 2
+        }
     }
 }
 
@@ -44,6 +54,11 @@ struct Question1: CanGoNext{
         D == 0 ? print() : array.append(NSIndexPath.init(forRow: 3, inSection: 0))
         return array
     }
+    mutating func choose(index: NSInteger) {
+//        [changeValue(&A),changeValue(&B),changeValue(&C),changeValue(&D)][index]()
+      let a = changeValue(&A)
+        a()
+    }
 }
 
 struct Question2: CanGoNext {
@@ -66,6 +81,13 @@ struct Question2: CanGoNext {
         F == 0 ? print() : array.append(NSIndexPath.init(forRow: 5, inSection: 1))
         return array
     }
+     mutating func cleanData() {
+        A = 0;B = 0;C = 0;D = 0;E = 0;F = 0
+    }
+    
+    mutating func choose(index: NSInteger) {
+        
+    }
 }
 
 struct Question3: CanGoNext {
@@ -86,6 +108,13 @@ struct Question3: CanGoNext {
         E == 0 ? print() : array.append(NSIndexPath.init(forRow: 4, inSection: 2))
         return array
     }
+     mutating func cleanData() {
+        A = 0;B = 0;C = 0;D = 0;E = 0
+    }
+    
+    mutating func choose(index: NSInteger) {
+        
+    }
 }
 
 struct Question4: CanGoNext {
@@ -103,5 +132,12 @@ struct Question4: CanGoNext {
         C == 0 ? print() : array.append(NSIndexPath.init(forRow: 2, inSection: 3))
         D == 0 ? print() : array.append(NSIndexPath.init(forRow: 3, inSection: 3))
         return array
+    }
+    mutating func cleanData() {
+        A = 0;B = 0;C = 0;D = 0
+    }
+    
+    mutating func choose(index: NSInteger) {
+        
     }
 }

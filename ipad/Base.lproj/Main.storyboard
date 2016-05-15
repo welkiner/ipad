@@ -263,6 +263,12 @@
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVj-Ks-g2z">
+                                <rect key="frame" x="227" y="150" width="60" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -275,6 +281,7 @@
                     <navigationItem key="navigationItem" id="olL-ab-PU4"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="countLabel" destination="JVj-Ks-g2z" id="hN0-uh-4ZR"/>
                         <outletCollection property="labels" destination="XxS-9k-l66" collectionClass="NSMutableArray" id="SdN-4y-ZLA"/>
                         <outletCollection property="labels" destination="WVb-tg-BVK" collectionClass="NSMutableArray" id="4eJ-dH-dEq"/>
                         <outletCollection property="labels" destination="Qml-ld-nE9" collectionClass="NSMutableArray" id="fPH-Vr-mmR"/>

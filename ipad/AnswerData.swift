@@ -20,11 +20,8 @@ extension CanGoNext{
     mutating func cleanData(){
         
     }
-    private mutating func changeValue(inout value: Int) -> () -> Void{
-        
-        return{
-            value = (value + 1) % 2
-        }
+    private mutating func changeValue(inout value: Int)() -> Void{
+        value = (value + 1) % 2
     }
 }
 
@@ -33,6 +30,22 @@ struct Answer {
     var two = Question2()
     var three = Question3()
     var four = Question4()
+    
+    func store() {
+        let tempArray = [one.A, one.B, one.C, one.D,
+                         two.A, two.B, two.C, two.D, two.E, two.F,
+                         three.A, three.B, three.C, three.D, three.E,
+                         four.A, four.B, four.C, four.D]
+        for index in 0 ... 18 {
+            let temp = tempArray[index] + NSUserDefaults.standardUserDefaults().integerForKey(String(index))
+            NSUserDefaults.standardUserDefaults().setInteger(temp, forKey: String(index))
+        }
+        
+        let count = NSUserDefaults.standardUserDefaults().integerForKey("count") + 1
+        NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "count")
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
 }
 
 struct Question1: CanGoNext{
@@ -48,16 +61,33 @@ struct Question1: CanGoNext{
     }
     func choosedIndexs() -> [NSIndexPath] {
         var array = [NSIndexPath]()
-        A == 0 ? print() : array.append(NSIndexPath.init(forRow: 0, inSection: 0))
-        B == 0 ? print() : array.append(NSIndexPath.init(forRow: 1, inSection: 0))
-        C == 0 ? print() : array.append(NSIndexPath.init(forRow: 2, inSection: 0))
-        D == 0 ? print() : array.append(NSIndexPath.init(forRow: 3, inSection: 0))
+        if A == 1 {
+            array.append(NSIndexPath.init(forRow: 0, inSection: 0))
+        }
+        if B == 1 {
+            array.append(NSIndexPath.init(forRow: 1, inSection: 0))
+        }
+        if C == 1 {
+            array.append(NSIndexPath.init(forRow: 2, inSection: 0))
+        }
+        if D == 1 {
+            array.append(NSIndexPath.init(forRow: 3, inSection: 0))
+        }
         return array
     }
     mutating func choose(index: NSInteger) {
-//        [changeValue(&A),changeValue(&B),changeValue(&C),changeValue(&D)][index]()
-      let a = changeValue(&A)
-        a()
+        switch index {
+        case 0:
+            changeValue(&A)()
+        case 1:
+            changeValue(&B)()
+        case 2:
+            changeValue(&C)()
+        case 3:
+            changeValue(&D)()
+        default:
+            return
+        }
     }
 }
 
@@ -73,12 +103,24 @@ struct Question2: CanGoNext {
     }
     func choosedIndexs() -> [NSIndexPath] {
         var array = [NSIndexPath]()
-        A == 0 ? print() : array.append(NSIndexPath.init(forRow: 0, inSection: 1))
-        B == 0 ? print() : array.append(NSIndexPath.init(forRow: 1, inSection: 1))
-        C == 0 ? print() : array.append(NSIndexPath.init(forRow: 2, inSection: 1))
-        D == 0 ? print() : array.append(NSIndexPath.init(forRow: 3, inSection: 1))
-        E == 0 ? print() : array.append(NSIndexPath.init(forRow: 4, inSection: 1))
-        F == 0 ? print() : array.append(NSIndexPath.init(forRow: 5, inSection: 1))
+        if A == 1 {
+            array.append(NSIndexPath.init(forRow: 0, inSection: 1))
+        }
+        if B == 1 {
+            array.append(NSIndexPath.init(forRow: 1, inSection: 1))
+        }
+        if C == 1 {
+            array.append(NSIndexPath.init(forRow: 2, inSection: 1))
+        }
+        if D == 1 {
+            array.append(NSIndexPath.init(forRow: 3, inSection: 1))
+        }
+        if E == 1 {
+            array.append(NSIndexPath.init(forRow: 4, inSection: 1))
+        }
+        if F == 1 {
+            array.append(NSIndexPath.init(forRow: 5, inSection: 1))
+        }
         return array
     }
      mutating func cleanData() {
@@ -86,7 +128,22 @@ struct Question2: CanGoNext {
     }
     
     mutating func choose(index: NSInteger) {
-        
+        switch index {
+        case 0:
+            changeValue(&A)()
+        case 1:
+            changeValue(&B)()
+        case 2:
+            changeValue(&C)()
+        case 3:
+            changeValue(&D)()
+        case 4:
+            changeValue(&E)()
+        case 5:
+            changeValue(&F)()
+        default:
+            return
+        }
     }
 }
 
@@ -101,11 +158,21 @@ struct Question3: CanGoNext {
     }
     func choosedIndexs() -> [NSIndexPath] {
         var array = [NSIndexPath]()
-        A == 0 ? print() : array.append(NSIndexPath.init(forRow: 0, inSection: 2))
-        B == 0 ? print() : array.append(NSIndexPath.init(forRow: 1, inSection: 2))
-        C == 0 ? print() : array.append(NSIndexPath.init(forRow: 2, inSection: 2))
-        D == 0 ? print() : array.append(NSIndexPath.init(forRow: 3, inSection: 2))
-        E == 0 ? print() : array.append(NSIndexPath.init(forRow: 4, inSection: 2))
+        if A == 1 {
+            array.append(NSIndexPath.init(forRow: 0, inSection: 2))
+        }
+        if B == 1 {
+            array.append(NSIndexPath.init(forRow: 1, inSection: 2))
+        }
+        if C == 1 {
+            array.append(NSIndexPath.init(forRow: 2, inSection: 2))
+        }
+        if D == 1 {
+            array.append(NSIndexPath.init(forRow: 3, inSection: 2))
+        }
+        if E == 1 {
+            array.append(NSIndexPath.init(forRow: 4, inSection: 2))
+        }
         return array
     }
      mutating func cleanData() {
@@ -113,7 +180,20 @@ struct Question3: CanGoNext {
     }
     
     mutating func choose(index: NSInteger) {
-        
+        switch index {
+        case 0:
+            changeValue(&A)()
+        case 1:
+            changeValue(&B)()
+        case 2:
+            changeValue(&C)()
+        case 3:
+            changeValue(&D)()
+        case 4:
+            changeValue(&E)()
+        default:
+            return
+        }
     }
 }
 
@@ -127,10 +207,18 @@ struct Question4: CanGoNext {
     }
     func choosedIndexs() -> [NSIndexPath] {
         var array = [NSIndexPath]()
-        A == 0 ? print() : array.append(NSIndexPath.init(forRow: 0, inSection: 3))
-        B == 0 ? print() : array.append(NSIndexPath.init(forRow: 1, inSection: 3))
-        C == 0 ? print() : array.append(NSIndexPath.init(forRow: 2, inSection: 3))
-        D == 0 ? print() : array.append(NSIndexPath.init(forRow: 3, inSection: 3))
+        if A == 1 {
+            array.append(NSIndexPath.init(forRow: 0, inSection: 3))
+        }
+        if B == 1 {
+            array.append(NSIndexPath.init(forRow: 1, inSection: 3))
+        }
+        if C == 1 {
+            array.append(NSIndexPath.init(forRow: 2, inSection: 3))
+        }
+        if D == 1 {
+            array.append(NSIndexPath.init(forRow: 3, inSection: 3))
+        }
         return array
     }
     mutating func cleanData() {
@@ -138,6 +226,17 @@ struct Question4: CanGoNext {
     }
     
     mutating func choose(index: NSInteger) {
-        
+        switch index {
+        case 0:
+            changeValue(&A)()
+        case 1:
+            changeValue(&B)()
+        case 2:
+            changeValue(&C)()
+        case 3:
+            changeValue(&D)()
+        default:
+            return
+        }
     }
 }

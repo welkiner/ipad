@@ -8,23 +8,37 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController,UIAlertViewDelegate{
     
     
     @IBOutlet var labels: [UILabel]!
     
+    @IBOutlet weak var countLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         for (index, label) in labels.enumerate() {
-            label.text = String(index)
+            label.text = String(NSUserDefaults.standardUserDefaults().integerForKey(String(index)))
         }
+        countLabel.text = String(NSUserDefaults.standardUserDefaults().integerForKey("count"))
         // Do any additional setup after loading the view.
     }
     @IBAction func clearBtnClick(sender: UIButton) {
-        for label in labels {
+        let alert = UIAlertView.init(title: "确定要清空么", message: "", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确定")
+        alert.show()
+    }
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        guard buttonIndex == 1 else {return}
+
+        for (index, label) in labels.enumerate() {
+            NSUserDefaults.standardUserDefaults().setInteger(0, forKey: String(index))
             label.text = "0"
         }
+        NSUserDefaults.standardUserDefaults().setInteger(0, forKey: "count")
+        countLabel.text = "0"
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
 
     @IBAction func backBtnClick(sender: UIButton) {

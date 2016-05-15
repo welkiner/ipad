@@ -16,12 +16,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightBtnView: ImageButton!
     
     @IBOutlet weak var tableView: UITableView!
+    
     var oneAnswer = Answer()
     
     var currentIndex = 0 {
         didSet {
             leftBtnView.titleLabel.text = currentIndex == 0 ? "返  回" : "上一题"
             rightBtnView.titleLabel.text = currentIndex == answer.count-1 ? "提  交" : "下一题"
+            switch currentIndex {
+            case 0:
+                rightBtnView.btn.enabled = oneAnswer.one.canGoNext()
+                oneAnswer.two.cleanData()
+            case 1:
+                rightBtnView.btn.enabled = oneAnswer.two.canGoNext()
+                oneAnswer.three.cleanData()
+            case 2:
+                rightBtnView.btn.enabled = oneAnswer.three.canGoNext()
+                oneAnswer.four.cleanData()
+            case 3:
+                rightBtnView.btn.enabled = oneAnswer.four.canGoNext()
+                
+            default:
+                return
+            }
         }
     }
     
@@ -58,6 +75,7 @@ class ViewController: UIViewController {
             self.backgroundImageView.image = UIImage(named: "感谢参与示意")
             self.view.bringSubviewToFront(self.backgroundImageView)
             currentIndex += 1
+            oneAnswer.store()
             return
         }
         
@@ -88,32 +106,53 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         return 55
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let tempIndex = NSIndexPath(forRow: indexPath.row, inSection: currentIndex)
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
         cell.textLabel!.text = answer[currentIndex][indexPath.row]
         cell.textLabel!.font = UIFont.systemFontOfSize(30)
         switch currentIndex {
         case 0:
-            for index in oneAnswer.one.choosedIndexs() {
-                cell.accessoryType = index == indexPath ?.Checkmark : .None
-            }
-        default: break
-            
+            cell.accessoryType = tempIndex == oneAnswer.one.choosedIndexs() ?.Checkmark : .None
+        case 1:
+            cell.accessoryType = tempIndex == oneAnswer.two.choosedIndexs() ?.Checkmark : .None
+        case 2:
+            cell.accessoryType = tempIndex == oneAnswer.three.choosedIndexs() ?.Checkmark : .None
+        case 3:
+            cell.accessoryType = tempIndex == oneAnswer.four.choosedIndexs() ?.Checkmark : .None
+        default:
+            break
         }
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch currentIndex {
         case 0:
+            oneAnswer.one.cleanData()
             oneAnswer.one.choose(indexPath.row)
-            print("\(oneAnswer.one)")
+        case 1:
+            oneAnswer.two.cleanData()
+            oneAnswer.two.choose(indexPath.row)
+        case 2:
+            oneAnswer.three.cleanData()
+            oneAnswer.three.choose(indexPath.row)
+        case 3:
+            oneAnswer.four.cleanData()
+            oneAnswer.four.choose(indexPath.row)
         default:
             break
         }
         tableView.reloadData()
+        let a = currentIndex
+        currentIndex = a
     }
 }
 
-func == (left: NSIndexPath,right: NSIndexPath) -> Bool {
-    return left.row == right.row && left.section == right.section
+func == (left: NSIndexPath,right: [NSIndexPath]) -> Bool {
+    for index in right {
+        if (left.row == index.row) && (left.section == index.section) {
+            return true
+        }
+    }
+    return false
 }
 

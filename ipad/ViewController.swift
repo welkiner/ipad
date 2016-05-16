@@ -26,13 +26,10 @@ class ViewController: UIViewController {
             switch currentIndex {
             case 0:
                 rightBtnView.btn.enabled = oneAnswer.one.canGoNext()
-                oneAnswer.two.cleanData()
             case 1:
                 rightBtnView.btn.enabled = oneAnswer.two.canGoNext()
-                oneAnswer.three.cleanData()
             case 2:
                 rightBtnView.btn.enabled = oneAnswer.three.canGoNext()
-                oneAnswer.four.cleanData()
             case 3:
                 rightBtnView.btn.enabled = oneAnswer.four.canGoNext()
                 
@@ -112,13 +109,17 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         cell.textLabel!.font = UIFont.systemFontOfSize(30)
         switch currentIndex {
         case 0:
-            cell.accessoryType = tempIndex == oneAnswer.one.choosedIndexs() ?.Checkmark : .None
+            cell.textLabel?.textColor = tempIndex == oneAnswer.one.choosedIndexs() ? UIColor.blueColor() : UIColor.blackColor()
+//            cell.accessoryType = tempIndex == oneAnswer.one.choosedIndexs() ?.Checkmark : .None
         case 1:
-            cell.accessoryType = tempIndex == oneAnswer.two.choosedIndexs() ?.Checkmark : .None
+            cell.textLabel?.textColor = tempIndex == oneAnswer.two.choosedIndexs() ? UIColor.blueColor() : UIColor.blackColor()
+//            cell.accessoryType = tempIndex == oneAnswer.two.choosedIndexs() ?.Checkmark : .None
         case 2:
-            cell.accessoryType = tempIndex == oneAnswer.three.choosedIndexs() ?.Checkmark : .None
+            cell.textLabel?.textColor = tempIndex == oneAnswer.three.choosedIndexs() ? UIColor.blueColor() : UIColor.blackColor()
+//            cell.accessoryType = tempIndex == oneAnswer.three.choosedIndexs() ?.Checkmark : .None
         case 3:
-            cell.accessoryType = tempIndex == oneAnswer.four.choosedIndexs() ?.Checkmark : .None
+            cell.textLabel?.textColor = tempIndex == oneAnswer.four.choosedIndexs() ? UIColor.blueColor() : UIColor.blackColor()
+//            cell.accessoryType = tempIndex == oneAnswer.four.choosedIndexs() ?.Checkmark : .None
         default:
             break
         }

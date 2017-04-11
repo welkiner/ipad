@@ -85,15 +85,35 @@ class ViewController: UIViewController {
     }
 }
 
-let titles = ["1、您更关注呼吸机的哪些使用特点?\n    （可多选）",
-              "2、除Getinge Group的Maquet品牌外，\n     您对其他哪个品牌的呼吸机最满意？",
-              "3、您最满意Getinge Group的哪项服务？",
-              "4、您觉得Getinge Group有哪些服务最需要改进？"]
+let titles = ["1、贵医院在近期（1至2年）是否有以下计划：",
+              "2、作为医院的手术室护士长或医务工作人员，您在选择手术灯时,最关心的问题是：",
+              "3、作为医院的手术室护士长或医务工作人员，您在选择手术床时，最关心的问题是：",
+              "4、作为医院的手术室护士长或医务工作人员，最希望得到厂家的哪方面的培训："]
 
-let answer = [["A：操作简单","B：性能稳定","C：感染控制","D：最新技术"],
-              ["A：Drager","B：PB","C：Hamilton","D：Carefusion","E：MIndray","F：其他"],
-              ["A：售后维修","B：临床培训","C：定期随访","D：都满意","E：都不满意"],
-              ["A：售后维修","B：临床培训","C：定期随访","D：都需要改进"]]
+let answer = [["A：建造全新的手术室或改造手术室",
+               "B：建造或改造数字化手术室",
+               "C：建造或改造复合（Hybrid OR）手术室",
+               "D：增加或更换手术灯或者手术床",
+               "E：近期无任何手术室设备更换计划"],
+              
+              ["A：手术灯的最大光亮度",
+               "B：手术灯的光照深度",
+               "C：手术灯的光斑直径（是否固定光斑或可调光斑）",
+               "D：手术灯灯泡使用寿命",
+               "E：手术灯的无影效果",
+               "F：是否具有高清摄像系统（中置或旁置）"],
+              
+              ["A：手术床使用的稳定性（骨科、神外等）",
+               "B：手术床的是否具有特殊优点（如手术床最低高度等)",
+               "C：手术床是否具有水平移动功能",
+               "D：手术床具有完整的各类手术床配件",
+               "E：手术床使用的安全性"],
+              
+              ["A：手术床及手术灯操作培训",
+               "B：手术床手术体位培训",
+               "C：手术床或手术灯附件(配件)使用培训",
+               "D：手术室工作流程及感控培训",
+               "E：现代化手术室管理及最新手术室技术发展培训"]]
 
 extension ViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,21 +125,18 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tempIndex = IndexPath(row: indexPath.row, section: currentIndex)
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!
+        cell!.backgroundColor = UIColor.clear
         cell!.textLabel!.text = answer[currentIndex][indexPath.row]
-        cell!.textLabel!.font = UIFont.systemFont(ofSize: 30)
+        cell!.textLabel!.font = UIFont.systemFont(ofSize: 26)
         switch currentIndex {
         case 0:
             cell!.textLabel?.textColor = tempIndex == oneAnswer.one.choosedIndexs() ? UIColor.blue : UIColor.black
-//            cell.accessoryType = tempIndex == oneAnswer.one.choosedIndexs() ?.Checkmark : .None
         case 1:
             cell!.textLabel?.textColor = tempIndex == oneAnswer.two.choosedIndexs() ? UIColor.blue : UIColor.black
-//            cell.accessoryType = tempIndex == oneAnswer.two.choosedIndexs() ?.Checkmark : .None
         case 2:
             cell!.textLabel?.textColor = tempIndex == oneAnswer.three.choosedIndexs() ? UIColor.blue : UIColor.black
-//            cell.accessoryType = tempIndex == oneAnswer.three.choosedIndexs() ?.Checkmark : .None
         case 3:
             cell!.textLabel?.textColor = tempIndex == oneAnswer.four.choosedIndexs() ? UIColor.blue : UIColor.black
-//            cell.accessoryType = tempIndex == oneAnswer.four.choosedIndexs() ?.Checkmark : .None
         default:
             break
         }

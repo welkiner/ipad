@@ -129,16 +129,16 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         cell!.textLabel!.text = answer[currentIndex][indexPath.row]
         cell!.textLabel!.font = UIFont.systemFont(ofSize: 26)
         switch currentIndex {
-        case 0:
-            cell!.textLabel?.textColor = tempIndex == oneAnswer.one.choosedIndexs() ? UIColor.blue : UIColor.black
-        case 1:
-            cell!.textLabel?.textColor = tempIndex == oneAnswer.two.choosedIndexs() ? UIColor.blue : UIColor.black
-        case 2:
-            cell!.textLabel?.textColor = tempIndex == oneAnswer.three.choosedIndexs() ? UIColor.blue : UIColor.black
-        case 3:
-            cell!.textLabel?.textColor = tempIndex == oneAnswer.four.choosedIndexs() ? UIColor.blue : UIColor.black
-        default:
-            break
+            case 0:
+                cell!.textLabel?.textColor = tempIndex == oneAnswer.one.choosedIndexs() ? UIColor.blue : UIColor.black
+            case 1:
+                cell!.textLabel?.textColor = tempIndex == oneAnswer.two.choosedIndexs() ? UIColor.blue : UIColor.black
+            case 2:
+                cell!.textLabel?.textColor = tempIndex == oneAnswer.three.choosedIndexs() ? UIColor.blue : UIColor.black
+            case 3:
+                cell!.textLabel?.textColor = tempIndex == oneAnswer.four.choosedIndexs() ? UIColor.blue : UIColor.black
+            default:
+                break
         }
         return cell!
     }

@@ -32,11 +32,11 @@ struct Answer {
     var four = Question4()
     
     func store() {
-        let tempArray = [one.A, one.B, one.C, one.D,
+        let tempArray = [one.A, one.B, one.C, one.D, one.E,
                          two.A, two.B, two.C, two.D, two.E, two.F,
                          three.A, three.B, three.C, three.D, three.E,
-                         four.A, four.B, four.C, four.D]
-        for index in 0 ... 18 {
+                         four.A, four.B, four.C, four.D, four.E]
+        for index in 0 ... 20 {
             let temp = tempArray[index] + UserDefaults.standard.integer(forKey: String(index))
             UserDefaults.standard.set(temp, forKey: String(index))
         }
@@ -53,11 +53,15 @@ struct Question1: CanGoNext{
     var B = 0
     var C = 0
     var D = 0
+    var E = 0
     func canGoNext() -> Bool {
-        return A + B + C + D > 0
+        return A + B + C + D + E > 0
     }
-    func singleChooes() -> Bool {
-        return false
+//    func singleChooes() -> Bool {
+//        return false
+//    }
+    mutating func cleanData() {
+        A = 0;B = 0;C = 0;D = 0;E = 0
     }
     func choosedIndexs() -> [IndexPath] {
         var array = [IndexPath]()
@@ -73,6 +77,9 @@ struct Question1: CanGoNext{
         if D == 1 {
             array.append(IndexPath.init(row: 3, section: 0))
         }
+        if E == 1 {
+            array.append(IndexPath.init(row: 4, section: 0))
+        }
         return array
     }
     mutating func choose(_ index: NSInteger) {
@@ -85,6 +92,8 @@ struct Question1: CanGoNext{
             changeValue(&C)
         case 3:
             changeValue(&D)
+        case 4:
+            changeValue(&E)
         default:
             return
         }
@@ -123,7 +132,7 @@ struct Question2: CanGoNext {
         }
         return array
     }
-     mutating func cleanData() {
+    mutating func cleanData() {
         A = 0;B = 0;C = 0;D = 0;E = 0;F = 0
     }
     
@@ -202,8 +211,9 @@ struct Question4: CanGoNext {
     var B = 0
     var C = 0
     var D = 0
+    var E = 0
     func canGoNext() -> Bool {
-        return A + B + C + D > 0
+        return A + B + C + D + E > 0
     }
     func choosedIndexs() -> [IndexPath] {
         var array = [IndexPath]()
@@ -219,10 +229,13 @@ struct Question4: CanGoNext {
         if D == 1 {
             array.append(IndexPath.init(row: 3, section: 3))
         }
+        if E == 1 {
+            array.append(IndexPath.init(row: 4, section: 3))
+        }
         return array
     }
     mutating func cleanData() {
-        A = 0;B = 0;C = 0;D = 0
+        A = 0;B = 0;C = 0;D = 0; E = 0
     }
     
     mutating func choose(_ index: NSInteger) {
@@ -235,6 +248,8 @@ struct Question4: CanGoNext {
             changeValue(&C)
         case 3:
             changeValue(&D)
+        case 4:
+            changeValue(&E)
         default:
             return
         }

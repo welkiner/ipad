@@ -86,14 +86,14 @@ class ViewController: UIViewController {
 }
 
 let titles = ["1、贵医院在近期（1至2年）是否有以下计划：",
-              "2、作为医院的手术室护士长或医务工作人员，您在选择手术灯时,最关心的问题是：",
+              "2、作为医院的手术室护士长或医务工作人员，您在选择手术灯时，最关心的问题是：",
               "3、作为医院的手术室护士长或医务工作人员，您在选择手术床时，最关心的问题是：",
               "4、作为医院的手术室护士长或医务工作人员，最希望得到厂家的哪方面的培训："]
 
 let answer = [["A：建造全新的手术室或改造手术室",
                "B：建造或改造数字化手术室",
-               "C：建造或改造复合（Hybrid OR）手术室",
-               "D：增加或更换手术灯或者手术床",
+               "C：建造或改造复合（ Hybrid OR ）手术室",
+               "D：增加或更换手术灯或手术床",
                "E：近期无任何手术室设备更换计划"],
               
               ["A：手术灯的最大光亮度",
@@ -111,7 +111,7 @@ let answer = [["A：建造全新的手术室或改造手术室",
               
               ["A：手术床及手术灯操作培训",
                "B：手术床手术体位培训",
-               "C：手术床或手术灯附件(配件)使用培训",
+               "C：手术床或手术灯附件（配件）使用培训",
                "D：手术室工作流程及感控培训",
                "E：现代化手术室管理及最新手术室技术发展培训"]]
 
@@ -125,18 +125,19 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tempIndex = IndexPath(row: indexPath.row, section: currentIndex)
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!
-        cell!.backgroundColor = UIColor.clear
+        cell!.selectionStyle = .none
+        cell!.backgroundColor = .clear
         cell!.textLabel!.text = answer[currentIndex][indexPath.row]
-        cell!.textLabel!.font = UIFont.systemFont(ofSize: 26)
+        cell!.textLabel!.font = .systemFont(ofSize: 26)
         switch currentIndex {
             case 0:
-                cell!.textLabel?.textColor = tempIndex == oneAnswer.one.choosedIndexs() ? UIColor.blue : UIColor.black
+                cell!.textLabel?.textColor = tempIndex == oneAnswer.one.choosedIndexs() ? .blue : .black
             case 1:
-                cell!.textLabel?.textColor = tempIndex == oneAnswer.two.choosedIndexs() ? UIColor.blue : UIColor.black
+                cell!.textLabel?.textColor = tempIndex == oneAnswer.two.choosedIndexs() ? .blue : .black
             case 2:
-                cell!.textLabel?.textColor = tempIndex == oneAnswer.three.choosedIndexs() ? UIColor.blue : UIColor.black
+                cell!.textLabel?.textColor = tempIndex == oneAnswer.three.choosedIndexs() ? .blue : .black
             case 3:
-                cell!.textLabel?.textColor = tempIndex == oneAnswer.four.choosedIndexs() ? UIColor.blue : UIColor.black
+                cell!.textLabel?.textColor = tempIndex == oneAnswer.four.choosedIndexs() ? .blue : .black
             default:
                 break
         }

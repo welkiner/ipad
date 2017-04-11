@@ -17,8 +17,8 @@ class ResultViewController: UIViewController,UIAlertViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for (index, label) in labels.enumerated() {
-            label.text = String(UserDefaults.standard.integer(forKey: String(index)))
+        for (_, label) in labels.enumerated() {
+            label.text = String(UserDefaults.standard.integer(forKey: String(label.tag)))
         }
         countLabel.text = String(UserDefaults.standard.integer(forKey: "count"))
         // Do any additional setup after loading the view.
@@ -31,8 +31,8 @@ class ResultViewController: UIViewController,UIAlertViewDelegate{
     func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         guard buttonIndex == 1 else {return}
 
-        for (index, label) in labels.enumerated() {
-            UserDefaults.standard.set(0, forKey: String(index))
+        for (_, label) in labels.enumerated() {
+            UserDefaults.standard.set(0, forKey: String(label.tag))
             label.text = "0"
         }
         UserDefaults.standard.set(0, forKey: "count")

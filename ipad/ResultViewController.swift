@@ -17,32 +17,32 @@ class ResultViewController: UIViewController,UIAlertViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for (index, label) in labels.enumerate() {
-            label.text = String(NSUserDefaults.standardUserDefaults().integerForKey(String(index)))
+        for (index, label) in labels.enumerated() {
+            label.text = String(UserDefaults.standard.integer(forKey: String(index)))
         }
-        countLabel.text = String(NSUserDefaults.standardUserDefaults().integerForKey("count"))
+        countLabel.text = String(UserDefaults.standard.integer(forKey: "count"))
         // Do any additional setup after loading the view.
     }
-    @IBAction func clearBtnClick(sender: UIButton) {
+    @IBAction func clearBtnClick(_ sender: UIButton) {
         let alert = UIAlertView.init(title: "确定要清空么", message: "", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "确定")
         alert.show()
     }
     
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         guard buttonIndex == 1 else {return}
 
-        for (index, label) in labels.enumerate() {
-            NSUserDefaults.standardUserDefaults().setInteger(0, forKey: String(index))
+        for (index, label) in labels.enumerated() {
+            UserDefaults.standard.set(0, forKey: String(index))
             label.text = "0"
         }
-        NSUserDefaults.standardUserDefaults().setInteger(0, forKey: "count")
+        UserDefaults.standard.set(0, forKey: "count")
         countLabel.text = "0"
         
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.synchronize()
     }
 
-    @IBAction func backBtnClick(sender: UIButton) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func backBtnClick(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

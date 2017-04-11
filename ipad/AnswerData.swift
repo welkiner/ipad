@@ -10,8 +10,8 @@ import UIKit
 protocol CanGoNext {
     func canGoNext() -> Bool
     func singleChooes() -> Bool
-    func choosedIndexs() -> [NSIndexPath]
-    mutating func choose(index: NSInteger)
+    func choosedIndexs() -> [IndexPath]
+    mutating func choose(_ index: NSInteger)
 }
 extension CanGoNext{
     func singleChooes() -> Bool {
@@ -20,7 +20,7 @@ extension CanGoNext{
     mutating func cleanData(){
         
     }
-    private mutating func changeValue(inout value: Int)() -> Void{
+    fileprivate mutating func changeValue(_ value: inout Int) -> Void{
         value = (value + 1) % 2
     }
 }
@@ -37,14 +37,14 @@ struct Answer {
                          three.A, three.B, three.C, three.D, three.E,
                          four.A, four.B, four.C, four.D]
         for index in 0 ... 18 {
-            let temp = tempArray[index] + NSUserDefaults.standardUserDefaults().integerForKey(String(index))
-            NSUserDefaults.standardUserDefaults().setInteger(temp, forKey: String(index))
+            let temp = tempArray[index] + UserDefaults.standard.integer(forKey: String(index))
+            UserDefaults.standard.set(temp, forKey: String(index))
         }
         
-        let count = NSUserDefaults.standardUserDefaults().integerForKey("count") + 1
-        NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "count")
+        let count = UserDefaults.standard.integer(forKey: "count") + 1
+        UserDefaults.standard.set(count, forKey: "count")
         
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.synchronize()
     }
 }
 
@@ -59,32 +59,32 @@ struct Question1: CanGoNext{
     func singleChooes() -> Bool {
         return false
     }
-    func choosedIndexs() -> [NSIndexPath] {
-        var array = [NSIndexPath]()
+    func choosedIndexs() -> [IndexPath] {
+        var array = [IndexPath]()
         if A == 1 {
-            array.append(NSIndexPath.init(forRow: 0, inSection: 0))
+            array.append(IndexPath.init(row: 0, section: 0))
         }
         if B == 1 {
-            array.append(NSIndexPath.init(forRow: 1, inSection: 0))
+            array.append(IndexPath.init(row: 1, section: 0))
         }
         if C == 1 {
-            array.append(NSIndexPath.init(forRow: 2, inSection: 0))
+            array.append(IndexPath.init(row: 2, section: 0))
         }
         if D == 1 {
-            array.append(NSIndexPath.init(forRow: 3, inSection: 0))
+            array.append(IndexPath.init(row: 3, section: 0))
         }
         return array
     }
-    mutating func choose(index: NSInteger) {
+    mutating func choose(_ index: NSInteger) {
         switch index {
         case 0:
-            changeValue(&A)()
+            changeValue(&A)
         case 1:
-            changeValue(&B)()
+            changeValue(&B)
         case 2:
-            changeValue(&C)()
+            changeValue(&C)
         case 3:
-            changeValue(&D)()
+            changeValue(&D)
         default:
             return
         }
@@ -101,25 +101,25 @@ struct Question2: CanGoNext {
     func canGoNext() -> Bool {
         return A + B + C + D + E + F > 0
     }
-    func choosedIndexs() -> [NSIndexPath] {
-        var array = [NSIndexPath]()
+    func choosedIndexs() -> [IndexPath] {
+        var array = [IndexPath]()
         if A == 1 {
-            array.append(NSIndexPath.init(forRow: 0, inSection: 1))
+            array.append(IndexPath.init(row: 0, section: 1))
         }
         if B == 1 {
-            array.append(NSIndexPath.init(forRow: 1, inSection: 1))
+            array.append(IndexPath.init(row: 1, section: 1))
         }
         if C == 1 {
-            array.append(NSIndexPath.init(forRow: 2, inSection: 1))
+            array.append(IndexPath.init(row: 2, section: 1))
         }
         if D == 1 {
-            array.append(NSIndexPath.init(forRow: 3, inSection: 1))
+            array.append(IndexPath.init(row: 3, section: 1))
         }
         if E == 1 {
-            array.append(NSIndexPath.init(forRow: 4, inSection: 1))
+            array.append(IndexPath.init(row: 4, section: 1))
         }
         if F == 1 {
-            array.append(NSIndexPath.init(forRow: 5, inSection: 1))
+            array.append(IndexPath.init(row: 5, section: 1))
         }
         return array
     }
@@ -127,20 +127,20 @@ struct Question2: CanGoNext {
         A = 0;B = 0;C = 0;D = 0;E = 0;F = 0
     }
     
-    mutating func choose(index: NSInteger) {
+    mutating func choose(_ index: NSInteger) {
         switch index {
         case 0:
-            changeValue(&A)()
+            changeValue(&A)
         case 1:
-            changeValue(&B)()
+            changeValue(&B)
         case 2:
-            changeValue(&C)()
+            changeValue(&C)
         case 3:
-            changeValue(&D)()
+            changeValue(&D)
         case 4:
-            changeValue(&E)()
+            changeValue(&E)
         case 5:
-            changeValue(&F)()
+            changeValue(&F)
         default:
             return
         }
@@ -156,22 +156,22 @@ struct Question3: CanGoNext {
     func canGoNext() -> Bool {
         return A + B + C + D + E > 0
     }
-    func choosedIndexs() -> [NSIndexPath] {
-        var array = [NSIndexPath]()
+    func choosedIndexs() -> [IndexPath] {
+        var array = [IndexPath]()
         if A == 1 {
-            array.append(NSIndexPath.init(forRow: 0, inSection: 2))
+            array.append(IndexPath.init(row: 0, section: 2))
         }
         if B == 1 {
-            array.append(NSIndexPath.init(forRow: 1, inSection: 2))
+            array.append(IndexPath.init(row: 1, section: 2))
         }
         if C == 1 {
-            array.append(NSIndexPath.init(forRow: 2, inSection: 2))
+            array.append(IndexPath.init(row: 2, section: 2))
         }
         if D == 1 {
-            array.append(NSIndexPath.init(forRow: 3, inSection: 2))
+            array.append(IndexPath.init(row: 3, section: 2))
         }
         if E == 1 {
-            array.append(NSIndexPath.init(forRow: 4, inSection: 2))
+            array.append(IndexPath.init(row: 4, section: 2))
         }
         return array
     }
@@ -179,18 +179,18 @@ struct Question3: CanGoNext {
         A = 0;B = 0;C = 0;D = 0;E = 0
     }
     
-    mutating func choose(index: NSInteger) {
+    mutating func choose(_ index: NSInteger) {
         switch index {
         case 0:
-            changeValue(&A)()
+            changeValue(&A)
         case 1:
-            changeValue(&B)()
+            changeValue(&B)
         case 2:
-            changeValue(&C)()
+            changeValue(&C)
         case 3:
-            changeValue(&D)()
+            changeValue(&D)
         case 4:
-            changeValue(&E)()
+            changeValue(&E)
         default:
             return
         }
@@ -205,19 +205,19 @@ struct Question4: CanGoNext {
     func canGoNext() -> Bool {
         return A + B + C + D > 0
     }
-    func choosedIndexs() -> [NSIndexPath] {
-        var array = [NSIndexPath]()
+    func choosedIndexs() -> [IndexPath] {
+        var array = [IndexPath]()
         if A == 1 {
-            array.append(NSIndexPath.init(forRow: 0, inSection: 3))
+            array.append(IndexPath.init(row: 0, section: 3))
         }
         if B == 1 {
-            array.append(NSIndexPath.init(forRow: 1, inSection: 3))
+            array.append(IndexPath.init(row: 1, section: 3))
         }
         if C == 1 {
-            array.append(NSIndexPath.init(forRow: 2, inSection: 3))
+            array.append(IndexPath.init(row: 2, section: 3))
         }
         if D == 1 {
-            array.append(NSIndexPath.init(forRow: 3, inSection: 3))
+            array.append(IndexPath.init(row: 3, section: 3))
         }
         return array
     }
@@ -225,16 +225,16 @@ struct Question4: CanGoNext {
         A = 0;B = 0;C = 0;D = 0
     }
     
-    mutating func choose(index: NSInteger) {
+    mutating func choose(_ index: NSInteger) {
         switch index {
         case 0:
-            changeValue(&A)()
+            changeValue(&A)
         case 1:
-            changeValue(&B)()
+            changeValue(&B)
         case 2:
-            changeValue(&C)()
+            changeValue(&C)
         case 3:
-            changeValue(&D)()
+            changeValue(&D)
         default:
             return
         }

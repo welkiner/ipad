@@ -9,7 +9,16 @@
 import UIKit
 
 class QuestionController7: UIViewController {
-
+    @IBOutlet weak var BtnA: SimulateBtn!
+    @IBOutlet weak var BtnB: SimulateBtn!
+    @IBOutlet weak var BtnC: SimulateBtn!
+    @IBAction func backBtnClick(_ sender: PageBtn) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextBtnClick(_ sender: PageBtn) {
+        self.navigationController?.pushViewController(controller("EndController8"), animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

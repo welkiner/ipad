@@ -15,6 +15,12 @@ class AnswerController9: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func clearDataClick(_ sender: SimulateBtn) {
+    }
+    @IBAction func nextClick(_ sender: SimulateBtn) {
+    }
+    @IBAction func backClick(_ sender: SimulateBtn) {
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -9,7 +9,14 @@
 import UIKit
 
 class EndController8: UIViewController {
-
+    
+    @IBAction func backBtnClick(_ sender: PageBtn) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextBtnClick(_ sender: UIButton) {
+        self.navigationController?.pushViewController(controller("QuestionController4"), animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

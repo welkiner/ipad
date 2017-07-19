@@ -16,23 +16,25 @@ class SimulateBtn: UIButton {
         didSet {
             layer.cornerRadius = cornerRadius
             layer.masksToBounds = cornerRadius > 0
+            backgroundColor = UIColor.red.withAlphaComponent(0.4)
         }
     }
     override func awakeFromNib() {
         
     }
-//    @IBInspectable
-//    var borderWidth: CGFloat = 0 {
-//        didSet {
-//            layer.borderWidth = borderWidth
-//        }
-//    }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+}
+@IBDesignable
+class PageBtn: UIButton {
+    
+    @IBInspectable
+    var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+            backgroundColor = UIColor.red.withAlphaComponent(0.4)
+        }
     }
-    */
-
+    override func awakeFromNib() {
+        
+    }
 }

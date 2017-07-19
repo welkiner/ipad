@@ -15,7 +15,7 @@ class EndController8: UIViewController {
     }
     
     @IBAction func nextBtnClick(_ sender: UIButton) {
-        self.navigationController?.pushViewController(controller("QuestionController4"), animated: true)
+        self.navigationController?.pushViewController(controller("AnswerController9"), animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

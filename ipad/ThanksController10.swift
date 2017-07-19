@@ -1,27 +1,23 @@
 //
-//  HomeController2.swift
+//  ThanksController10.swift
 //  ipad
 //
-//  Created by tian.liang on 2017/7/19.
+//  Created by tian.liang on 2017/7/20.
 //  Copyright © 2017年 welkiner. All rights reserved.
 //
 
 import UIKit
 
-class HomeController2: UIViewController {
+class ThanksController10: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func beginBtnClicl(_ sender: SimulateBtn) {
-        self.navigationController?.pushViewController(controller("QuestionController3"), animated: true)
+    @IBAction func backClick(_ sender: SimulateBtn) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
-    @IBAction func endBtnClick(_ sender: SimulateBtn) {
-        self.navigationController?.pushViewController(controller("AnswerController9"), animated: true)
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

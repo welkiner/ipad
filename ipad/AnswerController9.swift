@@ -15,11 +15,14 @@ class AnswerController9: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet var labels: [UILabel]!
     @IBAction func clearDataClick(_ sender: SimulateBtn) {
     }
     @IBAction func nextClick(_ sender: SimulateBtn) {
+        self.navigationController?.pushViewController(controller("ThanksController10"), animated: true)
     }
     @IBAction func backClick(_ sender: SimulateBtn) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
     override func didReceiveMemoryWarning() {

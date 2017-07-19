@@ -17,7 +17,7 @@ class QuestionController6: UIViewController {
     }
     
     @IBAction func nextBtnClick(_ sender: PageBtn) {
-        self.navigationController?.pushViewController(controller("QuestionController6"), animated: true)
+        self.navigationController?.pushViewController(controller("QuestionController7"), animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

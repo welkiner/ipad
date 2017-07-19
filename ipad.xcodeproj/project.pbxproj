@@ -12,6 +12,7 @@
 		459129BB1F1FB15200254200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459129B91F1FB15200254200 /* Main.storyboard */; };
 		459129BD1F1FB15200254200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459129BC1F1FB15200254200 /* Assets.xcassets */; };
 		459129C01F1FB15200254200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459129BE1F1FB15200254200 /* LaunchScreen.storyboard */; };
+		459129C81F1FB7AB00254200 /* HomeController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459129C71F1FB7AB00254200 /* HomeController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		459129BC1F1FB15200254200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		459129BF1F1FB15200254200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		459129C11F1FB15200254200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		459129C71F1FB7AB00254200 /* HomeController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				459129B51F1FB15200254200 /* AppDelegate.swift */,
 				459129B71F1FB15200254200 /* ViewController.swift */,
+				459129C71F1FB7AB00254200 /* HomeController2.swift */,
 				459129B91F1FB15200254200 /* Main.storyboard */,
 				459129BC1F1FB15200254200 /* Assets.xcassets */,
 				459129BE1F1FB15200254200 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				459129B81F1FB15200254200 /* ViewController.swift in Sources */,
+				459129C81F1FB7AB00254200 /* HomeController2.swift in Sources */,
 				459129B61F1FB15200254200 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r0C-MC-L5Y">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="tHr-SQ-c5p">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="r0C-MC-L5Y" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7kU-Aj-9VN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QbL-MA-tAh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGe-Tx-DBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-433" y="-258"/>
+        </scene>
+        <!--1页面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ipad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="1页面" id="BYZ-38-t0r" customClass="ViewController" customModule="ipad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,11 +37,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ovr-PG-dJC">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZS-Ss-yQr">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiA-Kw-JT1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ovr-PG-dJC" secondAttribute="bottom" id="I94-Vs-jXf"/>
+                            <constraint firstAttribute="trailing" secondItem="1ZS-Ss-yQr" secondAttribute="trailing" id="Kij-N7-Cz7"/>
+                            <constraint firstAttribute="trailing" secondItem="Ovr-PG-dJC" secondAttribute="trailing" id="PCY-0c-dYB"/>
+                            <constraint firstItem="1ZS-Ss-yQr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="X1I-EF-PrM"/>
+                            <constraint firstItem="1ZS-Ss-yQr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ajC-74-YWS"/>
+                            <constraint firstItem="Ovr-PG-dJC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o1T-dP-7hh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1ZS-Ss-yQr" secondAttribute="bottom" id="vIz-HX-mYt"/>
+                            <constraint firstItem="Ovr-PG-dJC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zGx-Np-bqn"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WGQ-NC-8H7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="250" y="-259"/>
+        </scene>
+        <!--2开始答题页面-->
+        <scene sceneID="et9-am-KsQ">
+            <objects>
+                <viewController storyboardIdentifier="HomeController2" title="2开始答题页面" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XFA-FT-ADe" customClass="HomeController2" customModule="ipad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5MI-eN-TLW"/>
+                        <viewControllerLayoutGuide type="bottom" id="3HC-6p-R4F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ofa-Kq-3ta">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="cFn-EM-54K">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cFn-EM-54K" firstAttribute="top" secondItem="ofa-Kq-3ta" secondAttribute="top" id="DBU-ed-XIj"/>
+                            <constraint firstItem="3HC-6p-R4F" firstAttribute="top" secondItem="cFn-EM-54K" secondAttribute="bottom" id="Gbf-Fz-8Cs"/>
+                            <constraint firstItem="cFn-EM-54K" firstAttribute="leading" secondItem="ofa-Kq-3ta" secondAttribute="leading" id="O9d-a3-EXR"/>
+                            <constraint firstAttribute="trailing" secondItem="cFn-EM-54K" secondAttribute="trailing" id="Ruj-bU-Gy7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tj-xj-GYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="474"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="1024" height="768"/>
+        <image name="2" width="1024" height="768"/>
+    </resources>
 </document>

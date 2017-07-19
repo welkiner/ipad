@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+func controller(_ id: String) -> UIViewController{
+    return UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: id)
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

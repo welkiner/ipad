@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="250" y="-259"/>
         </scene>
-        <!--2开始答题页面-->
+        <!--2开始答题-->
         <scene sceneID="et9-am-KsQ">
             <objects>
-                <viewController storyboardIdentifier="HomeController2" title="2开始答题页面" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XFA-FT-ADe" customClass="HomeController2" customModule="ipad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeController2" title="2开始答题" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XFA-FT-ADe" customClass="HomeController2" customModule="ipad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5MI-eN-TLW"/>
                         <viewControllerLayoutGuide type="bottom" id="3HC-6p-R4F"/>
@@ -81,6 +81,36 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="cFn-EM-54K">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-vq-9bb" userLabel="begin" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
+                                <rect key="frame" x="347" y="161" width="334" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="beginBtnClicl:" destination="XFA-FT-ADe" eventType="touchUpInside" id="pqI-qU-8G4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha9-dg-yOw" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
+                                <rect key="frame" x="347" y="299" width="334" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endBtnClick:" destination="XFA-FT-ADe" eventType="touchUpInside" id="o7P-zp-XWp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -93,11 +123,221 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tj-xj-GYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250" y="474"/>
+            <point key="canvasLocation" x="910.54687499999989" y="-259.375"/>
+        </scene>
+        <!--3答题-->
+        <scene sceneID="efz-h7-o3d">
+            <objects>
+                <viewController storyboardIdentifier="QuestionController3" title="3答题" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5OS-rO-4Pn" customClass="QuestionController3" customModule="ipad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fl9-9Q-aZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="3TB-zV-NNN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="54P-DY-Con">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="Adt-SJ-fso">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Adt-SJ-fso" secondAttribute="trailing" id="Hzr-ax-lPZ"/>
+                            <constraint firstItem="3TB-zV-NNN" firstAttribute="top" secondItem="Adt-SJ-fso" secondAttribute="bottom" id="bOX-5o-9bf"/>
+                            <constraint firstItem="Adt-SJ-fso" firstAttribute="leading" secondItem="54P-DY-Con" secondAttribute="leading" id="ih9-js-hZx"/>
+                            <constraint firstItem="Adt-SJ-fso" firstAttribute="top" secondItem="54P-DY-Con" secondAttribute="top" id="vRV-rE-UUg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epk-vy-Gh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="480"/>
+        </scene>
+        <!--4答题-->
+        <scene sceneID="lTq-iQ-olE">
+            <objects>
+                <viewController storyboardIdentifier="QuestionController4" title="4答题" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kTA-jK-sFe" customClass="QuestionController4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dlA-1f-Z9f"/>
+                        <viewControllerLayoutGuide type="bottom" id="jCw-WU-IR9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fmf-L7-edS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="Qpc-6m-n1y">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qpc-6m-n1y" firstAttribute="top" secondItem="fmf-L7-edS" secondAttribute="top" id="Bzs-tN-wl8"/>
+                            <constraint firstItem="jCw-WU-IR9" firstAttribute="top" secondItem="Qpc-6m-n1y" secondAttribute="bottom" id="NMd-6A-kxz"/>
+                            <constraint firstItem="Qpc-6m-n1y" firstAttribute="leading" secondItem="fmf-L7-edS" secondAttribute="leading" id="fTz-ws-ntN"/>
+                            <constraint firstAttribute="trailing" secondItem="Qpc-6m-n1y" secondAttribute="trailing" id="w6I-81-iZ5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iK-1X-OST" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="-259"/>
+        </scene>
+        <!--5答题-->
+        <scene sceneID="sU6-zQ-FQD">
+            <objects>
+                <viewController storyboardIdentifier="QuestionController5" title="5答题" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G2T-0F-R5X" customClass="QuestionController5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="So4-4l-Ku0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y1X-FE-Lql"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cOt-3y-9cS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="2W4-Dg-2C0">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y1X-FE-Lql" firstAttribute="top" secondItem="2W4-Dg-2C0" secondAttribute="bottom" id="56u-mu-bgj"/>
+                            <constraint firstAttribute="trailing" secondItem="2W4-Dg-2C0" secondAttribute="trailing" id="9FD-Ef-Zz2"/>
+                            <constraint firstItem="2W4-Dg-2C0" firstAttribute="top" secondItem="cOt-3y-9cS" secondAttribute="top" id="VZh-RI-WQ5"/>
+                            <constraint firstItem="2W4-Dg-2C0" firstAttribute="leading" secondItem="cOt-3y-9cS" secondAttribute="leading" id="jK0-Ox-z0c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikp-bO-ra3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="480"/>
+        </scene>
+        <!--6答题-->
+        <scene sceneID="2EN-yk-8zf">
+            <objects>
+                <viewController storyboardIdentifier="QuestionController6" title="6答题" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zCr-XX-ClZ" customClass="QuestionController6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oWX-in-OXC"/>
+                        <viewControllerLayoutGuide type="bottom" id="FbB-LR-cDr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vbL-i9-zAj">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="wL9-Ig-Zvx">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FbB-LR-cDr" firstAttribute="top" secondItem="wL9-Ig-Zvx" secondAttribute="bottom" id="8BV-TY-Y6m"/>
+                            <constraint firstAttribute="trailing" secondItem="wL9-Ig-Zvx" secondAttribute="trailing" id="Fk4-Tq-UNX"/>
+                            <constraint firstItem="wL9-Ig-Zvx" firstAttribute="leading" secondItem="vbL-i9-zAj" secondAttribute="leading" id="JTP-I8-8SW"/>
+                            <constraint firstItem="wL9-Ig-Zvx" firstAttribute="top" secondItem="vbL-i9-zAj" secondAttribute="top" id="pD5-mr-2Q5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aav-NQ-I0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200" y="-259"/>
+        </scene>
+        <!--7答题-->
+        <scene sceneID="x1a-ad-y7t">
+            <objects>
+                <viewController storyboardIdentifier="QuestionController7" title="7答题" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UiO-vy-UFi" customClass="QuestionController7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KZb-fa-a3j"/>
+                        <viewControllerLayoutGuide type="bottom" id="XmH-JN-pet"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nGH-oG-Emj">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7" translatesAutoresizingMaskIntoConstraints="NO" id="oXf-d4-hBX">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oXf-d4-hBX" firstAttribute="leading" secondItem="nGH-oG-Emj" secondAttribute="leading" id="7UN-Ul-t7q"/>
+                            <constraint firstItem="XmH-JN-pet" firstAttribute="top" secondItem="oXf-d4-hBX" secondAttribute="bottom" id="Oc2-KK-JHc"/>
+                            <constraint firstAttribute="trailing" secondItem="oXf-d4-hBX" secondAttribute="trailing" id="VSg-W1-5Al"/>
+                            <constraint firstItem="oXf-d4-hBX" firstAttribute="top" secondItem="nGH-oG-Emj" secondAttribute="top" id="f63-6W-9vp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dts-64-aCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200" y="480"/>
+        </scene>
+        <!--8答题完成-->
+        <scene sceneID="15S-JY-gfb">
+            <objects>
+                <viewController storyboardIdentifier="EndController8" title="8答题完成" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lqs-e4-Ts0" customClass="EndController8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RWQ-JO-zJ7"/>
+                        <viewControllerLayoutGuide type="bottom" id="f29-JR-SBy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tdy-cK-OAo">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8" translatesAutoresizingMaskIntoConstraints="NO" id="GvF-Sz-5yZ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f29-JR-SBy" firstAttribute="top" secondItem="GvF-Sz-5yZ" secondAttribute="bottom" id="Hmk-RQ-zRA"/>
+                            <constraint firstAttribute="trailing" secondItem="GvF-Sz-5yZ" secondAttribute="trailing" id="Xxa-qU-FOY"/>
+                            <constraint firstItem="GvF-Sz-5yZ" firstAttribute="leading" secondItem="tdy-cK-OAo" secondAttribute="leading" id="abR-94-RKz"/>
+                            <constraint firstItem="GvF-Sz-5yZ" firstAttribute="top" secondItem="tdy-cK-OAo" secondAttribute="top" id="s6q-Ns-5mw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wW7-gx-0Nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="-1041"/>
+        </scene>
+        <!--9答案总结-->
+        <scene sceneID="xtS-Ar-0fh">
+            <objects>
+                <viewController storyboardIdentifier="AnswerController9" title="9答案总结" useStoryboardIdentifierAsRestorationIdentifier="YES" id="54M-oR-lYo" customClass="AnswerController9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r7N-nL-jPN"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZCQ-7a-vri"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p9A-KO-gYL">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-zA-YKv">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZCQ-7a-vri" firstAttribute="top" secondItem="iAE-zA-YKv" secondAttribute="bottom" id="9dW-eU-UP2"/>
+                            <constraint firstItem="iAE-zA-YKv" firstAttribute="top" secondItem="p9A-KO-gYL" secondAttribute="top" id="SZx-y4-6y9"/>
+                            <constraint firstItem="iAE-zA-YKv" firstAttribute="leading" secondItem="p9A-KO-gYL" secondAttribute="leading" id="bN1-ip-IcC"/>
+                            <constraint firstAttribute="trailing" secondItem="iAE-zA-YKv" secondAttribute="trailing" id="fI1-ai-omG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BjE-nl-Gy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200" y="-1041"/>
         </scene>
     </scenes>
     <resources>
         <image name="1" width="1024" height="768"/>
         <image name="2" width="1024" height="768"/>
+        <image name="3" width="1024" height="768"/>
+        <image name="4" width="1024" height="768"/>
+        <image name="5" width="1024" height="768"/>
+        <image name="6" width="1024" height="768"/>
+        <image name="7" width="1024" height="768"/>
+        <image name="8" width="1024" height="768"/>
+        <image name="9" width="1024" height="768"/>
     </resources>
 </document>

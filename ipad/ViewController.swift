@@ -15,9 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func btnClick(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeController2")
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(controller("HomeController2"), animated: true)
     }
 
     override func didReceiveMemoryWarning() {

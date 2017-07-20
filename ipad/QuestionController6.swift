@@ -12,18 +12,49 @@ class QuestionController6: UIViewController {
     @IBOutlet weak var BtnA: SimulateBtn!
     @IBOutlet weak var BtnB: SimulateBtn!
     @IBOutlet weak var BtnC: SimulateBtn!
+    var answer: Answer? = nil
     @IBAction func backBtnClick(_ sender: PageBtn) {
+        self.answer?.four.cleanData()
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func nextBtnClick(_ sender: PageBtn) {
-        self.navigationController?.pushViewController(controller("QuestionController7"), animated: true)
+        if !(self.answer?.four.canGoNext())! {
+            return
+        }
+        let vc = controller("QuestionController7") as! QuestionController7
+        vc.answer = answer
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.BtnA.addTarget(self, action: #selector(btnAClick), for: .touchUpInside)
+        self.BtnB.addTarget(self, action: #selector(btnBClick), for: .touchUpInside)
+        self.BtnC.addTarget(self, action: #selector(btnCClick), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
+    func btnAClick() {
+        self.BtnA.isEnabled = false
+        self.BtnB.isEnabled = true
+        self.BtnC.isEnabled = true
+        self.answer?.four.cleanData()
+        self.answer?.four.choose(0)
+    }
+    func btnBClick() {
+        self.BtnA.isEnabled = true
+        self.BtnB.isEnabled = false
+        self.BtnC.isEnabled = true
+        self.answer?.four.cleanData()
+        self.answer?.four.choose(1)
+    }
+    func btnCClick() {
+        self.BtnA.isEnabled = true
+        self.BtnB.isEnabled = true
+        self.BtnC.isEnabled = false
+        self.answer?.four.cleanData()
+        self.answer?.four.choose(2)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

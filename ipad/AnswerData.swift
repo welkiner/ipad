@@ -39,7 +39,7 @@ struct Answer {
                          three.A, three.B, three.C,
                          four.A, four.B, four.C,
                          five.A, five.B, five.C]
-        for index in 0 ... 15 {
+        for index in 0 ... 14 {
             let temp = tempArray[index] + UserDefaults.standard.integer(forKey: String(index))
             UserDefaults.standard.set(temp, forKey: String(index))
         }

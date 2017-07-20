@@ -21,7 +21,7 @@ class SimulateBtn: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setBackgroundImage(imageColor(UIColor.black.withAlphaComponent(0.7)), for: .highlighted)
-        self.setBackgroundImage(imageColor(UIColor.black.withAlphaComponent(0.7)), for: .disabled)
+        self.setBackgroundImage(imageColor(UIColor.black.withAlphaComponent(0.3)), for: .disabled)
     }
 }
 @IBDesignable

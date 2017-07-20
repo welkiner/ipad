@@ -12,7 +12,9 @@ class AnswerController9: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        for label in labels  {
+            
+        }
         // Do any additional setup after loading the view.
     }
     @IBOutlet var labels: [UILabel]!

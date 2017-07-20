@@ -9,12 +9,13 @@
 import UIKit
 
 class EndController8: UIViewController {
-    
+    var answer: Answer? = nil
     @IBAction func backBtnClick(_ sender: PageBtn) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func nextBtnClick(_ sender: UIButton) {
+        self.answer?.store()
         self.navigationController?.pushViewController(controller("AnswerController9"), animated: true)
     }
     override func viewDidLoad() {

@@ -17,6 +17,15 @@ class AnswerController9: UIViewController {
     }
     @IBOutlet var labels: [UILabel]!
     @IBAction func clearDataClick(_ sender: SimulateBtn) {
+        let vc = UIAlertController.init(title: "提示", message: "确定要清空数据么？", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "确定", style: .default, handler: {
+            action in
+            
+        })
+        vc.addAction(cancelAction)
+        vc.addAction(okAction)
+        self.present(vc, animated: true, completion: nil)
     }
     @IBAction func nextClick(_ sender: SimulateBtn) {
         self.navigationController?.pushViewController(controller("ThanksController10"), animated: true)

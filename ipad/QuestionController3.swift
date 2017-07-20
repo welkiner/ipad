@@ -18,11 +18,12 @@ class QuestionController3: UIViewController {
     }
     
     @IBAction func nextBtnClick(_ sender: PageBtn) {
-        self.navigationController?.pushViewController(controller("QuestionController4"), animated: true)
+        let vc = controller("QuestionController4") as! QuestionController4
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

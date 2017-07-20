@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r0C-MC-L5Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r0C-MC-L5Y">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -141,7 +141,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ5-gZ-aE7" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="333" y="350" width="359" height="70"/>
+                                <rect key="frame" x="333" y="347" width="359" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,7 +153,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3b-Ic-G26" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="333" y="474" width="359" height="70"/>
+                                <rect key="frame" x="333" y="475" width="359" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,7 +165,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4d-Xg-ukp" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="333" y="599" width="359" height="70"/>
+                                <rect key="frame" x="333" y="598" width="359" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,7 +341,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB6-CK-mR7" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="278" y="349" width="469" height="70"/>
+                                <rect key="frame" x="278" y="344" width="469" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -353,7 +353,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bky-MP-Z2Y" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="278" y="477" width="469" height="70"/>
+                                <rect key="frame" x="278" y="472" width="469" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -365,7 +365,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIZ-61-Ou3" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="278" y="599" width="469" height="70"/>
+                                <rect key="frame" x="278" y="596" width="469" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -405,7 +405,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikp-bO-ra3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="480"/>
+            <point key="canvasLocation" x="1542.7734375" y="479.6875"/>
         </scene>
         <!--10感谢-->
         <scene sceneID="gdG-rs-jga">
@@ -491,7 +491,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFe-sg-qE9" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="308" y="476" width="409" height="68"/>
+                                <rect key="frame" x="308" y="475" width="409" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -573,7 +573,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuz-kM-bMZ" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="277" y="348" width="471" height="72"/>
+                                <rect key="frame" x="277" y="345" width="471" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -585,7 +585,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQR-fO-nrP" userLabel="end" customClass="SimulateBtn" customModule="ipad" customModuleProvider="target">
-                                <rect key="frame" x="277" y="474" width="471" height="72"/>
+                                <rect key="frame" x="277" y="470" width="471" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="1" green="0.53637214879999995" blue="0.90887916280000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -860,6 +860,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-f2-7e0">
+                                <rect key="frame" x="649" y="197" width="77" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -870,7 +877,22 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countLabel" destination="fqy-f2-7e0" id="kco-Li-9Bd"/>
                         <outletCollection property="labels" destination="0W0-Gc-e9y" collectionClass="NSMutableArray" id="5ao-fQ-d2w"/>
+                        <outletCollection property="labels" destination="VtW-55-DHU" collectionClass="NSMutableArray" id="jSM-g8-05Z"/>
+                        <outletCollection property="labels" destination="8Y6-dr-rTd" collectionClass="NSMutableArray" id="CAV-u9-6E7"/>
+                        <outletCollection property="labels" destination="2rw-yX-t6m" collectionClass="NSMutableArray" id="7yB-8S-5Ks"/>
+                        <outletCollection property="labels" destination="PIL-zc-Pil" collectionClass="NSMutableArray" id="doR-qX-vaG"/>
+                        <outletCollection property="labels" destination="qwq-mN-F7s" collectionClass="NSMutableArray" id="FAQ-Nw-RFw"/>
+                        <outletCollection property="labels" destination="Dhn-Nb-kQm" collectionClass="NSMutableArray" id="8qf-gH-ESU"/>
+                        <outletCollection property="labels" destination="RYe-EV-Xxk" collectionClass="NSMutableArray" id="Vm4-mw-187"/>
+                        <outletCollection property="labels" destination="uB6-5S-GZB" collectionClass="NSMutableArray" id="TLx-hQ-YVA"/>
+                        <outletCollection property="labels" destination="JDv-8L-nfY" collectionClass="NSMutableArray" id="3fX-Sg-Pow"/>
+                        <outletCollection property="labels" destination="5EN-yG-Qgf" collectionClass="NSMutableArray" id="HlV-Wx-rIP"/>
+                        <outletCollection property="labels" destination="GSk-9y-myy" collectionClass="NSMutableArray" id="5eh-Nc-mS9"/>
+                        <outletCollection property="labels" destination="zrA-5E-3x5" collectionClass="NSMutableArray" id="j0I-MD-ecf"/>
+                        <outletCollection property="labels" destination="IE7-In-1QS" collectionClass="NSMutableArray" id="5Ez-1X-tDC"/>
+                        <outletCollection property="labels" destination="l8v-gH-K3c" collectionClass="NSMutableArray" id="H6Z-Sv-XxY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjE-nl-Gy0" userLabel="First Responder" sceneMemberID="firstResponder"/>

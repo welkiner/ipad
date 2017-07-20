@@ -12,18 +12,26 @@ class AnswerController9: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        for label in labels  {
-            
+        for (_, label) in labels.enumerated() {
+            label.text = String(UserDefaults.standard.integer(forKey: String(label.tag-100)))
         }
-        // Do any additional setup after loading the view.
+        countLabel.text = String(UserDefaults.standard.integer(forKey: "count"))
     }
+    @IBOutlet weak var countLabel: UILabel!
     @IBOutlet var labels: [UILabel]!
     @IBAction func clearDataClick(_ sender: SimulateBtn) {
         let vc = UIAlertController.init(title: "提示", message: "确定要清空数据么？", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "确定", style: .default, handler: {
             action in
+            for (_, label) in self.labels.enumerated() {
+                UserDefaults.standard.set(0, forKey: String(label.tag))
+                label.text = "0"
+            }
+            UserDefaults.standard.set(0, forKey: "count")
+            self.countLabel.text = "0"
             
+            UserDefaults.standard.synchronize()
         })
         vc.addAction(cancelAction)
         vc.addAction(okAction)

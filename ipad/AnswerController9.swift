@@ -25,7 +25,7 @@ class AnswerController9: UIViewController {
         let okAction = UIAlertAction(title: "确定", style: .default, handler: {
             action in
             for (_, label) in self.labels.enumerated() {
-                UserDefaults.standard.set(0, forKey: String(label.tag))
+                UserDefaults.standard.set(0, forKey: String(label.tag-100))
                 label.text = "0"
             }
             UserDefaults.standard.set(0, forKey: "count")

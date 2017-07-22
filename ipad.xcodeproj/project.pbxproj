@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452791881F23552100010996 /* BoschSansCHS-Bold_0.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 452791871F23552100010996 /* BoschSansCHS-Bold_0.ttf */; };
 		459129B61F1FB15200254200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459129B51F1FB15200254200 /* AppDelegate.swift */; };
 		459129B81F1FB15200254200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459129B71F1FB15200254200 /* ViewController.swift */; };
 		459129BB1F1FB15200254200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459129B91F1FB15200254200 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452791871F23552100010996 /* BoschSansCHS-Bold_0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BoschSansCHS-Bold_0.ttf"; sourceTree = "<group>"; };
 		459129B21F1FB15200254200 /* ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		459129B51F1FB15200254200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		459129B71F1FB15200254200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				459129D71F1FC60D00254200 /* AnswerController9.swift */,
 				459129D91F1FCEC400254200 /* ThanksController10.swift */,
 				459129C91F1FB9CF00254200 /* SimulateBtn.swift */,
+				452791871F23552100010996 /* BoschSansCHS-Bold_0.ttf */,
 				459129B91F1FB15200254200 /* Main.storyboard */,
 				459129BC1F1FB15200254200 /* Assets.xcassets */,
 				459129BE1F1FB15200254200 /* LaunchScreen.storyboard */,
@@ -159,6 +162,7 @@
 			files = (
 				459129C01F1FB15200254200 /* LaunchScreen.storyboard in Resources */,
 				459129BD1F1FB15200254200 /* Assets.xcassets in Resources */,
+				452791881F23552100010996 /* BoschSansCHS-Bold_0.ttf in Resources */,
 				459129BB1F1FB15200254200 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

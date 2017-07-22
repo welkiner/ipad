@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r0C-MC-L5Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r0C-MC-L5Y">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BoschSansCHS-Bold_0.ttf">
+            <string>BoschSansCHS-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="tHr-SQ-c5p">
             <objects>
                 <navigationController navigationBarHidden="YES" id="r0C-MC-L5Y" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7kU-Aj-9VN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7kU-Aj-9VN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -755,116 +760,116 @@
                                     <action selector="backClick:" destination="54M-oR-lYo" eventType="touchUpInside" id="IKR-0C-8uk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtW-55-DHU">
-                                <rect key="frame" x="247" y="283" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtW-55-DHU">
+                                <rect key="frame" x="244" y="283" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089465634519" green="0.56934089465634519" blue="0.56934089465634519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rw-yX-t6m">
-                                <rect key="frame" x="431" y="283" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="109" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZn-Zo-A6G">
+                                <rect key="frame" x="709" y="407" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8v-gH-K3c">
-                                <rect key="frame" x="708" y="283" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-v6-aw5">
+                                <rect key="frame" x="709" y="283" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="111" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-yG-Qgf">
-                                <rect key="frame" x="889" y="406" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sec-hX-Tid">
+                                <rect key="frame" x="890" y="283" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="110" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSk-9y-myy">
-                                <rect key="frame" x="797" y="406" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="111" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqX-jj-Fva">
+                                <rect key="frame" x="890" y="407" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-In-1QS">
-                                <rect key="frame" x="797" y="283" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJJ-Lb-Qea">
+                                <rect key="frame" x="798" y="283" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="109" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrA-5E-3x5">
-                                <rect key="frame" x="708" y="406" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="110" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-Vi-2UW">
+                                <rect key="frame" x="798" y="407" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="108" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-Nb-kQm">
-                                <rect key="frame" x="431" y="406" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="114" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsu-E3-uc0">
+                                <rect key="frame" x="431" y="527" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwq-mN-F7s">
-                                <rect key="frame" x="338" y="406" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="108" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHu-x5-i95">
+                                <rect key="frame" x="431" y="407" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="114" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDv-8L-nfY">
-                                <rect key="frame" x="431" y="525" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rr-dA-fKG">
+                                <rect key="frame" x="424" y="283" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="113" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB6-5S-GZB">
-                                <rect key="frame" x="338" y="525" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="113" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgX-Up-nOs">
+                                <rect key="frame" x="336" y="527" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="112" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYe-EV-Xxk">
-                                <rect key="frame" x="247" y="525" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22G-zI-h48">
+                                <rect key="frame" x="331" y="283" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIL-zc-Pil">
-                                <rect key="frame" x="247" y="406" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="107" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpu-I3-PAT">
+                                <rect key="frame" x="336" y="407" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y6-dr-rTd">
-                                <rect key="frame" x="338" y="283" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="112" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4X-U2-j9z">
+                                <rect key="frame" x="244" y="527" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="105" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W0-Gc-e9y">
-                                <rect key="frame" x="889" y="283" width="42" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="106" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J20-na-MwO">
+                                <rect key="frame" x="245" y="407" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="25"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-f2-7e0">
-                                <rect key="frame" x="649" y="197" width="77" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-f2-7e0">
+                                <rect key="frame" x="658" y="188" width="100" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BoschSansCHS-Bold" family="Bosch Sans CHS" pointSize="45"/>
+                                <color key="textColor" red="0.56934089470000004" green="0.56934089470000004" blue="0.56934089470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -878,21 +883,21 @@
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="fqy-f2-7e0" id="kco-Li-9Bd"/>
-                        <outletCollection property="labels" destination="0W0-Gc-e9y" collectionClass="NSMutableArray" id="5ao-fQ-d2w"/>
                         <outletCollection property="labels" destination="VtW-55-DHU" collectionClass="NSMutableArray" id="jSM-g8-05Z"/>
-                        <outletCollection property="labels" destination="8Y6-dr-rTd" collectionClass="NSMutableArray" id="CAV-u9-6E7"/>
-                        <outletCollection property="labels" destination="2rw-yX-t6m" collectionClass="NSMutableArray" id="7yB-8S-5Ks"/>
-                        <outletCollection property="labels" destination="PIL-zc-Pil" collectionClass="NSMutableArray" id="doR-qX-vaG"/>
-                        <outletCollection property="labels" destination="qwq-mN-F7s" collectionClass="NSMutableArray" id="FAQ-Nw-RFw"/>
-                        <outletCollection property="labels" destination="Dhn-Nb-kQm" collectionClass="NSMutableArray" id="8qf-gH-ESU"/>
-                        <outletCollection property="labels" destination="RYe-EV-Xxk" collectionClass="NSMutableArray" id="Vm4-mw-187"/>
-                        <outletCollection property="labels" destination="uB6-5S-GZB" collectionClass="NSMutableArray" id="TLx-hQ-YVA"/>
-                        <outletCollection property="labels" destination="JDv-8L-nfY" collectionClass="NSMutableArray" id="3fX-Sg-Pow"/>
-                        <outletCollection property="labels" destination="5EN-yG-Qgf" collectionClass="NSMutableArray" id="HlV-Wx-rIP"/>
-                        <outletCollection property="labels" destination="GSk-9y-myy" collectionClass="NSMutableArray" id="5eh-Nc-mS9"/>
-                        <outletCollection property="labels" destination="zrA-5E-3x5" collectionClass="NSMutableArray" id="j0I-MD-ecf"/>
-                        <outletCollection property="labels" destination="IE7-In-1QS" collectionClass="NSMutableArray" id="5Ez-1X-tDC"/>
-                        <outletCollection property="labels" destination="l8v-gH-K3c" collectionClass="NSMutableArray" id="H6Z-Sv-XxY"/>
+                        <outletCollection property="labels" destination="22G-zI-h48" collectionClass="NSMutableArray" id="8OC-lG-zJs"/>
+                        <outletCollection property="labels" destination="9rr-dA-fKG" collectionClass="NSMutableArray" id="SBN-nj-Qbl"/>
+                        <outletCollection property="labels" destination="J20-na-MwO" collectionClass="NSMutableArray" id="Fqf-Hd-LmL"/>
+                        <outletCollection property="labels" destination="bpu-I3-PAT" collectionClass="NSMutableArray" id="DwR-8V-Iiq"/>
+                        <outletCollection property="labels" destination="WHu-x5-i95" collectionClass="NSMutableArray" id="otr-ek-dde"/>
+                        <outletCollection property="labels" destination="S4X-U2-j9z" collectionClass="NSMutableArray" id="yi0-Zu-S1E"/>
+                        <outletCollection property="labels" destination="CgX-Up-nOs" collectionClass="NSMutableArray" id="Pbb-Eh-mSr"/>
+                        <outletCollection property="labels" destination="Xsu-E3-uc0" collectionClass="NSMutableArray" id="Hxy-Mo-0Ox"/>
+                        <outletCollection property="labels" destination="PDh-v6-aw5" collectionClass="NSMutableArray" id="tUW-Lk-4GI"/>
+                        <outletCollection property="labels" destination="VZn-Zo-A6G" collectionClass="NSMutableArray" id="oKa-Ft-z9l"/>
+                        <outletCollection property="labels" destination="4l9-Vi-2UW" collectionClass="NSMutableArray" id="hZE-yD-tV0"/>
+                        <outletCollection property="labels" destination="UJJ-Lb-Qea" collectionClass="NSMutableArray" id="f5q-Z9-mlE"/>
+                        <outletCollection property="labels" destination="gqX-jj-Fva" collectionClass="NSMutableArray" id="4jo-Rh-ccq"/>
+                        <outletCollection property="labels" destination="sec-hX-Tid" collectionClass="NSMutableArray" id="zTg-7y-lMS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjE-nl-Gy0" userLabel="First Responder" sceneMemberID="firstResponder"/>

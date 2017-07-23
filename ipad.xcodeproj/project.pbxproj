@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B1B92E7643A1CA4CB142C73 /* libPods-ipad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C78DD109B4F45CCDD835D517 /* libPods-ipad.a */; };
+		4527918B1F250A5400010996 /* 11111.db in Resources */ = {isa = PBXBuildFile; fileRef = 4527918A1F250A5400010996 /* 11111.db */; };
 		72112AD51F23265D00A6305B /* hospital.db in Resources */ = {isa = PBXBuildFile; fileRef = 72112AD41F23265D00A6305B /* hospital.db */; };
 		72112AD81F2331B500A6305B /* ShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72112AD71F2331B500A6305B /* ShareData.m */; };
 		72760E681F231DF500377839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E671F231DF500377839 /* main.m */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		258103E04245671C9128EB93 /* Pods-ipad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipad/Pods-ipad.release.xcconfig"; sourceTree = "<group>"; };
+		4527918A1F250A5400010996 /* 11111.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = 11111.db; sourceTree = "<group>"; };
 		72112AD41F23265D00A6305B /* hospital.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hospital.db; sourceTree = "<group>"; };
 		72112AD61F2331B500A6305B /* ShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareData.h; sourceTree = "<group>"; };
 		72112AD71F2331B500A6305B /* ShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareData.m; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				72760E7F1F23217200377839 /* HospitalDataBase.m */,
 				72112AD61F2331B500A6305B /* ShareData.h */,
 				72112AD71F2331B500A6305B /* ShareData.m */,
+				4527918A1F250A5400010996 /* 11111.db */,
 				72112AD41F23265D00A6305B /* hospital.db */,
 				72760E6F1F231DF500377839 /* Main.storyboard */,
 				72760E721F231DF500377839 /* Assets.xcassets */,
@@ -180,6 +183,7 @@
 			files = (
 				72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */,
 				72760E731F231DF500377839 /* Assets.xcassets in Resources */,
+				4527918B1F250A5400010996 /* 11111.db in Resources */,
 				72760E711F231DF500377839 /* Main.storyboard in Resources */,
 				72112AD51F23265D00A6305B /* hospital.db in Resources */,
 			);

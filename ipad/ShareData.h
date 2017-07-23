@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ShareData : NSObject
-
++(void)saveData;
 @end

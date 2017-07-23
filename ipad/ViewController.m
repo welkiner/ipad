@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HospitalDataBase.h"
+#import "ShareData.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>{
     NSArray *_listArray;
 }
@@ -41,6 +42,18 @@
     return cell;
 }
 - (IBAction)shareBtnClick:(id)sender {
+    [ShareData saveData];
+    
+//    UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:@[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"answers"]] applicationActivities:nil];
+//    activity.excludedActivityTypes = @[UIActivityTypeAirDrop];
+//    UIPopoverPresentationController *popover = activity.popoverPresentationController;
+//    if (popover) {
+////        popover.sourceView = self.activityButton;
+//        popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
+//    }
+//    [self presentViewController:activity animated:YES completion:NULL];
+    
+    
 }
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];

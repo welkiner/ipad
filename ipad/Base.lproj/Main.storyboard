@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,9 +34,12 @@
                                 <rect key="frame" x="0.0" y="131" width="375" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orz-Br-S6g">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orz-Br-S6g">
                                 <rect key="frame" x="147" y="604" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="AkD-HU-xQo"/>
+                                    <constraint firstAttribute="height" constant="30" id="anl-QZ-Ajc"/>
+                                </constraints>
                                 <state key="normal" title="分享"/>
                                 <connections>
                                     <action selector="shareBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F8j-Qd-24U"/>
@@ -47,9 +50,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Cec-yC-jp7" secondAttribute="trailing" constant="71" id="0jt-ma-fWf"/>
                             <constraint firstItem="Cec-yC-jp7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="71" id="7a8-W8-pNY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Orz-Br-S6g" secondAttribute="bottom" constant="33" id="Gv4-pM-iFx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ufQ-XJ-rhP" secondAttribute="bottom" constant="100" id="KaF-iY-TgE"/>
                             <constraint firstItem="ufQ-XJ-rhP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PWB-yn-RiF"/>
                             <constraint firstItem="ufQ-XJ-rhP" firstAttribute="top" secondItem="Cec-yC-jp7" secondAttribute="bottom" constant="33" id="WzI-Be-lca"/>
+                            <constraint firstItem="Orz-Br-S6g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQo-w9-BBM"/>
                             <constraint firstAttribute="trailing" secondItem="ufQ-XJ-rhP" secondAttribute="trailing" id="dr7-4b-Ghl"/>
                             <constraint firstItem="Cec-yC-jp7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="x8r-ic-Qlp"/>
                         </constraints>

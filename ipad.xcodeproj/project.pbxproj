@@ -18,6 +18,12 @@
 		457E8E191F25F5D000924F5F /* HospitalSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E181F25F5D000924F5F /* HospitalSearchView.m */; };
 		457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457E8E1A1F25F6D400924F5F /* HospitalSearchView.xib */; };
 		457E8E221F2638A600924F5F /* 1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457E8E211F2638A600924F5F /* 1.storyboard */; };
+		457E8E251F263CB800924F5F /* Button1.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E241F263CB800924F5F /* Button1.m */; };
+		457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E271F26414F00924F5F /* QuestionBaseController.m */; };
+		457E8E2B1F26416E00924F5F /* Q1Controller1.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E2A1F26416E00924F5F /* Q1Controller1.m */; };
+		457E8E2E1F26418500924F5F /* Q1Controller2.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E2D1F26418500924F5F /* Q1Controller2.m */; };
+		457E8E311F26418F00924F5F /* Q1Controller3.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E301F26418F00924F5F /* Q1Controller3.m */; };
+		457E8E341F26419900924F5F /* Q1Controller4.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E331F26419900924F5F /* Q1Controller4.m */; };
 		72112AD51F23265D00A6305B /* hospital.db in Resources */ = {isa = PBXBuildFile; fileRef = 72112AD41F23265D00A6305B /* hospital.db */; };
 		72112AD81F2331B500A6305B /* ShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72112AD71F2331B500A6305B /* ShareData.m */; };
 		72760E681F231DF500377839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E671F231DF500377839 /* main.m */; };
@@ -48,6 +54,18 @@
 		457E8E181F25F5D000924F5F /* HospitalSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalSearchView.m; sourceTree = "<group>"; };
 		457E8E1A1F25F6D400924F5F /* HospitalSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalSearchView.xib; sourceTree = "<group>"; };
 		457E8E211F2638A600924F5F /* 1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 1.storyboard; sourceTree = "<group>"; };
+		457E8E231F263CB800924F5F /* Button1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button1.h; sourceTree = "<group>"; };
+		457E8E241F263CB800924F5F /* Button1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button1.m; sourceTree = "<group>"; };
+		457E8E261F26414F00924F5F /* QuestionBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBaseController.h; sourceTree = "<group>"; };
+		457E8E271F26414F00924F5F /* QuestionBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionBaseController.m; sourceTree = "<group>"; };
+		457E8E291F26416E00924F5F /* Q1Controller1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q1Controller1.h; sourceTree = "<group>"; };
+		457E8E2A1F26416E00924F5F /* Q1Controller1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q1Controller1.m; sourceTree = "<group>"; };
+		457E8E2C1F26418500924F5F /* Q1Controller2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q1Controller2.h; sourceTree = "<group>"; };
+		457E8E2D1F26418500924F5F /* Q1Controller2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q1Controller2.m; sourceTree = "<group>"; };
+		457E8E2F1F26418F00924F5F /* Q1Controller3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q1Controller3.h; sourceTree = "<group>"; };
+		457E8E301F26418F00924F5F /* Q1Controller3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q1Controller3.m; sourceTree = "<group>"; };
+		457E8E321F26419900924F5F /* Q1Controller4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q1Controller4.h; sourceTree = "<group>"; };
+		457E8E331F26419900924F5F /* Q1Controller4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q1Controller4.m; sourceTree = "<group>"; };
 		72112AD41F23265D00A6305B /* hospital.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hospital.db; sourceTree = "<group>"; };
 		72112AD61F2331B500A6305B /* ShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareData.h; sourceTree = "<group>"; };
 		72112AD71F2331B500A6305B /* ShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareData.m; sourceTree = "<group>"; };
@@ -117,6 +135,18 @@
 			isa = PBXGroup;
 			children = (
 				457E8E211F2638A600924F5F /* 1.storyboard */,
+				457E8E231F263CB800924F5F /* Button1.h */,
+				457E8E241F263CB800924F5F /* Button1.m */,
+				457E8E261F26414F00924F5F /* QuestionBaseController.h */,
+				457E8E271F26414F00924F5F /* QuestionBaseController.m */,
+				457E8E291F26416E00924F5F /* Q1Controller1.h */,
+				457E8E2A1F26416E00924F5F /* Q1Controller1.m */,
+				457E8E2C1F26418500924F5F /* Q1Controller2.h */,
+				457E8E2D1F26418500924F5F /* Q1Controller2.m */,
+				457E8E2F1F26418F00924F5F /* Q1Controller3.h */,
+				457E8E301F26418F00924F5F /* Q1Controller3.m */,
+				457E8E321F26419900924F5F /* Q1Controller4.h */,
+				457E8E331F26419900924F5F /* Q1Controller4.m */,
 			);
 			path = 1;
 			sourceTree = "<group>";
@@ -315,13 +345,19 @@
 				4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */,
 				72760E6E1F231DF500377839 /* ViewController.m in Sources */,
 				4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */,
+				457E8E311F26418F00924F5F /* Q1Controller3.m in Sources */,
 				452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */,
 				452791911F25D11300010996 /* UserInfoController2.m in Sources */,
 				72760E6B1F231DF500377839 /* AppDelegate.m in Sources */,
 				4527918E1F25D09C00010996 /* FirstController.m in Sources */,
 				72760E801F23217200377839 /* HospitalDataBase.m in Sources */,
 				72760E681F231DF500377839 /* main.m in Sources */,
+				457E8E251F263CB800924F5F /* Button1.m in Sources */,
 				72112AD81F2331B500A6305B /* ShareData.m in Sources */,
+				457E8E2B1F26416E00924F5F /* Q1Controller1.m in Sources */,
+				457E8E2E1F26418500924F5F /* Q1Controller2.m in Sources */,
+				457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */,
+				457E8E341F26419900924F5F /* Q1Controller4.m in Sources */,
 				457E8E191F25F5D000924F5F /* HospitalSearchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

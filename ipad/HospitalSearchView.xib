@@ -15,6 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeB-a7-WwG">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGg-Tk-3Al">
                     <rect key="frame" x="150" y="108" width="724" height="660"/>
                     <subviews>
@@ -49,12 +53,17 @@
             <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="wGg-Tk-3Al" secondAttribute="bottom" id="5mD-iB-RkR"/>
+                <constraint firstItem="eeB-a7-WwG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qbb-Ia-9cB"/>
+                <constraint firstAttribute="bottom" secondItem="eeB-a7-WwG" secondAttribute="bottom" id="RlJ-PT-NuC"/>
                 <constraint firstItem="wGg-Tk-3Al" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="150" id="XQc-Xi-akI"/>
                 <constraint firstAttribute="trailing" secondItem="wGg-Tk-3Al" secondAttribute="trailing" constant="150" id="Z1K-hs-qps"/>
+                <constraint firstAttribute="trailing" secondItem="eeB-a7-WwG" secondAttribute="trailing" id="aCd-9X-8F8"/>
+                <constraint firstItem="eeB-a7-WwG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kfF-wj-EcD"/>
             </constraints>
             <connections>
                 <outlet property="bgConstraint" destination="5mD-iB-RkR" id="WnI-bi-OF8"/>
                 <outlet property="bgView" destination="wGg-Tk-3Al" id="HY5-UI-1K9"/>
+                <outlet property="bigBgView" destination="eeB-a7-WwG" id="tS0-e4-wpo"/>
                 <outlet property="tableView" destination="b6g-HX-Qna" id="nPb-ED-0Qh"/>
                 <outlet property="textField" destination="ycu-Ft-0YT" id="haL-yU-pVD"/>
             </connections>

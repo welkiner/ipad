@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bgConstraint;
+@property (weak, nonatomic) IBOutlet UIView *bigBgView;
 @property (copy, nonatomic) void (^chooseHospitalName)(NSString *);
 @end
 @implementation HospitalSearchView
@@ -47,7 +48,8 @@
     self.bgView.clipsToBounds = YES;
     self.bgView.layer.cornerRadius = 10.f;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelBtnClick)];
-    [self addGestureRecognizer:tapGesture];
+    [self.bigBgView addGestureRecognizer:tapGesture];
+
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -88,6 +90,16 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     !self.chooseHospitalName?:self.chooseHospitalName(_listArray[indexPath.row][@"PYName"]);
+    self.bgConstraint.constant = -self.frame.size.height;
+    [UIView animateWithDuration:0.25 animations:^{
+        [self layoutIfNeeded];
+        self.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [self removeFromSuperview];
+        }
+    }];
+    
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60.f;

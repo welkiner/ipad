@@ -31,8 +31,8 @@
     @weakify(self);
     [HETAddressPicker pickerIn:self.view defaultInfo:_addressinfo choose:^(HETAddressInfo * _Nonnull newInfo) {
         @strongify(self);
-        _addressinfo = newInfo;
-        [self.cityBtn setTitle:[NSString stringWithFormat:@"%@-%@",_addressinfo.province,_addressinfo.city] forState:UIControlStateNormal];
+        self -> _addressinfo = newInfo;
+        [self.cityBtn setTitle:[NSString stringWithFormat:@"%@-%@",self -> _addressinfo.province,_addressinfo.city] forState:UIControlStateNormal];
     }];
 }
 - (IBAction)hospitalBtnClick:(id)sender {
@@ -40,15 +40,15 @@
     [HospitalSearchView showInView:self.view hospitalName:^(NSString *str) {
         @strongify(self);
         self -> _hospitalInfo = str;
-        [self.cityBtn setTitle:_hospitalInfo forState:UIControlStateNormal];
+        [self.hospital setTitle:self ->_hospitalInfo forState:UIControlStateNormal];
     }];
 }
 - (IBAction)keshiBtnClick:(id)sender {
     @weakify(self);
     [HETKeshiPicker pickerIn:self.view choose:^(NSString * _Nonnull keshiName) {
         @strongify(self);
-        _keshiInfo = keshiName;
-        [self.keshiBtn setTitle:_keshiInfo forState:UIControlStateNormal];
+        self -> _keshiInfo = keshiName;
+        [self.keshiBtn setTitle:self -> _keshiInfo forState:UIControlStateNormal];
     }];
 }
 - (IBAction)submitBtnClick:(id)sender {

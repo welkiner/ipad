@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bgConstraint;
 @property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @property (copy, nonatomic) void ((^pickChanged)(NSArray *));
 @end
@@ -27,29 +28,21 @@
 -(void)configViews{
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelBtnClick)];
     [self addGestureRecognizer:tapGesture];
+    self.bgView.layer.cornerRadius = 10.f;
+    self.bgView.clipsToBounds = YES;
     
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
+    self.pickerView.showsSelectionIndicator = YES;
 }
 
-/**
- *  默认选择第几个
- *
- *  @param indexArray       每一个元素代表一行中选中的第几列
- *  @param animated 是否动画
- */
+
 -(void)defaultSelect:(NSArray *)indexArray animated:(BOOL)animated{
     [indexArray enumerateObjectsUsingBlock:^(NSNumber *obj, NSUInteger idx, BOOL *stop) {
         [self.pickerView selectRow:obj.integerValue inComponent:idx animated:animated];
     }];
 }
 
-/**
- *  展现
- *
- *  @param view        在哪个视图展示
- *  @param indexArray    每一个元素代表一行中选中的第几列
- */
 -(void)showInView:(UIView *)view pickChanged:(void (^)(NSArray *))pickChanged{
     self.pickChanged = pickChanged;
     
@@ -66,7 +59,7 @@
     self.bgConstraint.constant = -self.frame.size.height;
     [self layoutIfNeeded];
     
-    self.bgConstraint.constant = 0;
+    self.bgConstraint.constant = 50;
     self.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
         [self layoutIfNeeded];
@@ -133,7 +126,7 @@
 }
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
-    return 30;
+    return 60;
 }
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     UILabel* pickerLabel = (UILabel*)view;
@@ -144,7 +137,7 @@
         pickerLabel.adjustsFontSizeToFitWidth = YES;
         [pickerLabel setTextAlignment:NSTextAlignmentCenter];
         [pickerLabel setBackgroundColor:[UIColor clearColor]];
-        [pickerLabel setFont:[UIFont systemFontOfSize:16]];
+        [pickerLabel setFont:[UIFont boldSystemFontOfSize:40]];
     }
     // Fill the label text here
     pickerLabel.text=[self pickerView:pickerView titleForRow:row forComponent:component];

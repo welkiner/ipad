@@ -12,7 +12,7 @@
         <!--First Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="FirstController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FirstController" customModule="ipad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FirstController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,7 +56,7 @@
         <!--User Info Controller2-->
         <scene sceneID="Ez4-gH-NkQ">
             <objects>
-                <viewController storyboardIdentifier="UserInfoController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mtb-iD-fr5" customClass="UserInfoController2" customModule="ipad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserInfoController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mtb-iD-fr5" customClass="UserInfoController2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NSa-iB-oEp"/>
                         <viewControllerLayoutGuide type="bottom" id="UNP-9f-Zyt"/>
@@ -82,17 +82,56 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCe-d9-sxC">
-                                <rect key="frame" x="500" y="179" width="424" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="医院全称：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LN1-gM-B3O">
+                                <rect key="frame" x="373" y="347" width="167" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                <state key="normal" title="请选择">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCe-d9-sxC">
+                                <rect key="frame" x="373" y="255" width="293" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="cityBtnClick:" destination="mtb-iD-fr5" eventType="touchUpInside" id="b5h-ZS-VQp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ty5-bg-guK">
+                                <rect key="frame" x="711" y="255" width="293" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="keshiBtnClick:" destination="mtb-iD-fr5" eventType="touchUpInside" id="Kxr-9q-jZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="et5-n5-d9x">
+                                <rect key="frame" x="373" y="409" width="549" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="hospitalBtnClick:" destination="mtb-iD-fr5" eventType="touchUpInside" id="FTz-FH-l6e"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="科室：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eV4-18-Oav">
+                                <rect key="frame" x="711" y="187" width="167" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -104,6 +143,8 @@
                     </view>
                     <connections>
                         <outlet property="cityBtn" destination="rCe-d9-sxC" id="c58-b8-y11"/>
+                        <outlet property="hospital" destination="et5-n5-d9x" id="LeA-hy-vsC"/>
+                        <outlet property="keshiBtn" destination="ty5-bg-guK" id="tVw-PH-iuX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBf-fg-Pur" userLabel="First Responder" sceneMemberID="firstResponder"/>

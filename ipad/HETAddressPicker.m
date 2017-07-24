@@ -16,7 +16,7 @@
 +(void)pickerIn:(UIView *)view defaultInfo:(HETAddressInfo *)defaultInfo choose:(void (^)(HETAddressInfo *))choosed{
     
     void (^add_)(NSMutableArray *)= ^(NSMutableArray *array){
-        [array insertObject:@"----" atIndex:0];
+//        [array insertObject:@"----" atIndex:0];
     };
     
     NSError *error = nil;
@@ -39,13 +39,13 @@
     [pList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger pidx, BOOL * _Nonnull stop) {
         if (defaultInfo.province && ([defaultInfo.province isEqualToString:obj] || [defaultInfo.aliasProvince isEqualToString:obj])) {
             p = pidx;
-            [(NSArray *)originPList[pidx-1][@"c"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [(NSArray *)originPList[pidx][@"c"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 [cList addObject:obj[@"n"]];
             }];
             [cList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger cidx, BOOL * _Nonnull stop) {
                 if (defaultInfo.city && ([defaultInfo.city isEqualToString:obj] || [defaultInfo.aliasCity isEqualToString:obj])) {
                     c = cidx;
-                    [(NSArray *)originPList[pidx-1][@"c"][cidx-1][@"a"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [(NSArray *)originPList[pidx][@"c"][cidx][@"a"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                         [dList addObject:obj[@"s"]];
                     }];
                     [dList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -58,27 +58,27 @@
         }
     }];
     
-    NSArray *totalArray =@[pList,cList,dList];
+    NSArray *totalArray =@[pList,cList];
     
     
     HETPublicPickerView *pickerView = [HETPublicPickerView viewWithTitle:@""];
     
     
     pickerView.numberOfComponent = ^NSInteger{
-        return 3;
+        return 2;
     };
     pickerView.numberOfRowsInComponent = ^NSInteger(NSInteger component){
         return [totalArray[component] count];
     };
     
     pickerView.titleForRowAndComponent =^NSString *(NSInteger componentIndex, NSInteger row){
-        return totalArray[componentIndex][row];
+        if ([totalArray[componentIndex] count] > row) {
+            return totalArray[componentIndex][row];
+        }
+        return @"";
     };
     @weakify(pickerView);
     pickerView.rowChangedNeedReloadComponentIndex =^NSArray *(NSInteger changedComponent,NSInteger changeedRow){
-        if (changedComponent == 2) {
-            return  nil;
-        }
         
         if (changedComponent == 0) {
             [cList removeAllObjects];
@@ -86,46 +86,89 @@
             [dList removeAllObjects];
             add_(dList);
             if (changeedRow == 0) {
-                return @[@1,@2];
+                return @[@1];
             }else{
-                [(NSArray *)originPList[changeedRow-1][@"c"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [(NSArray *)originPList[changeedRow][@"c"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     [cList addObject:obj[@"n"]];
                 }];
-                return @[@1,@2];
+                return @[@1];
             }
         }else{
-            [dList removeAllObjects];
-            add_(dList);
-            if (changeedRow == 0) {
-                return @[@2];
-            }
-            @strongify(pickerView);
-            if ([pickerView currentRowInComponent:0] > 0 &&
-                [(NSArray *)originPList[[pickerView currentRowInComponent:0]-1][@"c"] count] > changeedRow-1) {
-                
-                [(NSArray *)originPList[[pickerView currentRowInComponent:0]-1][@"c"][changeedRow-1][@"a"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    [dList addObject:obj[@"s"]];
-                }];
-            }
-            return @[@2];
+            return nil;
         }
     };
     [pickerView showInView:view pickChanged:^(NSArray *indexArray) {
         @strongify(pickerView);
         HETAddressInfo *info = [HETAddressInfo new];
         info.country = @"中国";
-        if ([indexArray[0] integerValue]>0) {
+//        if ([indexArray[0] integerValue]>0) {
             info.province = pickerView.titleForRowAndComponent(0,[indexArray[0] integerValue]);
-        }
-        if ([indexArray[1] integerValue]>0) {
+//        }
+//        if ([indexArray[1] integerValue]>0) {
             info.city = pickerView.titleForRowAndComponent(1,[indexArray[1] integerValue]);
-        }
-        if ([indexArray[2] integerValue]>0) {
-            info.district = pickerView.titleForRowAndComponent(2,[indexArray[2] integerValue]);
-        }
+//        }
         !choosed?:choosed(info);
     }];
-    [pickerView defaultSelect:@[@(p),@(c),@(d)] animated:YES];
+    [pickerView defaultSelect:@[@(p),@(c)] animated:YES];
 }
-
+-(void)dealloc{
+    
+    NSLog(@"%s",__func__);
+}
 @end
+
+
+@interface HETKeshiPicker()
+@end
+
+@implementation HETKeshiPicker
++(void)pickerIn:(UIView *)view
+         choose:(void (^)(NSString *keshiName))choosed{
+    
+    
+    NSArray *array =@[@"心脏内科",
+                      @"心脏外科",
+                      @"心胸外科",
+                      @"ICU科",
+                      @"骨科",
+                      @"康复科",
+                      @"呼吸内科",
+                      @"麻醉科",
+                      @"儿科",
+                      @"设备科",
+                      @"新生儿疾病科",
+                      @"消毒供应中心",
+                      @"急诊科",
+                      @"普通病房",
+                      @"手术室",
+                      @"其他"];
+    
+    HETPublicPickerView *pickerView = [HETPublicPickerView viewWithTitle:@""];
+    
+    
+    pickerView.numberOfComponent = ^NSInteger{
+        return 1;
+    };
+    pickerView.numberOfRowsInComponent = ^NSInteger(NSInteger component){
+        return array.count;
+    };
+    
+    pickerView.titleForRowAndComponent =^NSString *(NSInteger componentIndex, NSInteger row){
+        return array[row];
+    };
+    pickerView.rowChangedNeedReloadComponentIndex =^NSArray *(NSInteger changedComponent,NSInteger changeedRow){
+        return array;
+    };
+    [pickerView showInView:view pickChanged:^(NSArray *indexArray) {
+        NSInteger i = [indexArray[0] integerValue];
+        !choosed?:choosed(array[i]);
+    }];
+}
+-(void)dealloc{
+    NSLog(@"%s",__func__);
+}
+@end
+
+
+
+

@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HETPublicPickerView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-4d-yCw">
-                    <rect key="frame" x="0.0" y="304" width="320" height="264"/>
+                    <rect key="frame" x="150" y="-80" width="180" height="400"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnO-pr-LKg" userLabel="提示语">
                             <rect key="frame" x="20" y="13" width="0.0" height="20"/>
@@ -20,45 +24,42 @@
                                 <constraint firstAttribute="height" constant="20" id="1bx-ng-pzg"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ker-9D-Pcu" userLabel="线" customClass="HETLine">
-                            <rect key="frame" x="0.0" y="46" width="320" height="1"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ker-9D-Pcu" userLabel="线">
+                            <rect key="frame" x="0.0" y="83" width="180" height="1"/>
+                            <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="qkf-kD-Ab8"/>
                             </constraints>
-                            <connections>
-                                <outlet property="layout" destination="qkf-kD-Ab8" id="adu-40-jMZ"/>
-                            </connections>
                         </view>
                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-9t-971">
-                            <rect key="frame" x="0.0" y="47" width="320" height="217"/>
+                            <rect key="frame" x="0.0" y="84" width="180" height="316"/>
                         </pickerView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLO-a5-F4W">
-                            <rect key="frame" x="235" y="0.0" width="69" height="46"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="14" y="0.0" width="150" height="83"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="69" id="aIx-xt-t3X"/>
+                                <constraint firstAttribute="width" constant="150" id="aIx-xt-t3X"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
                             <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="完成">
-                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="sureBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="atq-EX-cJY"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="iLO-a5-F4W" secondAttribute="trailing" constant="16" id="JGW-cB-kYV"/>
                         <constraint firstItem="qnO-pr-LKg" firstAttribute="leading" secondItem="f8F-4d-yCw" secondAttribute="leading" constant="20" id="K2h-Ye-NsF"/>
-                        <constraint firstAttribute="height" constant="264" id="Qsr-9o-QI3"/>
+                        <constraint firstAttribute="height" constant="400" id="Qsr-9o-QI3"/>
                         <constraint firstItem="Kg1-9t-971" firstAttribute="top" secondItem="Ker-9D-Pcu" secondAttribute="bottom" id="Vfs-3j-8Xc"/>
-                        <constraint firstItem="Ker-9D-Pcu" firstAttribute="top" secondItem="qnO-pr-LKg" secondAttribute="bottom" constant="13" id="gAT-JP-N1r"/>
+                        <constraint firstItem="Ker-9D-Pcu" firstAttribute="top" secondItem="qnO-pr-LKg" secondAttribute="bottom" constant="50" id="gAT-JP-N1r"/>
                         <constraint firstItem="Kg1-9t-971" firstAttribute="leading" secondItem="f8F-4d-yCw" secondAttribute="leading" id="h9X-6Q-01q"/>
                         <constraint firstAttribute="trailing" secondItem="Kg1-9t-971" secondAttribute="trailing" id="nfD-FT-U5h"/>
                         <constraint firstItem="iLO-a5-F4W" firstAttribute="top" secondItem="f8F-4d-yCw" secondAttribute="top" id="qiv-0p-nxM"/>
@@ -70,19 +71,25 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="f8F-4d-yCw" secondAttribute="bottom" id="DFd-X0-BTn"/>
-                <constraint firstItem="f8F-4d-yCw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NAs-Su-UDG"/>
-                <constraint firstAttribute="trailing" secondItem="f8F-4d-yCw" secondAttribute="trailing" id="pRn-wE-pKt"/>
+                <constraint firstItem="f8F-4d-yCw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="150" id="NAs-Su-UDG"/>
+                <constraint firstAttribute="trailing" secondItem="f8F-4d-yCw" secondAttribute="trailing" constant="150" id="pRn-wE-pKt"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <connections>
                 <outlet property="bgConstraint" destination="DFd-X0-BTn" id="MAE-jX-Zkx"/>
+                <outlet property="bgView" destination="f8F-4d-yCw" id="qwG-jF-f4o"/>
                 <outlet property="pickerView" destination="Kg1-9t-971" id="nfO-22-wby"/>
                 <outlet property="title" destination="qnO-pr-LKg" id="arC-b1-IwB"/>
             </connections>
             <point key="canvasLocation" x="603" y="362"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

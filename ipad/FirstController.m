@@ -16,7 +16,8 @@
 
 
 - (IBAction)beginBtnClick:(UIButton *)sender {
-    
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"UserInfoController2"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)shareBtnClick:(id)sender {
     

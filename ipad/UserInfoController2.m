@@ -7,10 +7,18 @@
 //
 
 #import "UserInfoController2.h"
-
-@interface UserInfoController2 ()
+#import "HETAddressPicker.h"
+#import "HospitalSearchView.h"
+#import <ReactiveCocoa.h>
+@interface UserInfoController2 (){
+    HETAddressInfo *_addressinfo;
+    NSString *_keshiInfo;
+    NSString *_hospitalInfo;
+}
 @property (weak, nonatomic) IBOutlet UIButton *cityBtn;
+@property (weak, nonatomic) IBOutlet UIButton *keshiBtn;
 
+@property (weak, nonatomic) IBOutlet UIButton *hospital;
 @end
 
 @implementation UserInfoController2
@@ -20,11 +28,32 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)cityBtnClick:(id)sender {
+    @weakify(self);
+    [HETAddressPicker pickerIn:self.view defaultInfo:_addressinfo choose:^(HETAddressInfo * _Nonnull newInfo) {
+        @strongify(self);
+        _addressinfo = newInfo;
+        [self.cityBtn setTitle:[NSString stringWithFormat:@"%@-%@",_addressinfo.province,_addressinfo.city] forState:UIControlStateNormal];
+    }];
+}
+- (IBAction)hospitalBtnClick:(id)sender {
+    @weakify(self);
+    [HospitalSearchView showInView:self.view hospitalName:^(NSString *str) {
+        @strongify(self);
+        self -> _hospitalInfo = str;
+        [self.cityBtn setTitle:_hospitalInfo forState:UIControlStateNormal];
+    }];
+}
+- (IBAction)keshiBtnClick:(id)sender {
+    @weakify(self);
+    [HETKeshiPicker pickerIn:self.view choose:^(NSString * _Nonnull keshiName) {
+        @strongify(self);
+        _keshiInfo = keshiName;
+        [self.keshiBtn setTitle:_keshiInfo forState:UIControlStateNormal];
+    }];
 }
 - (IBAction)submitBtnClick:(id)sender {
     
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

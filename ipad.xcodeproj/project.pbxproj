@@ -15,6 +15,8 @@
 		4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791991F25D78700010996 /* HETAddressInfo.m */; };
 		4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527919B1F25D78700010996 /* HETAddressPicker.m */; };
 		4527919F1F25D78700010996 /* HETCity.json in Resources */ = {isa = PBXBuildFile; fileRef = 4527919C1F25D78700010996 /* HETCity.json */; };
+		457E8E191F25F5D000924F5F /* HospitalSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E181F25F5D000924F5F /* HospitalSearchView.m */; };
+		457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457E8E1A1F25F6D400924F5F /* HospitalSearchView.xib */; };
 		72112AD51F23265D00A6305B /* hospital.db in Resources */ = {isa = PBXBuildFile; fileRef = 72112AD41F23265D00A6305B /* hospital.db */; };
 		72112AD81F2331B500A6305B /* ShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72112AD71F2331B500A6305B /* ShareData.m */; };
 		72760E681F231DF500377839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E671F231DF500377839 /* main.m */; };
@@ -41,6 +43,9 @@
 		4527919A1F25D78700010996 /* HETAddressPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HETAddressPicker.h; sourceTree = "<group>"; };
 		4527919B1F25D78700010996 /* HETAddressPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HETAddressPicker.m; sourceTree = "<group>"; };
 		4527919C1F25D78700010996 /* HETCity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HETCity.json; sourceTree = "<group>"; };
+		457E8E171F25F5D000924F5F /* HospitalSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalSearchView.h; sourceTree = "<group>"; };
+		457E8E181F25F5D000924F5F /* HospitalSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalSearchView.m; sourceTree = "<group>"; };
+		457E8E1A1F25F6D400924F5F /* HospitalSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalSearchView.xib; sourceTree = "<group>"; };
 		72112AD41F23265D00A6305B /* hospital.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hospital.db; sourceTree = "<group>"; };
 		72112AD61F2331B500A6305B /* ShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareData.h; sourceTree = "<group>"; };
 		72112AD71F2331B500A6305B /* ShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareData.m; sourceTree = "<group>"; };
@@ -96,6 +101,16 @@
 			name = HET;
 			sourceTree = "<group>";
 		};
+		457E8E161F25F4CB00924F5F /* Hospital */ = {
+			isa = PBXGroup;
+			children = (
+				457E8E171F25F5D000924F5F /* HospitalSearchView.h */,
+				457E8E181F25F5D000924F5F /* HospitalSearchView.m */,
+				457E8E1A1F25F6D400924F5F /* HospitalSearchView.xib */,
+			);
+			name = Hospital;
+			sourceTree = "<group>";
+		};
 		72760E5A1F231DF500377839 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +132,7 @@
 		72760E651F231DF500377839 /* ipad */ = {
 			isa = PBXGroup;
 			children = (
+				457E8E161F25F4CB00924F5F /* Hospital */,
 				452791A01F25D78B00010996 /* HET */,
 				72760E691F231DF500377839 /* AppDelegate.h */,
 				72760E6A1F231DF500377839 /* AppDelegate.m */,
@@ -220,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */,
+				457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */,
 				452791961F25D57E00010996 /* HETPublicPickerView.xib in Resources */,
 				72760E731F231DF500377839 /* Assets.xcassets in Resources */,
 				72760E711F231DF500377839 /* Main.storyboard in Resources */,
@@ -293,6 +310,7 @@
 				72760E801F23217200377839 /* HospitalDataBase.m in Sources */,
 				72760E681F231DF500377839 /* main.m in Sources */,
 				72112AD81F2331B500A6305B /* ShareData.m in Sources */,
+				457E8E191F25F5D000924F5F /* HospitalSearchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

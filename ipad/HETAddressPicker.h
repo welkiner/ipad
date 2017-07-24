@@ -24,4 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
     defaultInfo:(HETAddressInfo * __nullable)defaultInfo
          choose:(void (^)(HETAddressInfo *newInfo))choosed;
 @end
+
+@interface HETKeshiPicker : NSObject
++(void)pickerIn:(UIView *)view
+         choose:(void (^)(NSString *keshiName))choosed;
+@end
+
 NS_ASSUME_NONNULL_END

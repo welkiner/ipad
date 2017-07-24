@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2B1B92E7643A1CA4CB142C73 /* libPods-ipad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C78DD109B4F45CCDD835D517 /* libPods-ipad.a */; };
-		4527918B1F250A5400010996 /* 11111.db in Resources */ = {isa = PBXBuildFile; fileRef = 4527918A1F250A5400010996 /* 11111.db */; };
+		4527918E1F25D09C00010996 /* FirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527918D1F25D09C00010996 /* FirstController.m */; };
+		452791911F25D11300010996 /* UserInfoController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791901F25D11300010996 /* UserInfoController2.m */; };
+		452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791931F25D57E00010996 /* HETPublicPickerView.m */; };
+		452791961F25D57E00010996 /* HETPublicPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452791941F25D57E00010996 /* HETPublicPickerView.xib */; };
+		4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791991F25D78700010996 /* HETAddressInfo.m */; };
+		4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527919B1F25D78700010996 /* HETAddressPicker.m */; };
+		4527919F1F25D78700010996 /* HETCity.json in Resources */ = {isa = PBXBuildFile; fileRef = 4527919C1F25D78700010996 /* HETCity.json */; };
 		72112AD51F23265D00A6305B /* hospital.db in Resources */ = {isa = PBXBuildFile; fileRef = 72112AD41F23265D00A6305B /* hospital.db */; };
 		72112AD81F2331B500A6305B /* ShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72112AD71F2331B500A6305B /* ShareData.m */; };
 		72760E681F231DF500377839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E671F231DF500377839 /* main.m */; };
@@ -22,7 +28,19 @@
 
 /* Begin PBXFileReference section */
 		258103E04245671C9128EB93 /* Pods-ipad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipad/Pods-ipad.release.xcconfig"; sourceTree = "<group>"; };
-		4527918A1F250A5400010996 /* 11111.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = 11111.db; sourceTree = "<group>"; };
+		4527918C1F25D09C00010996 /* FirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstController.h; sourceTree = "<group>"; };
+		4527918D1F25D09C00010996 /* FirstController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstController.m; sourceTree = "<group>"; };
+		4527918F1F25D11300010996 /* UserInfoController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoController2.h; sourceTree = "<group>"; };
+		452791901F25D11300010996 /* UserInfoController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoController2.m; sourceTree = "<group>"; };
+		452791921F25D57E00010996 /* HETPublicPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HETPublicPickerView.h; sourceTree = "<group>"; };
+		452791931F25D57E00010996 /* HETPublicPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HETPublicPickerView.m; sourceTree = "<group>"; };
+		452791941F25D57E00010996 /* HETPublicPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HETPublicPickerView.xib; sourceTree = "<group>"; };
+		452791971F25D78700010996 /* HETAddressInfo_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HETAddressInfo_Private.h; sourceTree = "<group>"; };
+		452791981F25D78700010996 /* HETAddressInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HETAddressInfo.h; sourceTree = "<group>"; };
+		452791991F25D78700010996 /* HETAddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HETAddressInfo.m; sourceTree = "<group>"; };
+		4527919A1F25D78700010996 /* HETAddressPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HETAddressPicker.h; sourceTree = "<group>"; };
+		4527919B1F25D78700010996 /* HETAddressPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HETAddressPicker.m; sourceTree = "<group>"; };
+		4527919C1F25D78700010996 /* HETCity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HETCity.json; sourceTree = "<group>"; };
 		72112AD41F23265D00A6305B /* hospital.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hospital.db; sourceTree = "<group>"; };
 		72112AD61F2331B500A6305B /* ShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareData.h; sourceTree = "<group>"; };
 		72112AD71F2331B500A6305B /* ShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareData.m; sourceTree = "<group>"; };
@@ -62,6 +80,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		452791A01F25D78B00010996 /* HET */ = {
+			isa = PBXGroup;
+			children = (
+				452791971F25D78700010996 /* HETAddressInfo_Private.h */,
+				452791981F25D78700010996 /* HETAddressInfo.h */,
+				452791991F25D78700010996 /* HETAddressInfo.m */,
+				4527919A1F25D78700010996 /* HETAddressPicker.h */,
+				4527919B1F25D78700010996 /* HETAddressPicker.m */,
+				4527919C1F25D78700010996 /* HETCity.json */,
+				452791921F25D57E00010996 /* HETPublicPickerView.h */,
+				452791931F25D57E00010996 /* HETPublicPickerView.m */,
+				452791941F25D57E00010996 /* HETPublicPickerView.xib */,
+			);
+			name = HET;
+			sourceTree = "<group>";
+		};
 		72760E5A1F231DF500377839 = {
 			isa = PBXGroup;
 			children = (
@@ -83,15 +117,19 @@
 		72760E651F231DF500377839 /* ipad */ = {
 			isa = PBXGroup;
 			children = (
+				452791A01F25D78B00010996 /* HET */,
 				72760E691F231DF500377839 /* AppDelegate.h */,
 				72760E6A1F231DF500377839 /* AppDelegate.m */,
+				4527918C1F25D09C00010996 /* FirstController.h */,
+				4527918D1F25D09C00010996 /* FirstController.m */,
+				4527918F1F25D11300010996 /* UserInfoController2.h */,
+				452791901F25D11300010996 /* UserInfoController2.m */,
 				72760E6C1F231DF500377839 /* ViewController.h */,
 				72760E6D1F231DF500377839 /* ViewController.m */,
 				72760E7E1F23217200377839 /* HospitalDataBase.h */,
 				72760E7F1F23217200377839 /* HospitalDataBase.m */,
 				72112AD61F2331B500A6305B /* ShareData.h */,
 				72112AD71F2331B500A6305B /* ShareData.m */,
-				4527918A1F250A5400010996 /* 11111.db */,
 				72112AD41F23265D00A6305B /* hospital.db */,
 				72760E6F1F231DF500377839 /* Main.storyboard */,
 				72760E721F231DF500377839 /* Assets.xcassets */,
@@ -182,9 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */,
+				452791961F25D57E00010996 /* HETPublicPickerView.xib in Resources */,
 				72760E731F231DF500377839 /* Assets.xcassets in Resources */,
-				4527918B1F250A5400010996 /* 11111.db in Resources */,
 				72760E711F231DF500377839 /* Main.storyboard in Resources */,
+				4527919F1F25D78700010996 /* HETCity.json in Resources */,
 				72112AD51F23265D00A6305B /* hospital.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,8 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */,
 				72760E6E1F231DF500377839 /* ViewController.m in Sources */,
+				4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */,
+				452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */,
+				452791911F25D11300010996 /* UserInfoController2.m in Sources */,
 				72760E6B1F231DF500377839 /* AppDelegate.m in Sources */,
+				4527918E1F25D09C00010996 /* FirstController.m in Sources */,
 				72760E801F23217200377839 /* HospitalDataBase.m in Sources */,
 				72760E681F231DF500377839 /* main.m in Sources */,
 				72112AD81F2331B500A6305B /* ShareData.m in Sources */,
@@ -377,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -391,6 +436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

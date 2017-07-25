@@ -27,11 +27,11 @@
 		457E8E371F27192900924F5F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E361F27192900924F5F /* UserModel.m */; };
 		457E8E3A1F2728E500924F5F /* FinishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E391F2728E500924F5F /* FinishController.m */; };
 		457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E3C1F272B5500924F5F /* AnswerData.m */; };
+		45BF43661F2737F6004D5361 /* answerDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 45BF43651F2737F6004D5361 /* answerDB.db */; };
 		72112AD51F23265D00A6305B /* hospital.db in Resources */ = {isa = PBXBuildFile; fileRef = 72112AD41F23265D00A6305B /* hospital.db */; };
 		72112AD81F2331B500A6305B /* ShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72112AD71F2331B500A6305B /* ShareData.m */; };
 		72760E681F231DF500377839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E671F231DF500377839 /* main.m */; };
 		72760E6B1F231DF500377839 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E6A1F231DF500377839 /* AppDelegate.m */; };
-		72760E6E1F231DF500377839 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E6D1F231DF500377839 /* ViewController.m */; };
 		72760E711F231DF500377839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E6F1F231DF500377839 /* Main.storyboard */; };
 		72760E731F231DF500377839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72760E721F231DF500377839 /* Assets.xcassets */; };
 		72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E741F231DF500377839 /* LaunchScreen.storyboard */; };
@@ -75,6 +75,7 @@
 		457E8E391F2728E500924F5F /* FinishController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishController.m; sourceTree = "<group>"; };
 		457E8E3B1F272B5500924F5F /* AnswerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerData.h; sourceTree = "<group>"; };
 		457E8E3C1F272B5500924F5F /* AnswerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerData.m; sourceTree = "<group>"; };
+		45BF43651F2737F6004D5361 /* answerDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = answerDB.db; sourceTree = "<group>"; };
 		72112AD41F23265D00A6305B /* hospital.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hospital.db; sourceTree = "<group>"; };
 		72112AD61F2331B500A6305B /* ShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareData.h; sourceTree = "<group>"; };
 		72112AD71F2331B500A6305B /* ShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareData.m; sourceTree = "<group>"; };
@@ -82,8 +83,6 @@
 		72760E671F231DF500377839 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		72760E691F231DF500377839 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72760E6A1F231DF500377839 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		72760E6C1F231DF500377839 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		72760E6D1F231DF500377839 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		72760E701F231DF500377839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72760E721F231DF500377839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72760E751F231DF500377839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -190,8 +189,6 @@
 				4527918D1F25D09C00010996 /* FirstController.m */,
 				4527918F1F25D11300010996 /* UserInfoController2.h */,
 				452791901F25D11300010996 /* UserInfoController2.m */,
-				72760E6C1F231DF500377839 /* ViewController.h */,
-				72760E6D1F231DF500377839 /* ViewController.m */,
 				72760E7E1F23217200377839 /* HospitalDataBase.h */,
 				72760E7F1F23217200377839 /* HospitalDataBase.m */,
 				72112AD61F2331B500A6305B /* ShareData.h */,
@@ -202,6 +199,7 @@
 				457E8E361F27192900924F5F /* UserModel.m */,
 				457E8E381F2728E500924F5F /* FinishController.h */,
 				457E8E391F2728E500924F5F /* FinishController.m */,
+				45BF43651F2737F6004D5361 /* answerDB.db */,
 				72112AD41F23265D00A6305B /* hospital.db */,
 				72760E6F1F231DF500377839 /* Main.storyboard */,
 				72760E721F231DF500377839 /* Assets.xcassets */,
@@ -263,8 +261,8 @@
 				TargetAttributes = {
 					72760E621F231DF500377839 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = WU2WFZ2B66;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = DG4DS3J99U;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -295,6 +293,7 @@
 				457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */,
 				452791961F25D57E00010996 /* HETPublicPickerView.xib in Resources */,
 				72760E731F231DF500377839 /* Assets.xcassets in Resources */,
+				45BF43661F2737F6004D5361 /* answerDB.db in Resources */,
 				457E8E221F2638A600924F5F /* 1.storyboard in Resources */,
 				72760E711F231DF500377839 /* Main.storyboard in Resources */,
 				4527919F1F25D78700010996 /* HETCity.json in Resources */,
@@ -359,7 +358,6 @@
 			files = (
 				4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */,
 				457E8E3A1F2728E500924F5F /* FinishController.m in Sources */,
-				72760E6E1F231DF500377839 /* ViewController.m in Sources */,
 				4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */,
 				457E8E311F26418F00924F5F /* Q1Controller3.m in Sources */,
 				452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */,
@@ -500,15 +498,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WU2WFZ2B66;
+				DEVELOPMENT_TEAM = DG4DS3J99U;
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bbcd690c-9d27-4c58-9b2a-da0e026dfecf";
-				PROVISIONING_PROFILE_SPECIFIER = developAll;
-				TARGETED_DEVICE_FAMILY = 2;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -517,14 +515,16 @@
 			baseConfigurationReference = 258103E04245671C9128EB93 /* Pods-ipad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = DG4DS3J99U;
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

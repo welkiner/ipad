@@ -10,4 +10,5 @@
 #import "UserModel.h"
 @interface AnswerData : NSObject
 +(void)saveData:(UserModel *)model;
++(void)csvData;
 @end

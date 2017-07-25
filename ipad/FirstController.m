@@ -7,7 +7,8 @@
 //
 
 #import "FirstController.h"
-
+#import "UserModel.h"
+#import "AnswerData.h"
 @interface FirstController ()
 
 @end
@@ -20,7 +21,16 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)shareBtnClick:(id)sender {
-    
+//    [AnswerData csvData];
+    UserModel *model = [UserModel new];
+    model.hospital = @"北京医院";
+    model.province = @"北京";
+    model.question1 = @"A";
+    model.question2 = @"A";
+    model.question3 = @"A";
+    model.question4 = @"ABC";
+    [AnswerData saveData:model];
+    [AnswerData csvData];
 }
 
 - (void)viewDidLoad {

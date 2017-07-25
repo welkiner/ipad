@@ -9,7 +9,10 @@
 #import "FirstController.h"
 #import "UserModel.h"
 #import "AnswerData.h"
-@interface FirstController ()
+#import "GCDWebUploader.h"
+@interface FirstController (){
+    GCDWebUploader* _webUploader;
+}
 
 @end
 
@@ -21,16 +24,12 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)shareBtnClick:(id)sender {
-//    [AnswerData csvData];
-    UserModel *model = [UserModel new];
-    model.hospital = @"北京医院";
-    model.province = @"北京";
-    model.question1 = @"A";
-    model.question2 = @"A";
-    model.question3 = @"A";
-    model.question4 = @"ABC";
-    [AnswerData saveData:model];
     [AnswerData csvData];
+    
+    NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    _webUploader = [[GCDWebUploader alloc] initWithUploadDirectory:documentsPath];
+    [_webUploader start];
+    NSLog(@"Visit %@ in your web browser", _webUploader.serverURL);
 }
 
 - (void)viewDidLoad {

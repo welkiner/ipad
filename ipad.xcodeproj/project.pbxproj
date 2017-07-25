@@ -28,6 +28,8 @@
 		457E8E3A1F2728E500924F5F /* FinishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E391F2728E500924F5F /* FinishController.m */; };
 		457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E3C1F272B5500924F5F /* AnswerData.m */; };
 		45BF43661F2737F6004D5361 /* answerDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 45BF43651F2737F6004D5361 /* answerDB.db */; };
+		45DD5CE01F279F0C00E7B6EB /* GCDWebUploader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45DD5CDD1F279F0C00E7B6EB /* GCDWebUploader.bundle */; };
+		45DD5CE11F279F0C00E7B6EB /* GCDWebUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */; };
 		72112AD51F23265D00A6305B /* hospital.db in Resources */ = {isa = PBXBuildFile; fileRef = 72112AD41F23265D00A6305B /* hospital.db */; };
 		72112AD81F2331B500A6305B /* ShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72112AD71F2331B500A6305B /* ShareData.m */; };
 		72760E681F231DF500377839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E671F231DF500377839 /* main.m */; };
@@ -76,6 +78,9 @@
 		457E8E3B1F272B5500924F5F /* AnswerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerData.h; sourceTree = "<group>"; };
 		457E8E3C1F272B5500924F5F /* AnswerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerData.m; sourceTree = "<group>"; };
 		45BF43651F2737F6004D5361 /* answerDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = answerDB.db; sourceTree = "<group>"; };
+		45DD5CDD1F279F0C00E7B6EB /* GCDWebUploader.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GCDWebUploader.bundle; sourceTree = "<group>"; };
+		45DD5CDE1F279F0C00E7B6EB /* GCDWebUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebUploader.h; sourceTree = "<group>"; };
+		45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebUploader.m; sourceTree = "<group>"; };
 		72112AD41F23265D00A6305B /* hospital.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hospital.db; sourceTree = "<group>"; };
 		72112AD61F2331B500A6305B /* ShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareData.h; sourceTree = "<group>"; };
 		72112AD71F2331B500A6305B /* ShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareData.m; sourceTree = "<group>"; };
@@ -159,6 +164,16 @@
 			path = 1;
 			sourceTree = "<group>";
 		};
+		45DD5CDC1F279F0C00E7B6EB /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				45DD5CDD1F279F0C00E7B6EB /* GCDWebUploader.bundle */,
+				45DD5CDE1F279F0C00E7B6EB /* GCDWebUploader.h */,
+				45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
 		72760E5A1F231DF500377839 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +195,7 @@
 		72760E651F231DF500377839 /* ipad */ = {
 			isa = PBXGroup;
 			children = (
+				45DD5CDC1F279F0C00E7B6EB /* 3rd */,
 				457E8E201F26386700924F5F /* 1 */,
 				457E8E161F25F4CB00924F5F /* Hospital */,
 				452791A01F25D78B00010996 /* HET */,
@@ -292,6 +308,7 @@
 				72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */,
 				457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */,
 				452791961F25D57E00010996 /* HETPublicPickerView.xib in Resources */,
+				45DD5CE01F279F0C00E7B6EB /* GCDWebUploader.bundle in Resources */,
 				72760E731F231DF500377839 /* Assets.xcassets in Resources */,
 				45BF43661F2737F6004D5361 /* answerDB.db in Resources */,
 				457E8E221F2638A600924F5F /* 1.storyboard in Resources */,
@@ -375,6 +392,7 @@
 				457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */,
 				457E8E341F26419900924F5F /* Q1Controller4.m in Sources */,
 				457E8E191F25F5D000924F5F /* HospitalSearchView.m in Sources */,
+				45DD5CE11F279F0C00E7B6EB /* GCDWebUploader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -524,7 +542,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

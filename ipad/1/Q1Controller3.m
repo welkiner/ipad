@@ -7,7 +7,7 @@
 //
 
 #import "Q1Controller3.h"
-
+#import "Q1Controller4.h"
 @interface Q1Controller3 ()
 
 @end
@@ -19,8 +19,18 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)nextBtnClick:(id)sender {
+    self.model.question3 = [self answerStr];
+    if (self.model.question3.length == 0) {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+        return;
+    }
+    Q1Controller4 *con = [Q1Controller4 controllerWithModel:self.model];
+    [self.navigationController pushViewController:con animated:YES];
 }
 - (IBAction)backBtnClick:(id)sender {
+    self.model.question3 = nil;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

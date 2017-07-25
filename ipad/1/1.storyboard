@@ -72,6 +72,11 @@
                             <constraint firstItem="C7i-0g-nGE" firstAttribute="top" secondItem="u9T-ql-4MQ" secondAttribute="bottom" id="zQp-xW-HWU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="answerBtns" destination="pRF-3H-HUg" id="hnl-vj-Cte"/>
+                        <outletCollection property="answerBtns" destination="hbh-ce-vFd" id="DHP-3h-UzC"/>
+                        <outletCollection property="answerBtns" destination="V4s-xo-EzB" id="5LV-OE-XZn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ded-eU-xOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,6 +168,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClick:" destination="hKU-GB-tr3" eventType="touchUpInside" id="imr-QV-cUf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,6 +181,15 @@
                             <constraint firstItem="0gn-ba-FSy" firstAttribute="top" secondItem="w09-S7-yaa" secondAttribute="top" id="rQw-d4-X9L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="answerBtns" destination="qVL-FO-1I6" id="Q4x-di-UPC"/>
+                        <outletCollection property="answerBtns" destination="rf6-7n-fJL" id="k3w-ka-m9q"/>
+                        <outletCollection property="answerBtns" destination="HJ2-Vq-fzT" id="nfS-WC-Hpp"/>
+                        <outletCollection property="answerBtns" destination="fqa-pB-NEV" id="XgV-yH-8nW"/>
+                        <outletCollection property="answerBtns" destination="9wU-ip-Ic3" id="YoU-lc-kUl"/>
+                        <outletCollection property="answerBtns" destination="QhN-dj-hzB" id="nID-WA-bJq"/>
+                        <outletCollection property="answerBtns" destination="7Lu-JO-gwx" id="QVt-Hy-p8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrM-HZ-LCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,6 +218,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backBtnClick:" destination="Kcn-Oj-JeC" eventType="touchUpInside" id="Zdu-a7-ZGT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XM-ha-JCl" customClass="Button1">
                                 <rect key="frame" x="240" y="337" width="544" height="73"/>
@@ -228,6 +248,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClick:" destination="Kcn-Oj-JeC" eventType="touchUpInside" id="Qsq-fB-Sit"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -238,6 +261,10 @@
                             <constraint firstItem="296-9R-lnM" firstAttribute="top" secondItem="76W-I8-YGJ" secondAttribute="bottom" id="q2p-gE-Vkd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="answerBtns" destination="6XM-ha-JCl" id="wkS-QG-koX"/>
+                        <outletCollection property="answerBtns" destination="Lli-CP-Og5" id="iEU-Xa-LbV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YT3-XK-IUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,6 +293,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backBtnClick:" destination="TxR-0i-uFw" eventType="touchUpInside" id="deV-iH-gPf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duV-fV-k1g" customClass="Button1">
                                 <rect key="frame" x="248" y="523" width="544" height="42"/>
@@ -338,6 +368,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClick:" destination="TxR-0i-uFw" eventType="touchUpInside" id="5M3-5g-XDQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -348,6 +381,15 @@
                             <constraint firstItem="GHm-Q5-bh9" firstAttribute="top" secondItem="zwH-o7-0th" secondAttribute="top" id="cki-d5-zxF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="answerBtns" destination="lJX-oT-au1" id="9Cn-OP-mOQ"/>
+                        <outletCollection property="answerBtns" destination="1VD-RB-isF" id="hVw-Vc-VKa"/>
+                        <outletCollection property="answerBtns" destination="mxR-FZ-UW1" id="wAj-LH-eki"/>
+                        <outletCollection property="answerBtns" destination="83A-Pl-GE3" id="t03-LX-21Y"/>
+                        <outletCollection property="answerBtns" destination="duV-fV-k1g" id="hBh-jd-RpB"/>
+                        <outletCollection property="answerBtns" destination="I2t-9Q-VJH" id="Qlp-6t-EXB"/>
+                        <outletCollection property="answerBtns" destination="SAq-bk-txl" id="3Gq-54-XPB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4T1-zE-LTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

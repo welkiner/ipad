@@ -7,7 +7,7 @@
 //
 
 #import "Q1Controller1.h"
-
+#import "Q1Controller2.h"
 @interface Q1Controller1 ()
 
 @end
@@ -18,9 +18,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+//-(void)answerBtnsClick:(Button1 *)btn{
+//    btn.selected = !btn.selected;
+//}
 - (IBAction)nextBtnClick:(id)sender {
-}
-- (IBAction)backBtnClick:(id)sender {
+    self.model.question1 = [self answerStr];
+    if (self.model.question1.length == 0) {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+        return;
+    }
+    Q1Controller2 *con = [Q1Controller2 controllerWithModel:self.model];
+    [self.navigationController pushViewController:con animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

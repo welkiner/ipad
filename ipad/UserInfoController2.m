@@ -10,10 +10,11 @@
 #import "HETAddressPicker.h"
 #import "HospitalSearchView.h"
 #import <ReactiveCocoa.h>
+#import "Q1Controller1.h"
+#import "UserModel.h"
 @interface UserInfoController2 (){
     HETAddressInfo *_addressinfo;
-    NSString *_keshiInfo;
-    NSString *_hospitalInfo;
+    UserModel *_model;
 }
 @property (weak, nonatomic) IBOutlet UIButton *cityBtn;
 @property (weak, nonatomic) IBOutlet UIButton *keshiBtn;
@@ -25,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _model = [UserModel new];
     // Do any additional setup after loading the view.
 }
 - (IBAction)cityBtnClick:(id)sender {
@@ -32,6 +34,8 @@
     [HETAddressPicker pickerIn:self.view defaultInfo:_addressinfo choose:^(HETAddressInfo * _Nonnull newInfo) {
         @strongify(self);
         self -> _addressinfo = newInfo;
+        self -> _model.province = _addressinfo.province;
+        self -> _model.city = _addressinfo.city;
         [self.cityBtn setTitle:[NSString stringWithFormat:@"%@-%@",self -> _addressinfo.province,_addressinfo.city] forState:UIControlStateNormal];
     }];
 }
@@ -39,20 +43,28 @@
     @weakify(self);
     [HospitalSearchView showInView:self.view hospitalName:^(NSString *str) {
         @strongify(self);
-        self -> _hospitalInfo = str;
-        [self.hospital setTitle:self ->_hospitalInfo forState:UIControlStateNormal];
+        self -> _model.hospital = str;
+        [self.hospital setTitle:self ->_model.hospital forState:UIControlStateNormal];
     }];
 }
 - (IBAction)keshiBtnClick:(id)sender {
     @weakify(self);
     [HETKeshiPicker pickerIn:self.view choose:^(NSString * _Nonnull keshiName) {
         @strongify(self);
-        self -> _keshiInfo = keshiName;
-        [self.keshiBtn setTitle:self -> _keshiInfo forState:UIControlStateNormal];
+        self -> _model.keshi = keshiName;
+        [self.keshiBtn setTitle:self -> _model.keshi forState:UIControlStateNormal];
     }];
 }
 - (IBAction)submitBtnClick:(id)sender {
-    
+    if (_model.keshi.length == 0 ||
+        _model.hospital.length == 0 ||
+        _model.province.length == 0) {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写所有资料" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+        return;
+    }
+    Q1Controller1 *con = [Q1Controller1 controllerWithModel:_model];
+    [self.navigationController pushViewController:con animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

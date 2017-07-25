@@ -7,7 +7,8 @@
 //
 
 #import "Q1Controller4.h"
-
+#import "FinishController.h"
+#import "AnswerData.h"
 @interface Q1Controller4 ()
 
 @end
@@ -19,8 +20,26 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)nextBtnClick:(id)sender {
+    self.model.question4 = [self answerStr];
+    if (self.model.question4.length == 0) {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+        return;
+    }
+    
+    [AnswerData saveData:self.model];
+    FinishController *con = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FinishController"];
+    [self.navigationController pushViewController:con animated:YES];
 }
+
+-(BOOL)mutiAnswer{
+    return YES;
+}
+
+
 - (IBAction)backBtnClick:(id)sender {
+    self.model.question4 = nil;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

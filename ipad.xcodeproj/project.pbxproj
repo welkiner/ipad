@@ -31,13 +31,14 @@
 		45DD5CE01F279F0C00E7B6EB /* GCDWebUploader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45DD5CDD1F279F0C00E7B6EB /* GCDWebUploader.bundle */; };
 		45DD5CE11F279F0C00E7B6EB /* GCDWebUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */; };
 		72112AD51F23265D00A6305B /* hospital.db in Resources */ = {isa = PBXBuildFile; fileRef = 72112AD41F23265D00A6305B /* hospital.db */; };
-		72112AD81F2331B500A6305B /* ShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72112AD71F2331B500A6305B /* ShareData.m */; };
 		72760E681F231DF500377839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E671F231DF500377839 /* main.m */; };
 		72760E6B1F231DF500377839 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E6A1F231DF500377839 /* AppDelegate.m */; };
 		72760E711F231DF500377839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E6F1F231DF500377839 /* Main.storyboard */; };
 		72760E731F231DF500377839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72760E721F231DF500377839 /* Assets.xcassets */; };
 		72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E741F231DF500377839 /* LaunchScreen.storyboard */; };
 		72760E801F23217200377839 /* HospitalDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E7F1F23217200377839 /* HospitalDataBase.m */; };
+		72FA82101F28382A00B6F371 /* WifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FA820F1F28382A00B6F371 /* WifiView.m */; };
+		72FA82121F2838B700B6F371 /* WifiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72FA82111F2838B700B6F371 /* WifiView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,8 +83,6 @@
 		45DD5CDE1F279F0C00E7B6EB /* GCDWebUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebUploader.h; sourceTree = "<group>"; };
 		45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebUploader.m; sourceTree = "<group>"; };
 		72112AD41F23265D00A6305B /* hospital.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hospital.db; sourceTree = "<group>"; };
-		72112AD61F2331B500A6305B /* ShareData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareData.h; sourceTree = "<group>"; };
-		72112AD71F2331B500A6305B /* ShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareData.m; sourceTree = "<group>"; };
 		72760E631F231DF500377839 /* ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72760E671F231DF500377839 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		72760E691F231DF500377839 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +93,9 @@
 		72760E771F231DF500377839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72760E7E1F23217200377839 /* HospitalDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalDataBase.h; sourceTree = "<group>"; };
 		72760E7F1F23217200377839 /* HospitalDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalDataBase.m; sourceTree = "<group>"; };
+		72FA820E1F28382A00B6F371 /* WifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiView.h; sourceTree = "<group>"; };
+		72FA820F1F28382A00B6F371 /* WifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiView.m; sourceTree = "<group>"; };
+		72FA82111F2838B700B6F371 /* WifiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiView.xib; sourceTree = "<group>"; };
 		C78DD109B4F45CCDD835D517 /* libPods-ipad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ipad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7239B0B802F7C67ED749344 /* Pods-ipad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ipad/Pods-ipad.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,14 +209,15 @@
 				452791901F25D11300010996 /* UserInfoController2.m */,
 				72760E7E1F23217200377839 /* HospitalDataBase.h */,
 				72760E7F1F23217200377839 /* HospitalDataBase.m */,
-				72112AD61F2331B500A6305B /* ShareData.h */,
-				72112AD71F2331B500A6305B /* ShareData.m */,
 				457E8E3B1F272B5500924F5F /* AnswerData.h */,
 				457E8E3C1F272B5500924F5F /* AnswerData.m */,
 				457E8E351F27192900924F5F /* UserModel.h */,
 				457E8E361F27192900924F5F /* UserModel.m */,
 				457E8E381F2728E500924F5F /* FinishController.h */,
 				457E8E391F2728E500924F5F /* FinishController.m */,
+				72FA820E1F28382A00B6F371 /* WifiView.h */,
+				72FA820F1F28382A00B6F371 /* WifiView.m */,
+				72FA82111F2838B700B6F371 /* WifiView.xib */,
 				45BF43651F2737F6004D5361 /* answerDB.db */,
 				72112AD41F23265D00A6305B /* hospital.db */,
 				72760E6F1F231DF500377839 /* Main.storyboard */,
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FA82121F2838B700B6F371 /* WifiView.xib in Resources */,
 				72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */,
 				457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */,
 				452791961F25D57E00010996 /* HETPublicPickerView.xib in Resources */,
@@ -384,8 +388,8 @@
 				457E8E371F27192900924F5F /* UserModel.m in Sources */,
 				72760E801F23217200377839 /* HospitalDataBase.m in Sources */,
 				72760E681F231DF500377839 /* main.m in Sources */,
+				72FA82101F28382A00B6F371 /* WifiView.m in Sources */,
 				457E8E251F263CB800924F5F /* Button1.m in Sources */,
-				72112AD81F2331B500A6305B /* ShareData.m in Sources */,
 				457E8E2B1F26416E00924F5F /* Q1Controller1.m in Sources */,
 				457E8E2E1F26418500924F5F /* Q1Controller2.m in Sources */,
 				457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */,

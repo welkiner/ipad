@@ -67,17 +67,21 @@ static FMDatabase *__fmDB;
     }
     [__fmDB close];
 }
-
+#define COMMAA ','
 +(void)csvData{
+    [self shareInstance];
     if (![__fmDB open]) {
         return ;
     }
     FMResultSet *results = [__fmDB executeQuery:@"SELECT * FROM answerTable"];
-    CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initForWritingToCSVFile:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"answers.csv"]];
+    
+    NSOutputStream *stream = [NSOutputStream outputStreamToFileAtPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"answers.csv"] append:NO];
+    NSStringEncoding enc=CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:enc delimiter:COMMAA];
     BOOL isFirst = YES;
     while([results next]) {
         NSDictionary *resultRow = [results resultDictionary];
-        NSArray *orderedKeys = [[resultRow allKeys] sortedArrayUsingSelector:@selector(compare:)];
+        NSArray *orderedKeys = @[@"id",@"province",@"city",@"hospital",@"keshi",@"question1",@"question2",@"question3",@"question4"];
         if (isFirst) {
             isFirst = NO;
             for (NSString *columnName in orderedKeys) {

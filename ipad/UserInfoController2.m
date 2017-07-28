@@ -25,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _model = [UserModel new];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     // Do any additional setup after loading the view.
 }
 - (IBAction)cityBtnClick:(id)sender {
@@ -53,7 +55,28 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)keyboardWillShow:(NSNotification*)sender{
+    CGRect textFildRect = [self.view convertRect:self.textfield.frame fromView:self.textfield.superview ];
+    CGRect keyboardRect = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    CGFloat deltaY = keyboardRect.origin.y -textFildRect.size.height-textFildRect.origin.y - 60;
+    if (deltaY <0) {
+        [UIView animateWithDuration:[sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+            self.view.transform = CGAffineTransformMakeTranslation(0, deltaY);
+        }];
+    }
+}
+-(void)keyboardWillHide:(NSNotification*)sender{
+    [UIView animateWithDuration:[sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+        self.view.transform = CGAffineTransformIdentity;
+    }];
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 /*
 #pragma mark - Navigation
 

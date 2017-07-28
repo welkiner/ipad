@@ -7,7 +7,8 @@
 //
 
 #import "Q2Controller4.h"
-
+#import "FinishController.h"
+#import "AnswerData.h"
 @interface Q2Controller4 ()
 
 @end
@@ -25,6 +26,9 @@
         [view show];
         return;
     }
+    [AnswerData saveData2:self.model2];
+    FinishController *con = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FinishController"];
+    [self.navigationController pushViewController:con animated:YES];
     //    Q1Controller4 *con = [Q1Controller4 controllerWithModel:self.model];
     //    [self.navigationController pushViewController:con animated:YES];
 }

@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "UserModel.h"
+#import "UserModel2.h"
 @interface AnswerData : NSObject
 +(void)saveData:(UserModel *)model;
++(void)saveData2:(UserModel2 *)model;
 +(void)csvData;
 @end

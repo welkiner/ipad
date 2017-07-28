@@ -1,5 +1,5 @@
 //
-//  Q1Controller4.h
+//  Q1Controller3.h
 //  ipad
 //
 //  Created by tian.liang on 2017/7/24.
@@ -8,6 +8,6 @@
 
 #import "QuestionBaseController.h"
 
-@interface Q1Controller4 : QuestionBaseController
+@interface Q2Controller3 : QuestionBaseController
 
 @end

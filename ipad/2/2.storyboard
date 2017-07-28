@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Q2Controller1-->
+        <scene sceneID="zgx-ez-isD">
+            <objects>
+                <viewController storyboardIdentifier="Q2Controller1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hlp-8S-ead" userLabel="Q2Controller1" customClass="Q2Controller1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CZ0-qw-CTp"/>
+                        <viewControllerLayoutGuide type="bottom" id="C7i-0g-nGE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ci-bd-jO3">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="答题2-1" translatesAutoresizingMaskIntoConstraints="NO" id="u9T-ql-4MQ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48n-pz-hoN" customClass="Button1">
+                                <rect key="frame" x="844" y="631" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClick:" destination="hlp-8S-ead" eventType="touchUpInside" id="N69-dw-50a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRF-3H-HUg" customClass="Button1">
+                                <rect key="frame" x="240" y="332" width="544" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcW-QJ-HzA" customClass="Button1">
+                                <rect key="frame" x="240" y="469" width="544" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u9T-ql-4MQ" firstAttribute="leading" secondItem="8Ci-bd-jO3" secondAttribute="leading" id="8Sv-Zd-GsQ"/>
+                            <constraint firstItem="u9T-ql-4MQ" firstAttribute="top" secondItem="8Ci-bd-jO3" secondAttribute="top" id="ofQ-k5-Xoq"/>
+                            <constraint firstAttribute="trailing" secondItem="u9T-ql-4MQ" secondAttribute="trailing" id="vVe-Tm-j3e"/>
+                            <constraint firstItem="C7i-0g-nGE" firstAttribute="top" secondItem="u9T-ql-4MQ" secondAttribute="bottom" id="zQp-xW-HWU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="answerBtns" destination="pRF-3H-HUg" id="Kjv-q6-yF1"/>
+                        <outletCollection property="answerBtns" destination="ZcW-QJ-HzA" id="m2a-9L-dNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ded-eU-xOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360.546875" y="197.65625"/>
+        </scene>
+        <!--Q2Controller2-->
+        <scene sceneID="ubt-8n-1h4">
+            <objects>
+                <viewController storyboardIdentifier="Q2Controller2" id="Kcn-Oj-JeC" userLabel="Q2Controller2" customClass="Q1Controller2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zBg-Z7-bkD"/>
+                        <viewControllerLayoutGuide type="bottom" id="296-9R-lnM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BlC-4L-XRT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="答题2-2" translatesAutoresizingMaskIntoConstraints="NO" id="76W-I8-YGJ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmv-wQ-VLR" customClass="Button1">
+                                <rect key="frame" x="240" y="338" width="544" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3X-p5-b7L" customClass="Button1">
+                                <rect key="frame" x="240" y="406" width="544" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9p-ob-VFP" customClass="Button1">
+                                <rect key="frame" x="63" y="631" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backBtnClick:" destination="Kcn-Oj-JeC" eventType="touchUpInside" id="Zdu-a7-ZGT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-Ng-E3o" customClass="Button1">
+                                <rect key="frame" x="845" y="631" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClick:" destination="Kcn-Oj-JeC" eventType="touchUpInside" id="Qsq-fB-Sit"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWl-y1-hH6" customClass="Button1">
+                                <rect key="frame" x="240" y="474" width="544" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="76W-I8-YGJ" firstAttribute="leading" secondItem="BlC-4L-XRT" secondAttribute="leading" id="9Zl-hJ-CFT"/>
+                            <constraint firstAttribute="trailing" secondItem="76W-I8-YGJ" secondAttribute="trailing" id="MHX-DB-Tu3"/>
+                            <constraint firstItem="76W-I8-YGJ" firstAttribute="top" secondItem="BlC-4L-XRT" secondAttribute="top" id="WxC-AY-o19"/>
+                            <constraint firstItem="296-9R-lnM" firstAttribute="top" secondItem="76W-I8-YGJ" secondAttribute="bottom" id="q2p-gE-Vkd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="answerBtns" destination="bmv-wQ-VLR" id="gEn-m4-OhO"/>
+                        <outletCollection property="answerBtns" destination="O3X-p5-b7L" id="DE5-41-5Rq"/>
+                        <outletCollection property="answerBtns" destination="JWl-y1-hH6" id="4Is-iH-ZHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YT3-XK-IUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971.6796874999998" y="197.65625"/>
+        </scene>
+        <!--Q2Controller3-->
+        <scene sceneID="lrX-a3-vef">
+            <objects>
+                <viewController storyboardIdentifier="Q3Controller3" id="TxR-0i-uFw" userLabel="Q2Controller3" customClass="Q3Controller3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S5h-X1-CQS"/>
+                        <viewControllerLayoutGuide type="bottom" id="CNf-Eg-ijO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zwH-o7-0th">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="答题2-3" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-Q5-bh9">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eme-hI-lUi" customClass="Button1">
+                                <rect key="frame" x="61" y="631" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backBtnClick:" destination="TxR-0i-uFw" eventType="touchUpInside" id="deV-iH-gPf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qye-gS-ja2" customClass="Button1">
+                                <rect key="frame" x="845" y="631" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClick:" destination="TxR-0i-uFw" eventType="touchUpInside" id="5M3-5g-XDQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ml-LI-Qt8" customClass="Button1">
+                                <rect key="frame" x="224" y="341" width="590" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1w-a0-vLo" customClass="Button1">
+                                <rect key="frame" x="224" y="409" width="590" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtx-dV-d1E" customClass="Button1">
+                                <rect key="frame" x="224" y="480" width="590" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GHm-Q5-bh9" firstAttribute="leading" secondItem="zwH-o7-0th" secondAttribute="leading" id="GFG-g2-ZTP"/>
+                            <constraint firstAttribute="trailing" secondItem="GHm-Q5-bh9" secondAttribute="trailing" id="R7w-Cl-Zdi"/>
+                            <constraint firstItem="CNf-Eg-ijO" firstAttribute="top" secondItem="GHm-Q5-bh9" secondAttribute="bottom" id="chE-Lg-UFi"/>
+                            <constraint firstItem="GHm-Q5-bh9" firstAttribute="top" secondItem="zwH-o7-0th" secondAttribute="top" id="cki-d5-zxF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="answerBtns" destination="6Ml-LI-Qt8" id="ryx-pk-58r"/>
+                        <outletCollection property="answerBtns" destination="r1w-a0-vLo" id="G6V-xm-Kvd"/>
+                        <outletCollection property="answerBtns" destination="qtx-dV-d1E" id="aPn-7w-8wU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4T1-zE-LTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959.9609374999998" y="851.5625"/>
+        </scene>
+        <!--Q2Controller4-->
+        <scene sceneID="Nb0-w4-NXL">
+            <objects>
+                <viewController storyboardIdentifier="Q3Controller4" id="ufT-eT-UOZ" userLabel="Q2Controller4" customClass="Q2Controller4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qFE-U8-jN8"/>
+                        <viewControllerLayoutGuide type="bottom" id="lhS-qP-eUZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="knt-fe-JMC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="答题2-4" translatesAutoresizingMaskIntoConstraints="NO" id="5JJ-fv-5H4">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fs-gY-aEU" customClass="Button1">
+                                <rect key="frame" x="61" y="631" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backBtnClick:" destination="ufT-eT-UOZ" eventType="touchUpInside" id="GzC-x4-fKQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1t-cE-nxO" customClass="Button1">
+                                <rect key="frame" x="845" y="631" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnClick:" destination="ufT-eT-UOZ" eventType="touchUpInside" id="lia-mK-Wmz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iu3-1Z-h2A" customClass="Button1">
+                                <rect key="frame" x="240" y="409" width="544" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlu-WB-jxn" customClass="Button1">
+                                <rect key="frame" x="240" y="480" width="544" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXQ-6U-74v" customClass="Button1">
+                                <rect key="frame" x="240" y="550" width="544" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hl-YS-4Oe" customClass="Button1">
+                                <rect key="frame" x="240" y="339" width="544" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lhS-qP-eUZ" firstAttribute="top" secondItem="5JJ-fv-5H4" secondAttribute="bottom" id="0Tg-Uj-ECr"/>
+                            <constraint firstItem="5JJ-fv-5H4" firstAttribute="top" secondItem="knt-fe-JMC" secondAttribute="top" id="9dX-cw-2te"/>
+                            <constraint firstAttribute="trailing" secondItem="5JJ-fv-5H4" secondAttribute="trailing" id="PPu-8O-Wrh"/>
+                            <constraint firstItem="5JJ-fv-5H4" firstAttribute="leading" secondItem="knt-fe-JMC" secondAttribute="leading" id="RZx-CU-xfP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="answerBtns" destination="0hl-YS-4Oe" id="hli-HX-bmL"/>
+                        <outletCollection property="answerBtns" destination="Iu3-1Z-h2A" id="0Ar-iw-biA"/>
+                        <outletCollection property="answerBtns" destination="vlu-WB-jxn" id="UgJ-MA-78G"/>
+                        <outletCollection property="answerBtns" destination="UXQ-6U-74v" id="ZlC-vO-uxk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rOS-pe-ZlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1341" y="852"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="答题2-1" width="1024" height="768"/>
+        <image name="答题2-2" width="1024" height="768"/>
+        <image name="答题2-3" width="1024" height="768"/>
+        <image name="答题2-4" width="1024" height="768"/>
+    </resources>
+</document>

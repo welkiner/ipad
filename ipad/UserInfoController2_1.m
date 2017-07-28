@@ -1,30 +1,29 @@
 //
-//  UserInfoController2.m
+//  UserInfoController2_1.m
 //  ipad
 //
-//  Created by tian.liang on 2017/7/24.
+//  Created by tl on 2017/7/28.
 //  Copyright © 2017年 welkiner. All rights reserved.
 //
 
-#import "UserInfoController2.h"
+#import "UserInfoController2_1.h"
 #import "HETAddressPicker.h"
 #import <ReactiveCocoa.h>
-#import "Q1Controller1.h"
-#import "UserModel.h"
-@interface UserInfoController2 (){
+#import "Q2Controller1.h"
+#import "UserModel2.h"
+@interface UserInfoController2_1 (){
     HETAddressInfo *_addressinfo;
-    UserModel *_model;
+    UserModel2 *_model;
 }
 @property (weak, nonatomic) IBOutlet UIButton *cityBtn;
-@property (weak, nonatomic) IBOutlet UITextField *textfield;
 
 @end
 
-@implementation UserInfoController2
+@implementation UserInfoController2_1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _model = [UserModel new];
+    _model = [UserModel2 new];
     // Do any additional setup after loading the view.
 }
 - (IBAction)cityBtnClick:(id)sender {
@@ -39,15 +38,17 @@
 }
 
 - (IBAction)submitBtnClick:(id)sender {
-    if (_model.organization.length == 0 ||
+    if (
         _model.province.length == 0) {
-        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写所有资料" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择省市" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [view show];
         return;
     }
-    Q1Controller1 *con = [Q1Controller1 controllerWithModel:_model];
+    Q2Controller1 *con = [Q2Controller1 controllerWithModel2:_model];
     [self.navigationController pushViewController:con animated:YES];
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -57,7 +58,6 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
- 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

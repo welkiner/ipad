@@ -9,12 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "Button1.h"
 #import "UserModel.h"
+#import "UserModel2.h"
 @interface QuestionBaseController : UIViewController
 +(instancetype)controllerWithModel:(UserModel *)model;
++(instancetype)controllerWithModel2:(UserModel2 *)model;
 @property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns;
+
+@property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns2;
+@property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns3;
+@property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns4;
 @property (strong, nonatomic)UserModel *model;
--(void)answerBtnsClick:(Button1 *)btn;
--(BOOL)mutiAnswer;
+@property (strong, nonatomic)UserModel2 *model2;
 
 -(NSString *)answerStr;
+-(NSString *)answerStr2;
+-(NSString *)answerStr3;
+-(NSString *)answerStr4;
 @end

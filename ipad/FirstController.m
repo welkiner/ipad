@@ -24,6 +24,11 @@
     UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"UserInfoController2"];
     [self.navigationController pushViewController:vc animated:YES];
 }
+- (IBAction)beginBtn2Click:(UIButton *)sender {
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"UserInfoController2_1"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (IBAction)shareBtnClick:(id)sender {
     MBProgressHUD *hud=[[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].keyWindow] ;
     [[UIApplication sharedApplication].keyWindow addSubview:hud];

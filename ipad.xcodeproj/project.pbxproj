@@ -23,7 +23,6 @@
 		457E8E2B1F26416E00924F5F /* Q1Controller1.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E2A1F26416E00924F5F /* Q1Controller1.m */; };
 		457E8E2E1F26418500924F5F /* Q1Controller2.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E2D1F26418500924F5F /* Q1Controller2.m */; };
 		457E8E311F26418F00924F5F /* Q1Controller3.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E301F26418F00924F5F /* Q1Controller3.m */; };
-		457E8E341F26419900924F5F /* Q1Controller4.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E331F26419900924F5F /* Q1Controller4.m */; };
 		457E8E371F27192900924F5F /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E361F27192900924F5F /* UserModel.m */; };
 		457E8E3A1F2728E500924F5F /* FinishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E391F2728E500924F5F /* FinishController.m */; };
 		457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E3C1F272B5500924F5F /* AnswerData.m */; };
@@ -31,6 +30,13 @@
 		45DD5CE01F279F0C00E7B6EB /* GCDWebUploader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45DD5CDD1F279F0C00E7B6EB /* GCDWebUploader.bundle */; };
 		45DD5CE11F279F0C00E7B6EB /* GCDWebUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */; };
 		72112AD51F23265D00A6305B /* hospital.db in Resources */ = {isa = PBXBuildFile; fileRef = 72112AD41F23265D00A6305B /* hospital.db */; };
+		7225B7AD1F2B53B200AE2549 /* UserInfoController2_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225B7AC1F2B53B200AE2549 /* UserInfoController2_1.m */; };
+		7225B7B01F2B626200AE2549 /* UserModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225B7AF1F2B626200AE2549 /* UserModel2.m */; };
+		7225B7B91F2B62F400AE2549 /* 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7225B7B21F2B62F400AE2549 /* 2.storyboard */; };
+		7225B7BA1F2B62F400AE2549 /* Q2Controller1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225B7B41F2B62F400AE2549 /* Q2Controller1.m */; };
+		7225B7BB1F2B62F400AE2549 /* Q2Controller2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225B7B61F2B62F400AE2549 /* Q2Controller2.m */; };
+		7225B7BC1F2B62F400AE2549 /* Q2Controller3.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225B7B81F2B62F400AE2549 /* Q2Controller3.m */; };
+		7225B7BF1F2B643200AE2549 /* Q2Controller4.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225B7BE1F2B643200AE2549 /* Q2Controller4.m */; };
 		72760E681F231DF500377839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E671F231DF500377839 /* main.m */; };
 		72760E6B1F231DF500377839 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E6A1F231DF500377839 /* AppDelegate.m */; };
 		72760E711F231DF500377839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E6F1F231DF500377839 /* Main.storyboard */; };
@@ -70,8 +76,6 @@
 		457E8E2D1F26418500924F5F /* Q1Controller2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q1Controller2.m; sourceTree = "<group>"; };
 		457E8E2F1F26418F00924F5F /* Q1Controller3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q1Controller3.h; sourceTree = "<group>"; };
 		457E8E301F26418F00924F5F /* Q1Controller3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q1Controller3.m; sourceTree = "<group>"; };
-		457E8E321F26419900924F5F /* Q1Controller4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q1Controller4.h; sourceTree = "<group>"; };
-		457E8E331F26419900924F5F /* Q1Controller4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q1Controller4.m; sourceTree = "<group>"; };
 		457E8E351F27192900924F5F /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		457E8E361F27192900924F5F /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		457E8E381F2728E500924F5F /* FinishController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishController.h; sourceTree = "<group>"; };
@@ -83,6 +87,19 @@
 		45DD5CDE1F279F0C00E7B6EB /* GCDWebUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebUploader.h; sourceTree = "<group>"; };
 		45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebUploader.m; sourceTree = "<group>"; };
 		72112AD41F23265D00A6305B /* hospital.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hospital.db; sourceTree = "<group>"; };
+		7225B7AB1F2B53B200AE2549 /* UserInfoController2_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoController2_1.h; sourceTree = "<group>"; };
+		7225B7AC1F2B53B200AE2549 /* UserInfoController2_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoController2_1.m; sourceTree = "<group>"; };
+		7225B7AE1F2B626200AE2549 /* UserModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel2.h; sourceTree = "<group>"; };
+		7225B7AF1F2B626200AE2549 /* UserModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel2.m; sourceTree = "<group>"; };
+		7225B7B21F2B62F400AE2549 /* 2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 2.storyboard; sourceTree = "<group>"; };
+		7225B7B31F2B62F400AE2549 /* Q2Controller1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q2Controller1.h; sourceTree = "<group>"; };
+		7225B7B41F2B62F400AE2549 /* Q2Controller1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q2Controller1.m; sourceTree = "<group>"; };
+		7225B7B51F2B62F400AE2549 /* Q2Controller2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q2Controller2.h; sourceTree = "<group>"; };
+		7225B7B61F2B62F400AE2549 /* Q2Controller2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q2Controller2.m; sourceTree = "<group>"; };
+		7225B7B71F2B62F400AE2549 /* Q2Controller3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q2Controller3.h; sourceTree = "<group>"; };
+		7225B7B81F2B62F400AE2549 /* Q2Controller3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q2Controller3.m; sourceTree = "<group>"; };
+		7225B7BD1F2B643200AE2549 /* Q2Controller4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q2Controller4.h; sourceTree = "<group>"; };
+		7225B7BE1F2B643200AE2549 /* Q2Controller4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q2Controller4.m; sourceTree = "<group>"; };
 		72760E631F231DF500377839 /* ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72760E671F231DF500377839 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		72760E691F231DF500377839 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,8 +177,6 @@
 				457E8E2D1F26418500924F5F /* Q1Controller2.m */,
 				457E8E2F1F26418F00924F5F /* Q1Controller3.h */,
 				457E8E301F26418F00924F5F /* Q1Controller3.m */,
-				457E8E321F26419900924F5F /* Q1Controller4.h */,
-				457E8E331F26419900924F5F /* Q1Controller4.m */,
 			);
 			path = 1;
 			sourceTree = "<group>";
@@ -174,6 +189,22 @@
 				45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */,
 			);
 			path = 3rd;
+			sourceTree = "<group>";
+		};
+		7225B7B11F2B62F400AE2549 /* 2 */ = {
+			isa = PBXGroup;
+			children = (
+				7225B7B21F2B62F400AE2549 /* 2.storyboard */,
+				7225B7B31F2B62F400AE2549 /* Q2Controller1.h */,
+				7225B7B41F2B62F400AE2549 /* Q2Controller1.m */,
+				7225B7B51F2B62F400AE2549 /* Q2Controller2.h */,
+				7225B7B61F2B62F400AE2549 /* Q2Controller2.m */,
+				7225B7B71F2B62F400AE2549 /* Q2Controller3.h */,
+				7225B7B81F2B62F400AE2549 /* Q2Controller3.m */,
+				7225B7BD1F2B643200AE2549 /* Q2Controller4.h */,
+				7225B7BE1F2B643200AE2549 /* Q2Controller4.m */,
+			);
+			path = 2;
 			sourceTree = "<group>";
 		};
 		72760E5A1F231DF500377839 = {
@@ -197,6 +228,7 @@
 		72760E651F231DF500377839 /* ipad */ = {
 			isa = PBXGroup;
 			children = (
+				7225B7B11F2B62F400AE2549 /* 2 */,
 				45DD5CDC1F279F0C00E7B6EB /* 3rd */,
 				457E8E201F26386700924F5F /* 1 */,
 				457E8E161F25F4CB00924F5F /* Hospital */,
@@ -207,12 +239,16 @@
 				4527918D1F25D09C00010996 /* FirstController.m */,
 				4527918F1F25D11300010996 /* UserInfoController2.h */,
 				452791901F25D11300010996 /* UserInfoController2.m */,
+				7225B7AB1F2B53B200AE2549 /* UserInfoController2_1.h */,
+				7225B7AC1F2B53B200AE2549 /* UserInfoController2_1.m */,
 				72760E7E1F23217200377839 /* HospitalDataBase.h */,
 				72760E7F1F23217200377839 /* HospitalDataBase.m */,
 				457E8E3B1F272B5500924F5F /* AnswerData.h */,
 				457E8E3C1F272B5500924F5F /* AnswerData.m */,
 				457E8E351F27192900924F5F /* UserModel.h */,
 				457E8E361F27192900924F5F /* UserModel.m */,
+				7225B7AE1F2B626200AE2549 /* UserModel2.h */,
+				7225B7AF1F2B626200AE2549 /* UserModel2.m */,
 				457E8E381F2728E500924F5F /* FinishController.h */,
 				457E8E391F2728E500924F5F /* FinishController.m */,
 				72FA820E1F28382A00B6F371 /* WifiView.h */,
@@ -308,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7225B7B91F2B62F400AE2549 /* 2.storyboard in Resources */,
 				72FA82121F2838B700B6F371 /* WifiView.xib in Resources */,
 				72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */,
 				457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */,
@@ -379,9 +416,12 @@
 			files = (
 				4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */,
 				457E8E3A1F2728E500924F5F /* FinishController.m in Sources */,
+				7225B7BF1F2B643200AE2549 /* Q2Controller4.m in Sources */,
 				4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */,
+				7225B7BC1F2B62F400AE2549 /* Q2Controller3.m in Sources */,
 				457E8E311F26418F00924F5F /* Q1Controller3.m in Sources */,
 				452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */,
+				7225B7BA1F2B62F400AE2549 /* Q2Controller1.m in Sources */,
 				452791911F25D11300010996 /* UserInfoController2.m in Sources */,
 				72760E6B1F231DF500377839 /* AppDelegate.m in Sources */,
 				4527918E1F25D09C00010996 /* FirstController.m in Sources */,
@@ -389,12 +429,14 @@
 				72760E801F23217200377839 /* HospitalDataBase.m in Sources */,
 				72760E681F231DF500377839 /* main.m in Sources */,
 				72FA82101F28382A00B6F371 /* WifiView.m in Sources */,
+				7225B7AD1F2B53B200AE2549 /* UserInfoController2_1.m in Sources */,
+				7225B7BB1F2B62F400AE2549 /* Q2Controller2.m in Sources */,
+				7225B7B01F2B626200AE2549 /* UserModel2.m in Sources */,
 				457E8E251F263CB800924F5F /* Button1.m in Sources */,
 				457E8E2B1F26416E00924F5F /* Q1Controller1.m in Sources */,
 				457E8E2E1F26418500924F5F /* Q1Controller2.m in Sources */,
 				457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */,
 				457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */,
-				457E8E341F26419900924F5F /* Q1Controller4.m in Sources */,
 				457E8E191F25F5D000924F5F /* HospitalSearchView.m in Sources */,
 				45DD5CE11F279F0C00E7B6EB /* GCDWebUploader.m in Sources */,
 			);
@@ -524,7 +566,7 @@
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -542,7 +584,7 @@
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

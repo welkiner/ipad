@@ -52,21 +52,21 @@ static FMDatabase *__fmDB;
 
 
 
-+(void)saveData:(UserModel *)model{
-    [self shareInstance];
-    if (![__fmDB open]) {
-        return ;
-    }
-    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question4) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,model.question4] ;
-    
-    BOOL res = [__fmDB executeUpdate:sql];
-    if (!res) {
-        NSLog(@"error to insert data");
-    } else {
-        NSLog(@"success to insert data");
-    }
-    [__fmDB close];
-}
+//+(void)saveData:(UserModel *)model{
+//    [self shareInstance];
+//    if (![__fmDB open]) {
+//        return ;
+//    }
+//    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question4) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,model.question4] ;
+//    
+//    BOOL res = [__fmDB executeUpdate:sql];
+//    if (!res) {
+//        NSLog(@"error to insert data");
+//    } else {
+//        NSLog(@"success to insert data");
+//    }
+//    [__fmDB close];
+//}
 #define COMMAA ','
 +(void)csvData{
     [self shareInstance];

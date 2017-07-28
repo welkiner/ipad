@@ -7,7 +7,6 @@
 //
 
 #import "Q1Controller3.h"
-#import "Q1Controller4.h"
 @interface Q1Controller3 ()
 
 @end
@@ -25,8 +24,8 @@
         [view show];
         return;
     }
-    Q1Controller4 *con = [Q1Controller4 controllerWithModel:self.model];
-    [self.navigationController pushViewController:con animated:YES];
+//    Q1Controller4 *con = [Q1Controller4 controllerWithModel:self.model];
+//    [self.navigationController pushViewController:con animated:YES];
 }
 - (IBAction)backBtnClick:(id)sender {
     self.model.question3 = nil;

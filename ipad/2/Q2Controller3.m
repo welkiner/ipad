@@ -1,35 +1,34 @@
 //
-//  Q1Controller2.m
+//  Q1Controller3.m
 //  ipad
 //
 //  Created by tian.liang on 2017/7/24.
 //  Copyright © 2017年 welkiner. All rights reserved.
 //
 
-#import "Q1Controller2.h"
-#import "Q1Controller3.h"
-@interface Q1Controller2 ()
+#import "Q2Controller3.h"
+@interface Q2Controller3 ()
 
 @end
 
-@implementation Q1Controller2
+@implementation Q2Controller3
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 - (IBAction)nextBtnClick:(id)sender {
-    self.model.question2 = [NSString stringWithFormat:@"%@%@%@%@",[self answerStr],[self answerStr2],[self answerStr3],[self answerStr4]];
-    if (self.model.question2.length < 4) {
+    self.model2.question3 = [self answerStr];
+    if (self.model2.question3.length == 0) {
         UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [view show];
         return;
     }
-    Q1Controller3 *con = [Q1Controller3 controllerWithModel:self.model];
+    Q2Controller3 *con = [Q2Controller3 controllerWithModel2:self.model2];
     [self.navigationController pushViewController:con animated:YES];
 }
 - (IBAction)backBtnClick:(id)sender {
-    self.model.question2 = nil;
+    self.model2.question3 = nil;
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {

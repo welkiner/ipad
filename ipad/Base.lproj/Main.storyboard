@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l6G-dn-zNz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l6G-dn-zNz">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,14 +25,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM5-Ug-W1v">
-                                <rect key="frame" x="658" y="295" width="215" height="57"/>
+                                <rect key="frame" x="658" y="240" width="215" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="beginBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdf-AX-iER"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIQ-UT-Jxl" customClass="Button1">
-                                <rect key="frame" x="658" y="410" width="218" height="57"/>
+                                <rect key="frame" x="658" y="494" width="218" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="4XB-UT-ozW"/>
                                     <constraint firstAttribute="width" constant="218" id="VwO-3M-6m3"/>
@@ -43,16 +43,33 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="shareBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mwi-uS-2Hx"/>
+                                    <action selector="shareBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FvU-vI-tx0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aq0-Vw-fc8" customClass="Button1">
+                                <rect key="frame" x="658" y="369" width="218" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="mgL-DE-nyI"/>
+                                    <constraint firstAttribute="width" constant="218" id="uuY-1m-HqK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="beginBtn2Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71G-Gh-h08"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bpi-sN-PpT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0b6-oz-F4k"/>
+                            <constraint firstItem="gIQ-UT-Jxl" firstAttribute="top" secondItem="aq0-Vw-fc8" secondAttribute="bottom" constant="68" id="3Ln-A8-xYA"/>
                             <constraint firstAttribute="trailing" secondItem="gIQ-UT-Jxl" secondAttribute="trailing" constant="148" id="MzC-Yb-XRl"/>
+                            <constraint firstAttribute="trailing" secondItem="aq0-Vw-fc8" secondAttribute="trailing" constant="148" id="NOH-Hb-TCB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bpi-sN-PpT" secondAttribute="bottom" id="PMC-gJ-gp4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gIQ-UT-Jxl" secondAttribute="bottom" constant="301" id="PNI-5f-cJA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gIQ-UT-Jxl" secondAttribute="bottom" constant="217" id="PNI-5f-cJA"/>
                             <constraint firstAttribute="trailing" secondItem="bpi-sN-PpT" secondAttribute="trailing" id="Q9o-6a-28E"/>
                             <constraint firstItem="bpi-sN-PpT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sxH-aA-bU4"/>
                         </constraints>
@@ -92,7 +109,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="医院全称：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LN1-gM-B3O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="机构全称：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LN1-gM-B3O">
                                 <rect key="frame" x="373" y="347" width="167" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
@@ -111,37 +128,14 @@
                                     <action selector="cityBtnClick:" destination="mtb-iD-fr5" eventType="touchUpInside" id="b5h-ZS-VQp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ty5-bg-guK">
-                                <rect key="frame" x="711" y="255" width="293" height="58"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKf-aP-Z8h">
+                                <rect key="frame" x="373" y="398" width="571" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="keshiBtnClick:" destination="mtb-iD-fr5" eventType="touchUpInside" id="Kxr-9q-jZW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="et5-n5-d9x">
-                                <rect key="frame" x="373" y="409" width="631" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="hospitalBtnClick:" destination="mtb-iD-fr5" eventType="touchUpInside" id="FTz-FH-l6e"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="科室：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eV4-18-Oav">
-                                <rect key="frame" x="711" y="187" width="167" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -153,13 +147,12 @@
                     </view>
                     <connections>
                         <outlet property="cityBtn" destination="rCe-d9-sxC" id="c58-b8-y11"/>
-                        <outlet property="hospital" destination="et5-n5-d9x" id="LeA-hy-vsC"/>
-                        <outlet property="keshiBtn" destination="ty5-bg-guK" id="tVw-PH-iuX"/>
+                        <outlet property="textfield" destination="RKf-aP-Z8h" id="mdA-QI-JTL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBf-fg-Pur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736.5234375" y="197.65625"/>
+            <point key="canvasLocation" x="1230" y="-208"/>
         </scene>
         <!--Finish Controller-->
         <scene sceneID="mps-6z-uK8">
@@ -195,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ega-8i-gUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="198"/>
+            <point key="canvasLocation" x="2389" y="163"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VKP-ZN-ztS">
@@ -211,7 +204,65 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeu-P6-hpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-539" y="199"/>
+            <point key="canvasLocation" x="-998" y="188"/>
+        </scene>
+        <!--User Info Controller21-->
+        <scene sceneID="Jqv-Sd-1bl">
+            <objects>
+                <viewController storyboardIdentifier="UserInfoController2_1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jBi-Ic-aBt" customClass="UserInfoController2_1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n1L-c2-SYY"/>
+                        <viewControllerLayoutGuide type="bottom" id="QmT-On-g1g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wlk-Ed-WrP">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="资料录入背景" translatesAutoresizingMaskIntoConstraints="NO" id="wkQ-Jf-vdr">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnN-cd-Q3B">
+                                <rect key="frame" x="500" y="526" width="215" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="submitBtnClick:" destination="jBi-Ic-aBt" eventType="touchUpInside" id="EMn-vv-avY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lC0-lm-AXK">
+                                <rect key="frame" x="373" y="339" width="293" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cityBtnClick:" destination="jBi-Ic-aBt" eventType="touchUpInside" id="9DL-WK-jxf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="省、市：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-Jp-ATu">
+                                <rect key="frame" x="373" y="275" width="151" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wkQ-Jf-vdr" secondAttribute="trailing" id="15g-fT-Utg"/>
+                            <constraint firstItem="QmT-On-g1g" firstAttribute="top" secondItem="wkQ-Jf-vdr" secondAttribute="bottom" id="C62-a0-8bc"/>
+                            <constraint firstItem="wkQ-Jf-vdr" firstAttribute="leading" secondItem="Wlk-Ed-WrP" secondAttribute="leading" id="KcE-Qh-zUf"/>
+                            <constraint firstItem="wkQ-Jf-vdr" firstAttribute="top" secondItem="Wlk-Ed-WrP" secondAttribute="top" id="bJu-pm-5aS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityBtn" destination="lC0-lm-AXK" id="dvx-SB-4Oy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fja-0P-KQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="681"/>
         </scene>
     </scenes>
     <resources>

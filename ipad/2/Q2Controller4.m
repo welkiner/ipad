@@ -20,7 +20,7 @@
 }
 - (IBAction)nextBtnClick:(id)sender {
     self.model2.question4 = [self answerStr];
-    if (self.model.question3.length == 0) {
+    if (self.model2.question4.length == 0) {
         UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [view show];
         return;

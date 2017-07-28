@@ -52,36 +52,57 @@ static FMDatabase *__fmDB;
 
 
 
-//+(void)saveData:(UserModel *)model{
-//    [self shareInstance];
-//    if (![__fmDB open]) {
-//        return ;
-//    }
-//    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question4) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,model.question4] ;
-//    
-//    BOOL res = [__fmDB executeUpdate:sql];
-//    if (!res) {
-//        NSLog(@"error to insert data");
-//    } else {
-//        NSLog(@"success to insert data");
-//    }
-//    [__fmDB close];
-//}
++(void)saveData:(UserModel *)model{
+    [self shareInstance];
+    if (![__fmDB open]) {
+        return ;
+    }
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, organization, question1, question2, question3) values ('%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.organization,model.question1,model.question2,model.question3] ;
+    
+    BOOL res = [__fmDB executeUpdate:sql];
+    if (!res) {
+        NSLog(@"error to insert data");
+    } else {
+        NSLog(@"success to insert data");
+    }
+    [__fmDB close];
+}
++(void)saveData2:(UserModel2 *)model{
+    [self shareInstance];
+    if (![__fmDB open]) {
+        return ;
+    }
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable2 (province, city, question1, question2, question3, question4 ) values ('%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.question1,model.question2,model.question3,model.question4] ;
+    
+    BOOL res = [__fmDB executeUpdate:sql];
+    if (!res) {
+        NSLog(@"error to insert data");
+    } else {
+        NSLog(@"success to insert data");
+    }
+    [__fmDB close];
+}
 #define COMMAA ','
 +(void)csvData{
     [self shareInstance];
     if (![__fmDB open]) {
         return ;
     }
+    [self writeData];
+    [self writeData2];
+    [__fmDB close];
+}
+
++(void)writeData{
     FMResultSet *results = [__fmDB executeQuery:@"SELECT * FROM answerTable"];
     
-    NSOutputStream *stream = [NSOutputStream outputStreamToFileAtPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"answers.csv"] append:NO];
+    NSOutputStream *stream = [NSOutputStream outputStreamToFileAtPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"organization.csv"] append:NO];
     NSStringEncoding enc=CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
     CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:enc delimiter:COMMAA];
     BOOL isFirst = YES;
     while([results next]) {
         NSDictionary *resultRow = [results resultDictionary];
-        NSArray *orderedKeys = @[@"id",@"province",@"city",@"hospital",@"keshi",@"question1",@"question2",@"question3",@"question4"];
+        NSArray *orderedKeys = @[@"id",@"province",@"city",@"organization",@"question1",@"question2",@"question3"];
         if (isFirst) {
             isFirst = NO;
             for (NSString *columnName in orderedKeys) {
@@ -97,7 +118,32 @@ static FMDatabase *__fmDB;
         [csvWriter finishLine];
     }
     [csvWriter closeStream];
-    [__fmDB close];
+}
++(void)writeData2{
+    FMResultSet *results = [__fmDB executeQuery:@"SELECT * FROM answerTable2"];
+    
+    NSOutputStream *stream = [NSOutputStream outputStreamToFileAtPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"family.csv"] append:NO];
+    NSStringEncoding enc=CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:enc delimiter:COMMAA];
+    BOOL isFirst = YES;
+    while([results next]) {
+        NSDictionary *resultRow = [results resultDictionary];
+        NSArray *orderedKeys = @[@"id",@"province",@"city",@"question1",@"question2",@"question3",@"question4"];
+        if (isFirst) {
+            isFirst = NO;
+            for (NSString *columnName in orderedKeys) {
+                [csvWriter writeField:columnName];
+            }
+            [csvWriter finishLine];
+        }
+        //iterate over the dictionary
+        for (NSString *columnName in orderedKeys) {
+            id value = [resultRow objectForKey:columnName];
+            [csvWriter writeField:value];
+        }
+        [csvWriter finishLine];
+    }
+    [csvWriter closeStream];
 }
 @end
 

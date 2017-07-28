@@ -39,6 +39,7 @@
 }
 
 - (IBAction)submitBtnClick:(id)sender {
+    _model.organization = self.textfield.text;
     if (_model.organization.length == 0 ||
         _model.province.length == 0) {
         UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写所有资料" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];

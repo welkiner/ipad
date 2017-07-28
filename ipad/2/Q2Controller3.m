@@ -7,6 +7,7 @@
 //
 
 #import "Q2Controller3.h"
+#import "Q2Controller4.h"
 @interface Q2Controller3 ()
 
 @end
@@ -24,7 +25,7 @@
         [view show];
         return;
     }
-    Q2Controller3 *con = [Q2Controller3 controllerWithModel2:self.model2];
+    Q2Controller4 *con = [Q2Controller4 controllerWithModel2:self.model2];
     [self.navigationController pushViewController:con animated:YES];
 }
 - (IBAction)backBtnClick:(id)sender {

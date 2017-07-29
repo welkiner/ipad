@@ -32,9 +32,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIQ-UT-Jxl" customClass="Button1">
-                                <rect key="frame" x="658" y="494" width="218" height="57"/>
+                                <rect key="frame" x="658" y="495" width="218" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="4XB-UT-ozW"/>
+                                    <constraint firstAttribute="height" constant="58" id="4XB-UT-ozW"/>
                                     <constraint firstAttribute="width" constant="218" id="VwO-3M-6m3"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aq0-Vw-fc8" customClass="Button1">
-                                <rect key="frame" x="658" y="369" width="218" height="57"/>
+                                <rect key="frame" x="658" y="370" width="218" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="mgL-DE-nyI"/>
                                     <constraint firstAttribute="width" constant="218" id="uuY-1m-HqK"/>
@@ -69,7 +69,7 @@
                             <constraint firstAttribute="trailing" secondItem="gIQ-UT-Jxl" secondAttribute="trailing" constant="148" id="MzC-Yb-XRl"/>
                             <constraint firstAttribute="trailing" secondItem="aq0-Vw-fc8" secondAttribute="trailing" constant="148" id="NOH-Hb-TCB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bpi-sN-PpT" secondAttribute="bottom" id="PMC-gJ-gp4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gIQ-UT-Jxl" secondAttribute="bottom" constant="217" id="PNI-5f-cJA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gIQ-UT-Jxl" secondAttribute="bottom" constant="215" id="PNI-5f-cJA"/>
                             <constraint firstAttribute="trailing" secondItem="bpi-sN-PpT" secondAttribute="trailing" id="Q9o-6a-28E"/>
                             <constraint firstItem="bpi-sN-PpT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sxH-aA-bU4"/>
                         </constraints>
@@ -170,7 +170,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjU-jT-tOF">
-                                <rect key="frame" x="789" y="643" width="215" height="57"/>
+                                <rect key="frame" x="810" y="653" width="194" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="backBtnClick:" destination="G7M-7c-qHq" eventType="touchUpInside" id="vlM-pf-oDX"/>
@@ -188,13 +188,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ega-8i-gUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2389" y="163"/>
+            <point key="canvasLocation" x="2388.8671875" y="162.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VKP-ZN-ztS">
             <objects>
                 <navigationController navigationBarHidden="YES" id="l6G-dn-zNz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oyg-DG-gBh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oyg-DG-gBh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

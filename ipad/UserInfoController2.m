@@ -36,7 +36,11 @@
         self -> _addressinfo = newInfo;
         self -> _model.province = _addressinfo.province;
         self -> _model.city = _addressinfo.city;
-        [self.cityBtn setTitle:[NSString stringWithFormat:@"%@-%@",self -> _addressinfo.province,_addressinfo.city] forState:UIControlStateNormal];
+        NSMutableString *str = [self ->_addressinfo.province mutableCopy];
+        if (_addressinfo.city.length > 0 ) {
+            [str appendFormat:@"-%@",_addressinfo.city];
+        }
+        [self.cityBtn setTitle:str.copy forState:UIControlStateNormal];
     }];
 }
 - (IBAction)hospitalBtnClick:(id)sender {

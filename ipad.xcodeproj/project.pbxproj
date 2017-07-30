@@ -316,8 +316,8 @@
 				TargetAttributes = {
 					72760E621F231DF500377839 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = DG4DS3J99U;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 2F46R5UK38;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -562,7 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = DG4DS3J99U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -579,15 +579,15 @@
 			baseConfigurationReference = 258103E04245671C9128EB93 /* Pods-ipad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = DG4DS3J99U;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 2F46R5UK38;
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "0a8fc6b9-a026-43a2-85e7-a81863343316";
+				PROVISIONING_PROFILE_SPECIFIER = DisAll;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

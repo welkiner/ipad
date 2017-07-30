@@ -9,9 +9,10 @@
 #import "FirstController.h"
 #import "UserModel.h"
 #import "AnswerData.h"
-#import "GCDWebUploader.h"
+#import "MBProgressHUD.h"
+#import "WifiView.h"
 @interface FirstController (){
-    GCDWebUploader* _webUploader;
+    
 }
 
 @end
@@ -24,12 +25,15 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)shareBtnClick:(id)sender {
+    MBProgressHUD *hud=[[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].keyWindow] ;
+    [[UIApplication sharedApplication].keyWindow addSubview:hud];
+    hud.dimBackground = NO;
+    [hud show:YES];
     [AnswerData csvData];
+    [hud hide:YES];
     
-    NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    _webUploader = [[GCDWebUploader alloc] initWithUploadDirectory:documentsPath];
-    [_webUploader start];
-    NSLog(@"Visit %@ in your web browser", _webUploader.serverURL);
+    [WifiView showInView:self.view];
+    
 }
 
 - (void)viewDidLoad {

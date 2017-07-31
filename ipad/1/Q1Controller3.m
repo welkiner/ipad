@@ -9,7 +9,9 @@
 #import "Q1Controller3.h"
 #import "FinishController.h"
 #import "AnswerData.h"
-@interface Q1Controller3 ()
+@interface Q1Controller3 (){
+    NSMutableArray <Button1 *> * _selectBtnArray;
+}
 
 @end
 
@@ -17,11 +19,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _selectBtnArray = @[].mutableCopy;
+    
     // Do any additional setup after loading the view.
 }
+
+-(void)answerBtnsClick:(Button1 *)btn{
+    if (_selectBtnArray.count == 2 && ![_selectBtnArray containsObject:btn]) {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请先取消一个" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+        return;
+    }
+    if ([_selectBtnArray containsObject:btn]) {
+        [_selectBtnArray removeObject:btn];
+        btn.selected = NO;
+        return;
+    }
+    if (_selectBtnArray.count < 2) {
+        [_selectBtnArray addObject:btn];
+        btn.selected = YES;
+    }
+}
+
 - (IBAction)nextBtnClick:(id)sender {
     self.model.question3 = [self answerStr];
-    if (self.model.question3.length == 0) {
+    if (self.model.question3.length != 2) {
         UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [view show];
         return;

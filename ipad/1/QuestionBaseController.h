@@ -20,7 +20,7 @@
 @property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns4;
 @property (strong, nonatomic)UserModel *model;
 @property (strong, nonatomic)UserModel2 *model2;
-
+-(void)answerBtnsClick:(Button1 *)btn;
 -(NSString *)answerStr;
 -(NSString *)answerStr2;
 -(NSString *)answerStr3;

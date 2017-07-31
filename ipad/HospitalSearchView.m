@@ -9,8 +9,10 @@
 #import "HospitalSearchView.h"
 #import "Masonry.h"
 #import "HospitalDataBase.h"
+#import <ReactiveCocoa.h>
 @interface HospitalSearchView()<UITableViewDelegate,UITableViewDataSource>{
     NSArray *_listArray;
+    NSString *_primaryName;
 }
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -20,7 +22,7 @@
 @property (copy, nonatomic) void (^chooseHospitalName)(NSString *);
 @end
 @implementation HospitalSearchView
-+(void)showInView:(UIView *)view hospitalName:(void (^)(NSString* str))hospitalName{
++(void)showInView:(UIView *)view primaryName:(NSString *)primaryName hospitalName:(void (^)(NSString* str))hospitalName{
     HospitalSearchView *vi =[[NSBundle mainBundle] loadNibNamed:@"HospitalSearchView" owner:nil options:nil][0];
     [view.window addSubview:vi];
     [vi mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -41,6 +43,7 @@
         [vi.textField becomeFirstResponder];
     }];
     vi.chooseHospitalName = hospitalName;
+    vi -> _textField.text = primaryName;
 //    return vi;
 }
 -(void)awakeFromNib{
@@ -54,12 +57,15 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.tableFooterView = [UIView new];
+    @weakify(self);
+    [[[RACObserve(self.textField, text) merge:self.textField.rac_textSignal] filter:^BOOL(id value) {
+       return [value length] > 0;
+    }] subscribeNext:^(id x) {
+        @strongify(self);
+        self -> _listArray = [[HospitalDataBase shareInstance] queryWithName:self.textField.text];
+        [self.tableView reloadData];
+    }];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(text) name:UITextFieldTextDidChangeNotification object:nil];
-}
--(void)text{
-    _listArray = [[HospitalDataBase shareInstance] queryWithName:self.textField.text];
-    [self.tableView reloadData];
 }
 
 -(void)cancelBtnClick{
@@ -104,8 +110,20 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60.f;
 }
+
+-(IBAction)sureBtnClick{
+    !self.chooseHospitalName?:self.chooseHospitalName(self.textField.text);
+    self.bgConstraint.constant = -self.frame.size.height;
+    [UIView animateWithDuration:0.25 animations:^{
+        [self layoutIfNeeded];
+        self.alpha = 0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [self removeFromSuperview];
+        }
+    }];
+}
 -(void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
     NSLog(@"%s",__func__);
 }
 

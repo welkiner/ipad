@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HospitalSearchView : UIView
-+(void)showInView:(UIView *)view hospitalName:(void (^)(NSString* str))hospitalName;
++(void)showInView:(UIView *)view primaryName:(NSString *)primaryName hospitalName:(void (^)(NSString* str))hospitalName;
 @end

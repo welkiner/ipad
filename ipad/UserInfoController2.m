@@ -45,7 +45,7 @@
 }
 - (IBAction)hospitalBtnClick:(id)sender {
     @weakify(self);
-    [HospitalSearchView showInView:self.view hospitalName:^(NSString *str) {
+    [HospitalSearchView showInView:self.view primaryName:_model.hospital hospitalName:^(NSString *str){
         @strongify(self);
         self -> _model.hospital = str;
         [self.hospital setTitle:self ->_model.hospital forState:UIControlStateNormal];

@@ -101,8 +101,18 @@ static FMDatabase *__fmDB;
     CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:enc delimiter:COMMAA];
     BOOL isFirst = YES;
     while([results next]) {
-        NSDictionary *resultRow = [results resultDictionary];
-        NSArray *orderedKeys = @[@"id",@"province",@"city",@"organization",@"question1",@"question2",@"question3"];
+        NSMutableDictionary *resultRow = [results resultDictionary].mutableCopy;
+        if ([resultRow[@"question2"] length] == 4) {
+            resultRow[@"question2_1"] = [resultRow[@"question2"] substringWithRange:NSMakeRange(0, 1)];
+            resultRow[@"question2_2"] = [resultRow[@"question2"] substringWithRange:NSMakeRange(1, 1)];
+            resultRow[@"question2_3"] = [resultRow[@"question2"] substringWithRange:NSMakeRange(2, 1)];
+            resultRow[@"question2_4"] = [resultRow[@"question2"] substringWithRange:NSMakeRange(3, 1)];
+        }
+        if ([resultRow[@"question3"] length] == 2) {
+            resultRow[@"question3_1"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(0, 1)];
+            resultRow[@"question3_2"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(1, 1)];
+        }
+        NSArray *orderedKeys = @[@"id",@"province",@"city",@"organization",@"question1",@"question2_1",@"question2_2",@"question2_3",@"question2_4",@"question3_1",@"question3_2"];
         if (isFirst) {
             isFirst = NO;
             for (NSString *columnName in orderedKeys) {

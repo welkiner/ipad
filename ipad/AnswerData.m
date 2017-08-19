@@ -57,7 +57,7 @@ static FMDatabase *__fmDB;
     if (![__fmDB open]) {
         return ;
     }
-    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question4) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,model.question4] ;
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question4, question4_E) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', %@ ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,model.question4,model.question4_E] ;
     
     BOOL res = [__fmDB executeUpdate:sql];
     if (!res) {
@@ -80,8 +80,13 @@ static FMDatabase *__fmDB;
     CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:enc delimiter:COMMAA];
     BOOL isFirst = YES;
     while([results next]) {
-        NSDictionary *resultRow = [results resultDictionary];
-        NSArray *orderedKeys = @[@"id",@"province",@"city",@"hospital",@"keshi",@"question1",@"question2",@"question3",@"question4"];
+        NSMutableDictionary *resultRow = [results resultDictionary].mutableCopy;
+        if ([resultRow[@"question3"] length] == 3) {
+            resultRow[@"question3_1"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(0, 1)];
+            resultRow[@"question3_2"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(1, 1)];
+            resultRow[@"question3_3"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(2, 1)];
+        }
+        NSArray *orderedKeys = @[@"id",@"province",@"city",@"hospital",@"keshi",@"question1",@"question2",@"question3_1",@"question3_2",@"question3_3",@"question4",@"question4_E"];
         if (isFirst) {
             isFirst = NO;
             for (NSString *columnName in orderedKeys) {

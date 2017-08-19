@@ -35,7 +35,7 @@
 /**
  *  有几列
  */
-@property (copy, nonatomic)NSInteger (^(numberOfComponent))();
+@property (copy, nonatomic)NSInteger (^(numberOfComponent))(void);
 
 
 @property (copy, nonatomic)NSInteger (^(numberOfRowsInComponent))(NSInteger componentIndex);

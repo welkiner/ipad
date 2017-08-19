@@ -11,6 +11,7 @@
 #import "AnswerData.h"
 #import "MBProgressHUD.h"
 #import "WifiView.h"
+#import "Q1Controller4.h"
 @interface FirstController (){
     
 }
@@ -25,6 +26,10 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)shareBtnClick:(id)sender {
+    Q1Controller4 *con = [Q1Controller4 controllerWithModel:nil];
+    [self.navigationController pushViewController:con animated:YES];
+    return;
+    
     MBProgressHUD *hud=[[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].keyWindow] ;
     [[UIApplication sharedApplication].keyWindow addSubview:hud];
     hud.dimBackground = NO;

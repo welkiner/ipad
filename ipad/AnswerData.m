@@ -57,7 +57,7 @@ static FMDatabase *__fmDB;
     if (![__fmDB open]) {
         return ;
     }
-    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question4, question4_E) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,model.question4,model.question4_E] ;
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question4, question4_E) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,model.question4,[model.question4_E length] > 0?model.question4_E:@""] ;
     
     BOOL res = [__fmDB executeUpdate:sql];
     if (!res) {

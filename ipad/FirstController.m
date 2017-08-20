@@ -26,9 +26,6 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)shareBtnClick:(id)sender {
-    Q1Controller4 *con = [Q1Controller4 controllerWithModel:nil];
-    [self.navigationController pushViewController:con animated:YES];
-    return;
     
     MBProgressHUD *hud=[[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].keyWindow] ;
     [[UIApplication sharedApplication].keyWindow addSubview:hud];

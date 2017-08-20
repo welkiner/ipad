@@ -59,7 +59,7 @@
         [self addSubview:self.textField];
         [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self);
-            make.right.equalTo(self);
+            make.right.equalTo(self).offset(-30);
             make.bottom.equalTo(self);
             make.left.equalTo(self.label.mas_right);
         }];
@@ -74,7 +74,7 @@
     NSString *_EStr;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (weak, nonatomic) UITextField *textField;
 @end
 
 @implementation Q1Controller4
@@ -88,27 +88,41 @@
     [self.tableView registerClass:[Cell2 class] forCellReuseIdentifier:@"cell2"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView setEditing:YES animated:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
     // Do any additional setup after loading the view.
 }
 - (IBAction)nextBtnClick:(id)sender {
-//    self.model.question4 = [self answerStr];
-//    if (self.model.question4.length == 0) {
-//        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//        [view show];
-//        return;
-//    }
-//
-//    [AnswerData saveData:self.model];
-//    FinishController *con = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FinishController"];
-//    [self.navigationController pushViewController:con animated:YES];
+    NSMutableString *questionStr = @"".mutableCopy;
+    for (NSString *str in _listArray) {
+        [questionStr appendString:str];
+    }
+    self.model.question4 = questionStr.copy;
+    
+    if (_textField.text.length > 0) {
+        self.model.question4_E = _textField.text;
+    }
+    
+    [AnswerData saveData:self.model];
+    FinishController *con = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FinishController"];
+    [self.navigationController pushViewController:con animated:YES];
 }
 
 static NSDictionary *__dic(){
     return @{@"A":@"儿童ECMO套包",@"B":@"心室辅助套包",@"C":@"Mecc套包",@"D":@"自定义体外循环套包",@"E":@"其他请注明"};
 }
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    [self.view endEditing:YES];
     NSUInteger fromRow = [sourceIndexPath row];
     NSUInteger toRow = [destinationIndexPath row];
+    
+    if (fromRow == toRow) {
+        return;
+    }
+    id object = [_listArray objectAtIndex:fromRow];
+    [_listArray removeObjectAtIndex:fromRow];
+    [_listArray insertObject:object atIndex:toRow];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 47;
@@ -119,7 +133,8 @@ static NSDictionary *__dic(){
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if ([_listArray[indexPath.row] isEqualToString:@"E"]) {
         Cell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"cell2" forIndexPath:indexPath];
-        cell.textField.text = __dic()[_listArray[indexPath.row]];
+        cell.textField.placeholder = __dic()[_listArray[indexPath.row]];
+        self.textField = cell.textField;
         cell.label.text = [NSString stringWithFormat:@"%@ ：",_listArray[indexPath.row]];
         return cell;
     }
@@ -134,13 +149,35 @@ static NSDictionary *__dic(){
 }
 
 -(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     return YES;
 }
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleNone;
 }
 
-
+-(void)keyboardWillShow:(NSNotification*)sender{
+    CGRect textFildRect = [self.view convertRect:self.textField.frame fromView:self.textField.superview ];
+    CGRect keyboardRect = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    CGFloat deltaY = keyboardRect.origin.y -textFildRect.size.height-textFildRect.origin.y - 60;
+    if (deltaY <0) {
+        [UIView animateWithDuration:[sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+            self.view.transform = CGAffineTransformMakeTranslation(0, deltaY);
+        }];
+    }
+}
+-(void)keyboardWillHide:(NSNotification*)sender{
+    [UIView animateWithDuration:[sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+        self.view.transform = CGAffineTransformIdentity;
+    }];
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (IBAction)backBtnClick:(id)sender {
     self.model.question4 = nil;

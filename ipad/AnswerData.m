@@ -86,7 +86,14 @@ static FMDatabase *__fmDB;
             resultRow[@"question3_2"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(1, 1)];
             resultRow[@"question3_3"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(2, 1)];
         }
-        NSArray *orderedKeys = @[@"id",@"province",@"city",@"hospital",@"keshi",@"question1",@"question2",@"question3_1",@"question3_2",@"question3_3",@"question4",@"question4_E"];
+        if ([resultRow[@"question4"] length] == 5) {
+            resultRow[@"question4_1"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(0, 1)];
+            resultRow[@"question4_2"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(1, 1)];
+            resultRow[@"question4_3"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(2, 1)];
+            resultRow[@"question4_4"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(3, 1)];
+            resultRow[@"question4_5"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(4, 1)];
+        }
+        NSArray *orderedKeys = @[@"id",@"province",@"city",@"hospital",@"keshi",@"question1",@"question2",@"question3_1",@"question3_2",@"question3_3",@"question4_1",@"question4_2",@"question4_3",@"question4_4",@"question4_5",@"question4_E"];
         if (isFirst) {
             isFirst = NO;
             for (NSString *columnName in orderedKeys) {

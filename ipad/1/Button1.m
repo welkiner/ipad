@@ -12,7 +12,7 @@
 - (void)setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
     self.layer.masksToBounds = cornerRadius > 0;
-
+    self.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.4];
 }
 -(void)awakeFromNib{
     [super awakeFromNib];

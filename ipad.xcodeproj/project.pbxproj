@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B1B92E7643A1CA4CB142C73 /* libPods-ipad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C78DD109B4F45CCDD835D517 /* libPods-ipad.a */; };
+		451A7B5F1F603F87008BC9DB /* Q1Controller5.m in Sources */ = {isa = PBXBuildFile; fileRef = 451A7B5E1F603F87008BC9DB /* Q1Controller5.m */; };
 		4527918E1F25D09C00010996 /* FirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527918D1F25D09C00010996 /* FirstController.m */; };
 		452791911F25D11300010996 /* UserInfoController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791901F25D11300010996 /* UserInfoController2.m */; };
 		452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791931F25D57E00010996 /* HETPublicPickerView.m */; };
@@ -43,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		258103E04245671C9128EB93 /* Pods-ipad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipad/Pods-ipad.release.xcconfig"; sourceTree = "<group>"; };
+		451A7B5D1F603F87008BC9DB /* Q1Controller5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Q1Controller5.h; sourceTree = "<group>"; };
+		451A7B5E1F603F87008BC9DB /* Q1Controller5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Q1Controller5.m; sourceTree = "<group>"; };
 		4527918C1F25D09C00010996 /* FirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstController.h; sourceTree = "<group>"; };
 		4527918D1F25D09C00010996 /* FirstController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstController.m; sourceTree = "<group>"; };
 		4527918F1F25D11300010996 /* UserInfoController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoController2.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				457E8E301F26418F00924F5F /* Q1Controller3.m */,
 				457E8E321F26419900924F5F /* Q1Controller4.h */,
 				457E8E331F26419900924F5F /* Q1Controller4.m */,
+				451A7B5D1F603F87008BC9DB /* Q1Controller5.h */,
+				451A7B5E1F603F87008BC9DB /* Q1Controller5.m */,
 			);
 			path = 1;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				457E8E251F263CB800924F5F /* Button1.m in Sources */,
 				457E8E2B1F26416E00924F5F /* Q1Controller1.m in Sources */,
 				457E8E2E1F26418500924F5F /* Q1Controller2.m in Sources */,
+				451A7B5F1F603F87008BC9DB /* Q1Controller5.m in Sources */,
 				457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */,
 				457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */,
 				457E8E341F26419900924F5F /* Q1Controller4.m in Sources */,
@@ -538,7 +544,7 @@
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -556,7 +562,7 @@
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0a8fc6b9-a026-43a2-85e7-a81863343316";
 				PROVISIONING_PROFILE_SPECIFIER = DisAll;

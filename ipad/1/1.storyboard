@@ -121,12 +121,6 @@
                                     <action selector="nextBtnClick:" destination="hKU-GB-tr3" eventType="touchUpInside" id="imr-QV-cUf"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ogp-cK-1g4">
-                                <rect key="frame" x="263" y="340" width="438" height="245"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <sections/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,13 +130,10 @@
                             <constraint firstItem="0gn-ba-FSy" firstAttribute="top" secondItem="w09-S7-yaa" secondAttribute="top" id="rQw-d4-X9L"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="tableView" destination="Ogp-cK-1g4" id="v5i-I6-Kof"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrM-HZ-LCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498.4375" y="1043.75"/>
+            <point key="canvasLocation" x="2478" y="1044"/>
         </scene>
         <!--Q1Controller2-->
         <scene sceneID="ubt-8n-1h4">
@@ -217,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YT3-XK-IUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="198"/>
+            <point key="canvasLocation" x="2478" y="173"/>
         </scene>
         <!--Q1Controller3-->
         <scene sceneID="lrX-a3-vef">
@@ -424,11 +415,59 @@
             </objects>
             <point key="canvasLocation" x="1360.546875" y="851.5625"/>
         </scene>
+        <!--Q1Controller4-->
+        <scene sceneID="SRi-ky-Byx">
+            <objects>
+                <viewController storyboardIdentifier="Q1Controller5" id="WVU-SS-NcE" userLabel="Q1Controller4" customClass="Q1Controller5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M8n-74-ajW"/>
+                        <viewControllerLayoutGuide type="bottom" id="eon-46-wlA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g5T-mZ-cbq">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="答题1-5" translatesAutoresizingMaskIntoConstraints="NO" id="ZVN-aB-U4h">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc9-OH-dQ5" customClass="Button1">
+                                <rect key="frame" x="60" y="630" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIP-ni-sqK" customClass="Button1">
+                                <rect key="frame" x="845" y="630" width="125" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZVN-aB-U4h" firstAttribute="leading" secondItem="g5T-mZ-cbq" secondAttribute="leading" id="EZx-cU-g4T"/>
+                            <constraint firstItem="eon-46-wlA" firstAttribute="top" secondItem="ZVN-aB-U4h" secondAttribute="bottom" id="O7P-tX-bFs"/>
+                            <constraint firstAttribute="trailing" secondItem="ZVN-aB-U4h" secondAttribute="trailing" id="Xv0-lZ-bmQ"/>
+                            <constraint firstItem="ZVN-aB-U4h" firstAttribute="top" secondItem="g5T-mZ-cbq" secondAttribute="top" id="y7k-5s-Y2x"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ypa-0Z-Bt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="1538"/>
+        </scene>
     </scenes>
     <resources>
         <image name="答题1-1" width="1024" height="768"/>
         <image name="答题1-2" width="1024" height="768"/>
         <image name="答题1-3" width="1024" height="768"/>
         <image name="答题1-4" width="1024" height="768"/>
+        <image name="答题1-5" width="1024" height="768"/>
     </resources>
 </document>

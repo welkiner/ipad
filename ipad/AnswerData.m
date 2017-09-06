@@ -57,7 +57,7 @@ static FMDatabase *__fmDB;
     if (![__fmDB open]) {
         return ;
     }
-    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question3_E, question4, question4_D, question5) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,[model.question3_E length] > 0?model.question3_E:@"",model.question4,[model.question4_D length] > 0?model.question4_D:@"",model.question5] ;
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO answerTable (province, city, hospital, keshi, question1, question2, question3, question3_other, question4, question4_other, question5) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",model.province,model.city,model.hospital,model.keshi,model.question1,model.question2,model.question3,[model.question3_other length] > 0?model.question3_other:@"",model.question4,[model.question4_other length] > 0?model.question4_other:@"",model.question5] ;
     
     BOOL res = [__fmDB executeUpdate:sql];
     if (!res) {
@@ -81,19 +81,39 @@ static FMDatabase *__fmDB;
     BOOL isFirst = YES;
     while([results next]) {
         NSMutableDictionary *resultRow = [results resultDictionary].mutableCopy;
-        if ([resultRow[@"question3"] length] == 3) {
-            resultRow[@"question3_1"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(0, 1)];
-            resultRow[@"question3_2"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(1, 1)];
-            resultRow[@"question3_3"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(2, 1)];
+        NSString *q3str = resultRow[@"question3"];
+        if ([q3str containsString:@"A"]) {
+            resultRow[@"question3_A"] = @"√";
         }
-        if ([resultRow[@"question4"] length] == 5) {
-            resultRow[@"question4_1"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(0, 1)];
-            resultRow[@"question4_2"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(1, 1)];
-            resultRow[@"question4_3"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(2, 1)];
-            resultRow[@"question4_4"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(3, 1)];
-            resultRow[@"question4_5"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(4, 1)];
+        if ([q3str containsString:@"B"]) {
+            resultRow[@"question3_B"] = @"√";
         }
-        NSArray *orderedKeys = @[@"id",@"province",@"city",@"hospital",@"keshi",@"question1",@"question2",@"question3_1",@"question3_2",@"question3_3",@"question4_1",@"question4_2",@"question4_3",@"question4_4",@"question4_5",@"question4_E"];
+        if ([q3str containsString:@"C"]) {
+            resultRow[@"question3_C"] = @"√";
+        }
+        if ([q3str containsString:@"D"]) {
+            resultRow[@"question3_D"] = @"√";
+        }
+        if ([q3str containsString:@"E"]) {
+            resultRow[@"question3_E"] = @"√";
+        }
+        
+        NSString *q5str = resultRow[@"question5"];
+        if ([q5str containsString:@"A"]) {
+            resultRow[@"question5_A"] = @"√";
+        }
+        if ([q5str containsString:@"B"]) {
+            resultRow[@"question5_B"] = @"√";
+        }
+        if ([q5str containsString:@"C"]) {
+            resultRow[@"question5_C"] = @"√";
+        }
+        if ([q5str containsString:@"D"]) {
+            resultRow[@"question5_D"] = @"√";
+        }
+
+
+        NSArray *orderedKeys = @[@"id",@"province",@"city",@"hospital",@"keshi",@"question1",@"question2",@"question3_A",@"question3_B",@"question3_C",@"question3_D",@"question3_E",@"question3_other",@"question4",@"question4_other",@"question5_A",@"question5_B",@"question5_C",@"question5_D"];
         if (isFirst) {
             isFirst = NO;
             for (NSString *columnName in orderedKeys) {

@@ -30,7 +30,7 @@
 }
 - (IBAction)backBtnClick:(id)sender {
     self.model.question3 = nil;
-    self.model.question3_E = nil;
+    self.model.question3_other = nil;
     [self.navigationController popViewControllerAnimated:YES];
 }
 

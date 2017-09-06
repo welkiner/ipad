@@ -63,7 +63,7 @@
 
 - (IBAction)backBtnClick:(id)sender {
     self.model.question4 = nil;
-    self.model.question4_D = nil;
+    self.model.question4_other = nil;
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {

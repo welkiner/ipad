@@ -16,8 +16,8 @@
 @property (nonatomic,copy)NSString *question1;
 @property (nonatomic,copy)NSString *question2;
 @property (nonatomic,copy)NSString *question3;
-@property (nonatomic,copy)NSString *question3_E;
+@property (nonatomic,copy)NSString *question3_other;
 @property (nonatomic,copy)NSString *question4;
-@property (nonatomic,copy)NSString *question4_D;
+@property (nonatomic,copy)NSString *question4_other;
 @property (nonatomic,copy)NSString *question5;
 @end

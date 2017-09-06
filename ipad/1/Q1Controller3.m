@@ -19,8 +19,8 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)nextBtnClick:(id)sender {
-    self.model.question3 = [NSString stringWithFormat:@"%@%@%@",[self answerStr],[self answerStr2],[self answerStr3]];
-    if (self.model.question3.length < 3) {
+    self.model.question3 = [self answerStr];
+    if (self.model.question3.length == 0) {
         UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [view show];
         return;
@@ -30,7 +30,12 @@
 }
 - (IBAction)backBtnClick:(id)sender {
     self.model.question3 = nil;
+    self.model.question3_E = nil;
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(BOOL)mutiAnswer{
+    return YES;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

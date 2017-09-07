@@ -11,6 +11,8 @@
 
 @interface Q1Controller4 (){
 
+    __weak IBOutlet UITextField *textfield;
+    __weak Button1 *_btn;
 }
 @end
 
@@ -18,7 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    for (Button1 *btn in self.answerBtns) {
+        if (btn.tag == 103) {
+            btn.userInteractionEnabled = NO;
+            _btn = btn;
+        }
+        
+    }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -36,20 +44,37 @@
     [self.navigationController pushViewController:con animated:YES];
 
 }
+-(void)answerBtnsClick:(Button1 *)btn{
+    [super answerBtnsClick:btn];
+    if ([_btn isEqual:btn]) {
+        return;
+    }
+    textfield.text = nil;
+    self.model.question4_other = nil;
+}
 
 
 -(void)keyboardWillShow:(NSNotification*)sender{
-//    CGRect textFildRect = [self.view convertRect:self.textField.frame fromView:self.textField.superview ];
-//    CGRect keyboardRect = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-//    
-//    CGFloat deltaY = keyboardRect.origin.y -textFildRect.size.height-textFildRect.origin.y - 60;
-//    if (deltaY <0) {
-//        [UIView animateWithDuration:[sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
-//            self.view.transform = CGAffineTransformMakeTranslation(0, deltaY);
-//        }];
-//    }
+    CGRect textFildRect = [self.view convertRect:textfield.frame fromView:textfield.superview ];
+    CGRect keyboardRect = [sender.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    CGFloat deltaY = keyboardRect.origin.y -textFildRect.size.height-textFildRect.origin.y - 60;
+    if (deltaY <0) {
+        [UIView animateWithDuration:[sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
+            self.view.transform = CGAffineTransformMakeTranslation(0, deltaY);
+        }];
+    }
 }
 -(void)keyboardWillHide:(NSNotification*)sender{
+    if (textfield.text.length >0 && self.model.question4_other.length >0) {
+        
+    }else if (textfield.text.length == 0 && self.model.question4_other.length == 0){
+        
+    }else {
+        [self answerBtnsClick:_btn];
+    }
+    
+    self.model.question4_other = textfield.text;
     [UIView animateWithDuration:[sender.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue] animations:^{
         self.view.transform = CGAffineTransformIdentity;
     }];

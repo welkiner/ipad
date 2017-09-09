@@ -96,6 +96,25 @@ static FMDatabase *__fmDB;
     BOOL isFirst = YES;
     while([results next]) {
         NSMutableDictionary *resultRow = [results resultDictionary].mutableCopy;
+        
+        NSString *q3str = resultRow[@"question1"];
+        if ([q3str containsString:@"A"]) {
+            resultRow[@"question1_A"] = @"√";
+        }
+        if ([q3str containsString:@"B"]) {
+            resultRow[@"question1_B"] = @"√";
+        }
+        if ([q3str containsString:@"C"]) {
+            resultRow[@"question1_C"] = @"√";
+        }
+        if ([q3str containsString:@"D"]) {
+            resultRow[@"question1_D"] = @"√";
+        }
+        if ([q3str containsString:@"E"]) {
+            resultRow[@"question1_E"] = @"√";
+        }
+        
+        
         if ([resultRow[@"question3"] length] == 4) {
             resultRow[@"question3_A"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(0, 1)];
             resultRow[@"question3_B"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(1, 1)];
@@ -125,8 +144,11 @@ static FMDatabase *__fmDB;
                                 @"province",
                                 @"city",
                                 @"hospital",
-                                @"keshi",
-                                @"question1",
+                                @"question1_A",
+                                @"question1_B",
+                                @"question1_C",
+                                @"question1_D",
+                                @"question1_E",
                                 @"question2",
                                 @"question3_A",
                                 @"question3_B",

@@ -19,7 +19,14 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)nextBtnClick:(id)sender {
-    
+    self.model.question4 = [NSString stringWithFormat:@"%@%@%@%@%@",[self answerStr],[self answerStr2],[self answerStr3],[self answerStr4],[self answerStr5]];
+    if (self.model.question4.length < 5) {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+        return;
+    }
+    Q1Controller5 *con = [Q1Controller5 controllerWithModel:self.model];
+    [self.navigationController pushViewController:con animated:YES];
 }
 
 - (IBAction)backBtnClick:(id)sender {

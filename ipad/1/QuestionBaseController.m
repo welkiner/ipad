@@ -130,6 +130,13 @@ static NSDictionary *__dic(){
     return str.copy;
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSString *classStr = NSStringFromClass(self.class);
+    NSString *numberStr = [classStr substringFromIndex:@"Q1Controller".length];
+    id a = [self.model valueForKeyPath:[NSString stringWithFormat:@"question%@",numberStr]];
+    NSLog(@"页面%@答案%@",numberStr,a);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -17,7 +17,7 @@
     UserModel *_model;
 }
 @property (weak, nonatomic) IBOutlet UIButton *cityBtn;
-@property (weak, nonatomic) IBOutlet UIButton *keshiBtn;
+//@property (weak, nonatomic) IBOutlet UIButton *keshiBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *hospital;
 @end
@@ -51,22 +51,21 @@
         [self.hospital setTitle:self ->_model.hospital forState:UIControlStateNormal];
     }];
 }
-- (IBAction)keshiBtnClick:(id)sender {
-    @weakify(self);
-    [HETKeshiPicker pickerIn:self.view choose:^(NSString * _Nonnull keshiName) {
-        @strongify(self);
-        self -> _model.keshi = keshiName;
-        [self.keshiBtn setTitle:self -> _model.keshi forState:UIControlStateNormal];
-    }];
-}
+//- (IBAction)keshiBtnClick:(id)sender {
+//    @weakify(self);
+//    [HETKeshiPicker pickerIn:self.view choose:^(NSString * _Nonnull keshiName) {
+//        @strongify(self);
+//        self -> _model.keshi = keshiName;
+//        [self.keshiBtn setTitle:self -> _model.keshi forState:UIControlStateNormal];
+//    }];
+//}
 - (IBAction)submitBtnClick:(id)sender {
-    if (_model.keshi.length == 0 ||
-        _model.hospital.length == 0 ||
-        _model.province.length == 0) {
-        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写所有资料" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [view show];
-        return;
-    }
+//    if (_model.hospital.length == 0 ||
+//        _model.province.length == 0) {
+//        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写所有资料" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+//        [view show];
+//        return;
+//    }
     Q1Controller1 *con = [Q1Controller1 controllerWithModel:_model];
     [self.navigationController pushViewController:con animated:YES];
 }

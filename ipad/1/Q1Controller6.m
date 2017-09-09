@@ -19,8 +19,8 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)nextBtnClick:(id)sender {
-    self.model.question3 = [NSString stringWithFormat:@"%@%@%@",[self answerStr],[self answerStr2],[self answerStr3]];
-    if (self.model.question3.length < 3) {
+    self.model.question6 = [NSString stringWithFormat:@"%@%@%@%@",[self answerStr],[self answerStr2],[self answerStr3],[self answerStr4]];
+    if (self.model.question6.length < 4) {
         UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [view show];
         return;
@@ -29,7 +29,7 @@
     [self.navigationController pushViewController:con animated:YES];
 }
 - (IBAction)backBtnClick:(id)sender {
-    self.model.question3 = nil;
+    self.model.question6 = nil;
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {

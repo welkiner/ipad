@@ -20,20 +20,18 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)nextBtnClick:(id)sender {
-//    self.model.question3 = [NSString stringWithFormat:@"%@%@%@",[self answerStr],[self answerStr2],[self answerStr3]];
-//    if (self.model.question3.length < 3) {
-//        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//        [view show];
-//        return;
-//    }
-//    Q1Controller4 *con = [Q1Controller4 controllerWithModel:self.model];
-//    [self.navigationController pushViewController:con animated:YES];
-    [AnswerData saveData:self.model];
+    self.model.question10 = [self answerStr];
+    if (self.model.question10.length == 0) {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+        return;
+    }
+//    [AnswerData saveData:self.model];
     FinishController *con = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FinishController"];
     [self.navigationController pushViewController:con animated:YES];
 }
 - (IBAction)backBtnClick:(id)sender {
-    self.model.question3 = nil;
+    self.model.question10 = nil;
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {

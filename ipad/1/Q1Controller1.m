@@ -31,7 +31,9 @@
     Q1Controller2 *con = [Q1Controller2 controllerWithModel:self.model];
     [self.navigationController pushViewController:con animated:YES];
 }
-
+-(BOOL)mutiAnswer{
+    return YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -26,7 +26,7 @@
         [view show];
         return;
     }
-//    [AnswerData saveData:self.model];
+    [AnswerData saveData:self.model];
     FinishController *con = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"FinishController"];
     [self.navigationController pushViewController:con animated:YES];
 }

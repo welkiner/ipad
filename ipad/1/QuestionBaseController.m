@@ -30,10 +30,10 @@
         [btn addTarget:self action:@selector(answerBtnsClick3:) forControlEvents:UIControlEventTouchUpInside];
     }
     for (UIButton *btn in self.answerBtns4) {
-        [btn addTarget:self action:@selector(answerBtnsClick3:) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(answerBtnsClick4:) forControlEvents:UIControlEventTouchUpInside];
     }
     for (UIButton *btn in self.answerBtns5) {
-        [btn addTarget:self action:@selector(answerBtnsClick3:) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(answerBtnsClick5:) forControlEvents:UIControlEventTouchUpInside];
     }
     // Do any additional setup after loading the view.
 }

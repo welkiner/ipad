@@ -574,7 +574,7 @@
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -592,7 +592,7 @@
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0a8fc6b9-a026-43a2-85e7-a81863343316";
 				PROVISIONING_PROFILE_SPECIFIER = DisAll;

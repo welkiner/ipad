@@ -60,12 +60,12 @@
 //    }];
 //}
 - (IBAction)submitBtnClick:(id)sender {
-//    if (_model.hospital.length == 0 ||
-//        _model.province.length == 0) {
-//        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写所有资料" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//        [view show];
-//        return;
-//    }
+    if (_model.hospital.length == 0 ||
+        _model.province.length == 0) {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写所有资料" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [view show];
+        return;
+    }
     Q1Controller1 *con = [Q1Controller1 controllerWithModel:_model];
     [self.navigationController pushViewController:con animated:YES];
 }

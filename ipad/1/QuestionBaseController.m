@@ -29,6 +29,12 @@
     for (UIButton *btn in self.answerBtns3) {
         [btn addTarget:self action:@selector(answerBtnsClick3:) forControlEvents:UIControlEventTouchUpInside];
     }
+    for (UIButton *btn in self.answerBtns4) {
+        [btn addTarget:self action:@selector(answerBtnsClick3:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    for (UIButton *btn in self.answerBtns5) {
+        [btn addTarget:self action:@selector(answerBtnsClick3:) forControlEvents:UIControlEventTouchUpInside];
+    }
     // Do any additional setup after loading the view.
 }
 -(void)answerBtnsClick:(Button1 *)btn{
@@ -55,12 +61,28 @@
     }
     btn.selected = !btn.selected;
 }
+-(void)answerBtnsClick4:(Button1 *)btn{
+    if (![self mutiAnswer]) {
+        for (UIButton *btn in self.answerBtns4) {
+            btn.selected = NO;
+        }
+    }
+    btn.selected = !btn.selected;
+}
+-(void)answerBtnsClick5:(Button1 *)btn{
+    if (![self mutiAnswer]) {
+        for (UIButton *btn in self.answerBtns5) {
+            btn.selected = NO;
+        }
+    }
+    btn.selected = !btn.selected;
+}
 -(BOOL)mutiAnswer{
     return NO;
 }
 
 static NSDictionary *__dic(){
-    return @{@"100":@"A",@"101":@"B",@"102":@"C",@"103":@"D",@"104":@"E"};
+    return @{@"100":@"A",@"101":@"B",@"102":@"C",@"103":@"D",@"104":@"E",@"105":@"F"};
 }
 -(NSString *)answerStr{
     NSMutableString *str = @"".mutableCopy;
@@ -83,6 +105,24 @@ static NSDictionary *__dic(){
 -(NSString *)answerStr3{
     NSMutableString *str = @"".mutableCopy;
     for (UIButton *btn in self.answerBtns3) {
+        if (btn.selected) {
+            [str appendString:__dic()[[NSString stringWithFormat:@"%@",@(btn.tag)]]];
+        }
+    }
+    return str.copy;
+}
+-(NSString *)answerStr4{
+    NSMutableString *str = @"".mutableCopy;
+    for (UIButton *btn in self.answerBtns4) {
+        if (btn.selected) {
+            [str appendString:__dic()[[NSString stringWithFormat:@"%@",@(btn.tag)]]];
+        }
+    }
+    return str.copy;
+}
+-(NSString *)answerStr5{
+    NSMutableString *str = @"".mutableCopy;
+    for (UIButton *btn in self.answerBtns5) {
         if (btn.selected) {
             [str appendString:__dic()[[NSString stringWithFormat:@"%@",@(btn.tag)]]];
         }

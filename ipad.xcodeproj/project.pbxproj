@@ -37,6 +37,12 @@
 		72760E731F231DF500377839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72760E721F231DF500377839 /* Assets.xcassets */; };
 		72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E741F231DF500377839 /* LaunchScreen.storyboard */; };
 		72760E801F23217200377839 /* HospitalDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E7F1F23217200377839 /* HospitalDataBase.m */; };
+		7277275A1F63BD600091459E /* Q1Controller5.m in Sources */ = {isa = PBXBuildFile; fileRef = 727727591F63BD600091459E /* Q1Controller5.m */; };
+		7277275D1F63BD6D0091459E /* Q1Controller6.m in Sources */ = {isa = PBXBuildFile; fileRef = 7277275C1F63BD6D0091459E /* Q1Controller6.m */; };
+		727727601F63BD780091459E /* Q1Controller7.m in Sources */ = {isa = PBXBuildFile; fileRef = 7277275F1F63BD780091459E /* Q1Controller7.m */; };
+		727727631F63BD870091459E /* Q1Controller8.m in Sources */ = {isa = PBXBuildFile; fileRef = 727727621F63BD870091459E /* Q1Controller8.m */; };
+		727727661F63BD910091459E /* Q1Controller9.m in Sources */ = {isa = PBXBuildFile; fileRef = 727727651F63BD910091459E /* Q1Controller9.m */; };
+		727727691F63BDBC0091459E /* Q1Controller10.m in Sources */ = {isa = PBXBuildFile; fileRef = 727727681F63BDBC0091459E /* Q1Controller10.m */; };
 		72FA82101F28382A00B6F371 /* WifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FA820F1F28382A00B6F371 /* WifiView.m */; };
 		72FA82121F2838B700B6F371 /* WifiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72FA82111F2838B700B6F371 /* WifiView.xib */; };
 /* End PBXBuildFile section */
@@ -93,6 +99,18 @@
 		72760E771F231DF500377839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72760E7E1F23217200377839 /* HospitalDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalDataBase.h; sourceTree = "<group>"; };
 		72760E7F1F23217200377839 /* HospitalDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalDataBase.m; sourceTree = "<group>"; };
+		727727581F63BD600091459E /* Q1Controller5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller5.h; sourceTree = "<group>"; };
+		727727591F63BD600091459E /* Q1Controller5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller5.m; sourceTree = "<group>"; };
+		7277275B1F63BD6D0091459E /* Q1Controller6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller6.h; sourceTree = "<group>"; };
+		7277275C1F63BD6D0091459E /* Q1Controller6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller6.m; sourceTree = "<group>"; };
+		7277275E1F63BD780091459E /* Q1Controller7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller7.h; sourceTree = "<group>"; };
+		7277275F1F63BD780091459E /* Q1Controller7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller7.m; sourceTree = "<group>"; };
+		727727611F63BD870091459E /* Q1Controller8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller8.h; sourceTree = "<group>"; };
+		727727621F63BD870091459E /* Q1Controller8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller8.m; sourceTree = "<group>"; };
+		727727641F63BD910091459E /* Q1Controller9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller9.h; sourceTree = "<group>"; };
+		727727651F63BD910091459E /* Q1Controller9.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller9.m; sourceTree = "<group>"; };
+		727727671F63BDBC0091459E /* Q1Controller10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller10.h; sourceTree = "<group>"; };
+		727727681F63BDBC0091459E /* Q1Controller10.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller10.m; sourceTree = "<group>"; };
 		72FA820E1F28382A00B6F371 /* WifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiView.h; sourceTree = "<group>"; };
 		72FA820F1F28382A00B6F371 /* WifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiView.m; sourceTree = "<group>"; };
 		72FA82111F2838B700B6F371 /* WifiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiView.xib; sourceTree = "<group>"; };
@@ -162,6 +180,18 @@
 				457E8E301F26418F00924F5F /* Q1Controller3.m */,
 				457E8E321F26419900924F5F /* Q1Controller4.h */,
 				457E8E331F26419900924F5F /* Q1Controller4.m */,
+				727727581F63BD600091459E /* Q1Controller5.h */,
+				727727591F63BD600091459E /* Q1Controller5.m */,
+				7277275B1F63BD6D0091459E /* Q1Controller6.h */,
+				7277275C1F63BD6D0091459E /* Q1Controller6.m */,
+				7277275E1F63BD780091459E /* Q1Controller7.h */,
+				7277275F1F63BD780091459E /* Q1Controller7.m */,
+				727727611F63BD870091459E /* Q1Controller8.h */,
+				727727621F63BD870091459E /* Q1Controller8.m */,
+				727727641F63BD910091459E /* Q1Controller9.h */,
+				727727651F63BD910091459E /* Q1Controller9.m */,
+				727727671F63BDBC0091459E /* Q1Controller10.h */,
+				727727681F63BDBC0091459E /* Q1Controller10.m */,
 			);
 			path = 1;
 			sourceTree = "<group>";
@@ -379,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727727631F63BD870091459E /* Q1Controller8.m in Sources */,
 				4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */,
 				457E8E3A1F2728E500924F5F /* FinishController.m in Sources */,
 				4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */,
@@ -390,10 +421,15 @@
 				457E8E371F27192900924F5F /* UserModel.m in Sources */,
 				72760E801F23217200377839 /* HospitalDataBase.m in Sources */,
 				72760E681F231DF500377839 /* main.m in Sources */,
+				727727691F63BDBC0091459E /* Q1Controller10.m in Sources */,
 				72FA82101F28382A00B6F371 /* WifiView.m in Sources */,
 				457E8E251F263CB800924F5F /* Button1.m in Sources */,
+				727727661F63BD910091459E /* Q1Controller9.m in Sources */,
 				457E8E2B1F26416E00924F5F /* Q1Controller1.m in Sources */,
 				457E8E2E1F26418500924F5F /* Q1Controller2.m in Sources */,
+				7277275A1F63BD600091459E /* Q1Controller5.m in Sources */,
+				7277275D1F63BD6D0091459E /* Q1Controller6.m in Sources */,
+				727727601F63BD780091459E /* Q1Controller7.m in Sources */,
 				457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */,
 				457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */,
 				457E8E341F26419900924F5F /* Q1Controller4.m in Sources */,

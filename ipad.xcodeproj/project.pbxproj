@@ -234,6 +234,7 @@
 				72760E601F231DF500377839 /* Frameworks */,
 				72760E611F231DF500377839 /* Resources */,
 				70AA7E753106C3B3035322C9 /* [CP] Copy Pods Resources */,
+				60ACDFCA30E22882E4D8665A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,7 +256,6 @@
 				TargetAttributes = {
 					72760E621F231DF500377839 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = WU2WFZ2B66;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -299,13 +299,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		60ACDFCA30E22882E4D8665A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipad/Pods-ipad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		70AA7E753106C3B3035322C9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ipad/Pods-ipad-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ipad/Pods-ipad-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -314,7 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ipad/Pods-ipad-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipad/Pods-ipad-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A2FD41374FBEF49875A41A70 /* [CP] Check Pods Manifest.lock */ = {
@@ -494,15 +513,17 @@
 			baseConfigurationReference = D7239B0B802F7C67ED749344 /* Pods-ipad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WU2WFZ2B66;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.answer.car1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answer.car2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = developAll;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -512,12 +533,14 @@
 			baseConfigurationReference = 258103E04245671C9128EB93 /* Pods-ipad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2F46R5UK38;
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.answer.car1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answer.car2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0a8fc6b9-a026-43a2-85e7-a81863343316";
 				PROVISIONING_PROFILE_SPECIFIER = DisAll;

@@ -11,7 +11,7 @@
 @implementation UserModel
 
 -(void)change:(NSString *)s index:(NSInteger)index{
-    [self.choose replaceCharactersInRange:NSMakeRange(index, 1) withString:s];
+    [self.choose replaceCharactersInRange:NSMakeRange(index-1, 1) withString:s];
 }
 -(void)clearIndex:(NSInteger)index{
     [self change:@"0" index:index];

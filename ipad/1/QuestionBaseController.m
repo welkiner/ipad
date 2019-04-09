@@ -73,13 +73,13 @@ static NSArray *__ArrayName(){
 
 #pragma mark -----answerBtns
 
-#define kSpace 10
+#define kSpace 5
 #define kTag 100
 -(void)makeButton{
     self.answerBtn1 = [Button1 button];
     [self.view addSubview:self.answerBtn1];
     [self.answerBtn1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(323);
+        make.top.equalTo(self.view.mas_top).offset(320);
         make.height.mas_equalTo(kHeight);
         make.left.equalTo(self.view.mas_left).offset(220);
         make.right.equalTo(self.view.mas_right).offset(-220);
@@ -183,7 +183,7 @@ static NSDictionary *__dicName(){
     }
     NSString *classStr = NSStringFromClass(self.class);
     NSString *numberStr = [classStr substringFromIndex:@"Q1Controller".length];
-    [self.model change:answerStr index:numberStr.integerValue-1];
+    [self.model change:answerStr index:numberStr.integerValue];
     
     Class a = NSClassFromString([NSString stringWithFormat:@"Q1Controller%@",@(numberStr.integerValue+1)]);
     QuestionBaseController *vc = [a controllerWithModel:self.model];

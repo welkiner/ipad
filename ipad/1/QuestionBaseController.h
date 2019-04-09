@@ -23,7 +23,7 @@
 @property (strong, nonatomic) UIButton* backBtn;
 @property (strong, nonatomic) UIButton* nextBtn;
 
-#define kHeight 50
+#define kHeight 55
 -(NSString *)answerStr;
 -(void)nextBtnClick;
 -(void)backBtnClick;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-IB_DESIGNABLE
 @interface Button1 : UIButton
-@property (nonatomic, assign)IBInspectable CGFloat cornerRadius;
+@property (nonatomic, assign)CGFloat cornerRadius;
++(instancetype)button;
 @end

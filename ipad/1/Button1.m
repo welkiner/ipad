@@ -14,10 +14,13 @@
     self.layer.masksToBounds = cornerRadius > 0;
 //    self.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.4];
 }
--(void)awakeFromNib{
-    [super awakeFromNib];
-    [self setBackgroundImage:[Button1 imageWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.3]] forState:UIControlStateHighlighted];
-    [self setBackgroundImage:[Button1 imageWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.3]] forState:UIControlStateSelected];
++(instancetype)button{
+    Button1 *but = [Button1 buttonWithType:UIButtonTypeCustom];
+    [but setBackgroundImage:[Button1 imageWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.3]] forState:UIControlStateHighlighted];
+    [but setBackgroundImage:[Button1 imageWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.3]] forState:UIControlStateSelected];
+    but.layer.cornerRadius = 8.f;
+    but.layer.masksToBounds = YES;
+    return but;
 }
 + (UIImage *)imageWithColor:(UIColor *)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);

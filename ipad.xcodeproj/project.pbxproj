@@ -9,14 +9,11 @@
 /* Begin PBXBuildFile section */
 		2B1B92E7643A1CA4CB142C73 /* libPods-ipad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C78DD109B4F45CCDD835D517 /* libPods-ipad.a */; };
 		4527918E1F25D09C00010996 /* FirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527918D1F25D09C00010996 /* FirstController.m */; };
-		452791911F25D11300010996 /* UserInfoController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791901F25D11300010996 /* UserInfoController2.m */; };
 		452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791931F25D57E00010996 /* HETPublicPickerView.m */; };
 		452791961F25D57E00010996 /* HETPublicPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452791941F25D57E00010996 /* HETPublicPickerView.xib */; };
 		4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 452791991F25D78700010996 /* HETAddressInfo.m */; };
 		4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4527919B1F25D78700010996 /* HETAddressPicker.m */; };
 		4527919F1F25D78700010996 /* HETCity.json in Resources */ = {isa = PBXBuildFile; fileRef = 4527919C1F25D78700010996 /* HETCity.json */; };
-		457E8E191F25F5D000924F5F /* HospitalSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E181F25F5D000924F5F /* HospitalSearchView.m */; };
-		457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457E8E1A1F25F6D400924F5F /* HospitalSearchView.xib */; };
 		457E8E221F2638A600924F5F /* 1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457E8E211F2638A600924F5F /* 1.storyboard */; };
 		457E8E251F263CB800924F5F /* Button1.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E241F263CB800924F5F /* Button1.m */; };
 		457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457E8E271F26414F00924F5F /* QuestionBaseController.m */; };
@@ -36,7 +33,6 @@
 		72760E711F231DF500377839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E6F1F231DF500377839 /* Main.storyboard */; };
 		72760E731F231DF500377839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72760E721F231DF500377839 /* Assets.xcassets */; };
 		72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E741F231DF500377839 /* LaunchScreen.storyboard */; };
-		72760E801F23217200377839 /* HospitalDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 72760E7F1F23217200377839 /* HospitalDataBase.m */; };
 		7277275A1F63BD600091459E /* Q1Controller5.m in Sources */ = {isa = PBXBuildFile; fileRef = 727727591F63BD600091459E /* Q1Controller5.m */; };
 		7277275D1F63BD6D0091459E /* Q1Controller6.m in Sources */ = {isa = PBXBuildFile; fileRef = 7277275C1F63BD6D0091459E /* Q1Controller6.m */; };
 		727727601F63BD780091459E /* Q1Controller7.m in Sources */ = {isa = PBXBuildFile; fileRef = 7277275F1F63BD780091459E /* Q1Controller7.m */; };
@@ -51,8 +47,6 @@
 		258103E04245671C9128EB93 /* Pods-ipad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ipad/Pods-ipad.release.xcconfig"; sourceTree = "<group>"; };
 		4527918C1F25D09C00010996 /* FirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstController.h; sourceTree = "<group>"; };
 		4527918D1F25D09C00010996 /* FirstController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstController.m; sourceTree = "<group>"; };
-		4527918F1F25D11300010996 /* UserInfoController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoController2.h; sourceTree = "<group>"; };
-		452791901F25D11300010996 /* UserInfoController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoController2.m; sourceTree = "<group>"; };
 		452791921F25D57E00010996 /* HETPublicPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HETPublicPickerView.h; sourceTree = "<group>"; };
 		452791931F25D57E00010996 /* HETPublicPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HETPublicPickerView.m; sourceTree = "<group>"; };
 		452791941F25D57E00010996 /* HETPublicPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HETPublicPickerView.xib; sourceTree = "<group>"; };
@@ -62,9 +56,6 @@
 		4527919A1F25D78700010996 /* HETAddressPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HETAddressPicker.h; sourceTree = "<group>"; };
 		4527919B1F25D78700010996 /* HETAddressPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HETAddressPicker.m; sourceTree = "<group>"; };
 		4527919C1F25D78700010996 /* HETCity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HETCity.json; sourceTree = "<group>"; };
-		457E8E171F25F5D000924F5F /* HospitalSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalSearchView.h; sourceTree = "<group>"; };
-		457E8E181F25F5D000924F5F /* HospitalSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalSearchView.m; sourceTree = "<group>"; };
-		457E8E1A1F25F6D400924F5F /* HospitalSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalSearchView.xib; sourceTree = "<group>"; };
 		457E8E211F2638A600924F5F /* 1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 1.storyboard; sourceTree = "<group>"; };
 		457E8E231F263CB800924F5F /* Button1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button1.h; sourceTree = "<group>"; };
 		457E8E241F263CB800924F5F /* Button1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button1.m; sourceTree = "<group>"; };
@@ -97,8 +88,6 @@
 		72760E721F231DF500377839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72760E751F231DF500377839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72760E771F231DF500377839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72760E7E1F23217200377839 /* HospitalDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalDataBase.h; sourceTree = "<group>"; };
-		72760E7F1F23217200377839 /* HospitalDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalDataBase.m; sourceTree = "<group>"; };
 		727727581F63BD600091459E /* Q1Controller5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller5.h; sourceTree = "<group>"; };
 		727727591F63BD600091459E /* Q1Controller5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller5.m; sourceTree = "<group>"; };
 		7277275B1F63BD6D0091459E /* Q1Controller6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller6.h; sourceTree = "<group>"; };
@@ -152,16 +141,6 @@
 				452791941F25D57E00010996 /* HETPublicPickerView.xib */,
 			);
 			name = HET;
-			sourceTree = "<group>";
-		};
-		457E8E161F25F4CB00924F5F /* Hospital */ = {
-			isa = PBXGroup;
-			children = (
-				457E8E171F25F5D000924F5F /* HospitalSearchView.h */,
-				457E8E181F25F5D000924F5F /* HospitalSearchView.m */,
-				457E8E1A1F25F6D400924F5F /* HospitalSearchView.xib */,
-			);
-			name = Hospital;
 			sourceTree = "<group>";
 		};
 		457E8E201F26386700924F5F /* 1 */ = {
@@ -229,16 +208,11 @@
 			children = (
 				45DD5CDC1F279F0C00E7B6EB /* 3rd */,
 				457E8E201F26386700924F5F /* 1 */,
-				457E8E161F25F4CB00924F5F /* Hospital */,
 				452791A01F25D78B00010996 /* HET */,
 				72760E691F231DF500377839 /* AppDelegate.h */,
 				72760E6A1F231DF500377839 /* AppDelegate.m */,
 				4527918C1F25D09C00010996 /* FirstController.h */,
 				4527918D1F25D09C00010996 /* FirstController.m */,
-				4527918F1F25D11300010996 /* UserInfoController2.h */,
-				452791901F25D11300010996 /* UserInfoController2.m */,
-				72760E7E1F23217200377839 /* HospitalDataBase.h */,
-				72760E7F1F23217200377839 /* HospitalDataBase.m */,
 				457E8E3B1F272B5500924F5F /* AnswerData.h */,
 				457E8E3C1F272B5500924F5F /* AnswerData.m */,
 				457E8E351F27192900924F5F /* UserModel.h */,
@@ -287,8 +261,6 @@
 				72760E5F1F231DF500377839 /* Sources */,
 				72760E601F231DF500377839 /* Frameworks */,
 				72760E611F231DF500377839 /* Resources */,
-				81D487B00AF702765EB24479 /* [CP] Embed Pods Frameworks */,
-				F01329517182C2F441A97F46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +282,7 @@
 				TargetAttributes = {
 					72760E621F231DF500377839 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = WU2WFZ2B66;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -319,6 +292,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -339,7 +313,6 @@
 			files = (
 				72FA82121F2838B700B6F371 /* WifiView.xib in Resources */,
 				72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */,
-				457E8E1B1F25F6D400924F5F /* HospitalSearchView.xib in Resources */,
 				452791961F25D57E00010996 /* HETPublicPickerView.xib in Resources */,
 				45DD5CE01F279F0C00E7B6EB /* GCDWebUploader.bundle in Resources */,
 				72760E731F231DF500377839 /* Assets.xcassets in Resources */,
@@ -354,21 +327,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		81D487B00AF702765EB24479 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipad/Pods-ipad-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A2FD41374FBEF49875A41A70 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,21 +345,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F01329517182C2F441A97F46 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipad/Pods-ipad-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -415,11 +358,9 @@
 				4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */,
 				457E8E311F26418F00924F5F /* Q1Controller3.m in Sources */,
 				452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */,
-				452791911F25D11300010996 /* UserInfoController2.m in Sources */,
 				72760E6B1F231DF500377839 /* AppDelegate.m in Sources */,
 				4527918E1F25D09C00010996 /* FirstController.m in Sources */,
 				457E8E371F27192900924F5F /* UserModel.m in Sources */,
-				72760E801F23217200377839 /* HospitalDataBase.m in Sources */,
 				72760E681F231DF500377839 /* main.m in Sources */,
 				727727691F63BDBC0091459E /* Q1Controller10.m in Sources */,
 				72FA82101F28382A00B6F371 /* WifiView.m in Sources */,
@@ -433,7 +374,6 @@
 				457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */,
 				457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */,
 				457E8E341F26419900924F5F /* Q1Controller4.m in Sources */,
-				457E8E191F25F5D000924F5F /* HospitalSearchView.m in Sources */,
 				45DD5CE11F279F0C00E7B6EB /* GCDWebUploader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,14 +510,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WU2WFZ2B66;
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answer.car1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = developAll;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -592,7 +532,7 @@
 				INFOPLIST_FILE = ipad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.het.ipad5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.answer.car1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0a8fc6b9-a026-43a2-85e7-a81863343316";
 				PROVISIONING_PROFILE_SPECIFIER = DisAll;

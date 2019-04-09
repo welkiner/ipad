@@ -11,18 +11,15 @@
 #import "UserModel.h"
 @interface QuestionBaseController : UIViewController
 +(instancetype)controllerWithModel:(UserModel *)model;
-@property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns;
-@property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns2;
-@property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns3;
-@property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns4;
-@property (strong, nonatomic) IBOutletCollection(Button1) NSArray *answerBtns5;
+
+@property (strong, nonatomic) UIImageView* backImageView;
+@property (strong, nonatomic) Button1* answerBtn1;
+@property (strong, nonatomic) Button1* answerBtn2;
+@property (strong, nonatomic) Button1* answerBtn3;
+@property (strong, nonatomic) Button1* answerBtn4;
+@property (strong, nonatomic) Button1* answerBtn5;
 @property (strong, nonatomic)UserModel *model;
--(void)answerBtnsClick:(Button1 *)btn;
--(BOOL)mutiAnswer;
+
 
 -(NSString *)answerStr;
--(NSString *)answerStr2;
--(NSString *)answerStr3;
--(NSString *)answerStr4;
--(NSString *)answerStr5;
 @end

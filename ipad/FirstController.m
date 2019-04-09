@@ -11,7 +11,7 @@
 #import "AnswerData.h"
 #import "MBProgressHUD.h"
 #import "WifiView.h"
-#import "Q1Controller4.h"
+#import "Q1Controller1.h"
 @interface FirstController (){
     
 }
@@ -22,17 +22,17 @@
 
 
 - (IBAction)beginBtnClick:(UIButton *)sender {
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"UserInfoController2"];
+    Q1Controller1 *vc = [Q1Controller1 controllerWithModel:nil];
+    vc.model = UserModel.new;
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)shareBtnClick:(id)sender {
     
     MBProgressHUD *hud=[[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].keyWindow] ;
     [[UIApplication sharedApplication].keyWindow addSubview:hud];
-    hud.dimBackground = NO;
-    [hud show:YES];
+    [hud showAnimated:true];
     [AnswerData csvData];
-    [hud hide:YES];
+    [hud hideAnimated:true];
     
     [WifiView showInView:self.view];
     

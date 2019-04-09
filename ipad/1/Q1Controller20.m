@@ -10,11 +10,15 @@
 #import "AnswerData.h"
 #import "FinishController.h"
 #import "Masonry.h"
-@interface Q1Controller3 ()
+#import "UITextView+Utils.h"
+@interface Q1Controller20 (){
+    
+    UITextView *_textView;
+}
 
 @end
 
-@implementation Q1Controller3
+@implementation Q1Controller20
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,12 +39,34 @@
         make.centerX.equalTo(self.view);
     }];
     [self.nextBtn addTarget:self action:@selector(nextBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    _textView = [[UITextView alloc] init];
+    [self.view addSubview:_textView];
+    _textView.backgroundColor = [UIColor clearColor];
+    _textView.font = [UIFont systemFontOfSize:28];
+    _textView.textColor = [UIColor whiteColor];
+    [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(313);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-177);
+        make.left.equalTo(self.view.mas_left).offset(230);
+        make.right.equalTo(self.view.mas_right).offset(-230);
+    }];
+    [_textView disableEmoji];
+    [_textView maxLength:150];
 }
 -(void)nextBtnClick{
+    if (_textView.text.length > 0) {
+        self.model.advice = _textView.text;
+    }
     [AnswerData saveData:self.model];
     [self.navigationController pushViewController:FinishController.new animated:true];
 }
-
+-(void)backBtnClick{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 /*
 #pragma mark - Navigation
 

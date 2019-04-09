@@ -80,45 +80,36 @@ static FMDatabase *__fmDB;
     FMResultSet *results = [__fmDB executeQuery:@"SELECT * FROM answerTable"];
     
     NSOutputStream *stream = [NSOutputStream outputStreamToFileAtPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"answers.csv"] append:NO];
+    
+//    CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:NSUTF8StringEncoding delimiter:COMMAA];
+    
     NSStringEncoding enc=CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
     CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:enc delimiter:COMMAA];
     BOOL isFirst = YES;
     while([results next]) {
-        NSMutableDictionary *resultRow = [results resultDictionary].mutableCopy;
+        NSDictionary *resultRow = [results resultDictionary];
         
-        NSString *q3str = resultRow[@"question1"];
-        
-        NSArray *orderedKeys =@[@"id\题号",
-                                @"province",
-                                @"city",
-                                @"hospital",
-                                @"question1_A",
-                                @"question1_B",
-                                @"question1_C",
-                                @"question1_D",
-                                @"question1_E",
-                                @"question2",
-                                @"question3_A",
-                                @"question3_B",
-                                @"question3_C",
-                                @"question3_D",
-                                @"question4_A",
-                                @"question4_B",
-                                @"question4_C",
-                                @"question4_D",
-                                @"question4_E",
-                                @"question5_A",
-                                @"question5_B",
-                                @"question5_C",
-                                @"question5_D",
-                                @"question6_A",
-                                @"question6_B",
-                                @"question6_C",
-                                @"question6_D",
-                                @"question7",
-                                @"question8",
-                                @"question9",
-                                @"question10",
+        NSArray *orderedKeys =@[@"id",
+                                @"题目1",
+                                @"题目2",
+                                @"题目3",
+                                @"题目4",
+                                @"题目5",
+                                @"题目6",
+                                @"题目7",
+                                @"题目8",
+                                @"题目9",
+                                @"题目10",
+                                @"题目11",
+                                @"题目12",
+                                @"题目13",
+                                @"题目14",
+                                @"题目15",
+                                @"题目16",
+                                @"题目17",
+                                @"题目18",
+                                @"题目19",
+                                @"题目20",
                                 ];
         if (isFirst) {
             isFirst = NO;
@@ -128,13 +119,29 @@ static FMDatabase *__fmDB;
             [csvWriter finishLine];
         }
         //iterate over the dictionary
-        for (NSString *columnName in orderedKeys) {
-            id value = [resultRow objectForKey:columnName];
-            if (!value || [value isKindOfClass:[NSNull class]]) {
-                value = @"";
-            }
-            [csvWriter writeField:value];
+        
+        NSString *s = resultRow[@"id"];
+        if (!s || [s isKindOfClass:[NSNull class]] ) {
+            s = @"";
         }
+        [csvWriter writeField:s];
+        
+        NSRange range ;
+        NSString *theString = resultRow[@"choose"];
+        //方法三(正确，可打印emoji)
+        for(int i=0; i<theString.length; i+=range.length){
+            range = [theString rangeOfComposedCharacterSequenceAtIndex:i];
+            NSString *s = [theString substringWithRange:range];
+            if (!s || [s isKindOfClass:[NSNull class]]) {
+                s = @"";
+            }
+            [csvWriter writeField:s];
+        }
+        s = resultRow[@"advice"];
+        if (!s || [s isKindOfClass:[NSNull class]] || ([s isKindOfClass:[NSString class]]&& [s isEqualToString:@"(null)"])) {
+            s = @"";
+        }
+        [csvWriter writeField:s];
         [csvWriter finishLine];
     }
     [csvWriter closeStream];

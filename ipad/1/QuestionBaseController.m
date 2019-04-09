@@ -188,7 +188,7 @@ static NSDictionary *__dicName(){
     Class a = NSClassFromString([NSString stringWithFormat:@"Q1Controller%@",@(numberStr.integerValue+1)]);
     QuestionBaseController *vc = [a controllerWithModel:self.model];
     [self.navigationController pushViewController:vc animated:YES];
-    NSLog(@"%@ %s",self.model.choose,__func__);
+//    NSLog(@"%@ %s",self.model.choose,__func__);
 }
 -(void)backBtnClick{
     NSString *classStr = NSStringFromClass(self.class);
@@ -196,7 +196,7 @@ static NSDictionary *__dicName(){
     
     [self.model clearIndex:numberStr.integerValue];
     [self.navigationController popViewControllerAnimated:YES];
-    NSLog(@"%@ %s",self.model.choose,__func__);
+//    NSLog(@"%@ %s",self.model.choose,__func__);
 }
 
 

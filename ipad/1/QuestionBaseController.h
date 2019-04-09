@@ -26,4 +26,5 @@
 #define kHeight 50
 -(NSString *)answerStr;
 -(void)nextBtnClick;
+-(void)backBtnClick;
 @end

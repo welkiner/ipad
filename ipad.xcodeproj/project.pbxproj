@@ -33,6 +33,8 @@
 		72FA82101F28382A00B6F371 /* WifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FA820F1F28382A00B6F371 /* WifiView.m */; };
 		72FA82121F2838B700B6F371 /* WifiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72FA82111F2838B700B6F371 /* WifiView.xib */; };
 		72FCBC0F225CC4E500969879 /* Q1Controller20.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FCBC0E225CC4E500969879 /* Q1Controller20.m */; };
+		72FCBC12225CCF6100969879 /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FCBC10225CCF6100969879 /* UITextView+Utils.m */; };
+		72FCBC15225CCFAE00969879 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FCBC14225CCFAE00969879 /* NSString+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,10 @@
 		72FA82111F2838B700B6F371 /* WifiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiView.xib; sourceTree = "<group>"; };
 		72FCBC0D225CC4E500969879 /* Q1Controller20.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller20.h; sourceTree = "<group>"; };
 		72FCBC0E225CC4E500969879 /* Q1Controller20.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller20.m; sourceTree = "<group>"; };
+		72FCBC10225CCF6100969879 /* UITextView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Utils.m"; sourceTree = "<group>"; };
+		72FCBC11225CCF6100969879 /* UITextView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Utils.h"; sourceTree = "<group>"; };
+		72FCBC13225CCFAE00969879 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		72FCBC14225CCFAE00969879 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 		C78DD109B4F45CCDD835D517 /* libPods-ipad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ipad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7239B0B802F7C67ED749344 /* Pods-ipad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ipad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ipad/Pods-ipad.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +147,10 @@
 		45DD5CDC1F279F0C00E7B6EB /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				72FCBC13225CCFAE00969879 /* NSString+Utils.h */,
+				72FCBC14225CCFAE00969879 /* NSString+Utils.m */,
+				72FCBC11225CCF6100969879 /* UITextView+Utils.h */,
+				72FCBC10225CCF6100969879 /* UITextView+Utils.m */,
 				45DD5CDD1F279F0C00E7B6EB /* GCDWebUploader.bundle */,
 				45DD5CDE1F279F0C00E7B6EB /* GCDWebUploader.h */,
 				45DD5CDF1F279F0C00E7B6EB /* GCDWebUploader.m */,
@@ -223,6 +233,7 @@
 				72760E5F1F231DF500377839 /* Sources */,
 				72760E601F231DF500377839 /* Frameworks */,
 				72760E611F231DF500377839 /* Resources */,
+				70AA7E753106C3B3035322C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +299,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		70AA7E753106C3B3035322C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ipad/Pods-ipad-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ipad/Pods-ipad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A2FD41374FBEF49875A41A70 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,12 +348,14 @@
 				72FCBC0F225CC4E500969879 /* Q1Controller20.m in Sources */,
 				452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */,
 				72760E6B1F231DF500377839 /* AppDelegate.m in Sources */,
+				72FCBC12225CCF6100969879 /* UITextView+Utils.m in Sources */,
 				4527918E1F25D09C00010996 /* FirstController.m in Sources */,
 				457E8E371F27192900924F5F /* UserModel.m in Sources */,
 				72760E681F231DF500377839 /* main.m in Sources */,
 				72FA82101F28382A00B6F371 /* WifiView.m in Sources */,
 				457E8E251F263CB800924F5F /* Button1.m in Sources */,
 				457E8E2B1F26416E00924F5F /* Q1Controller1.m in Sources */,
+				72FCBC15225CCFAE00969879 /* NSString+Utils.m in Sources */,
 				457E8E2E1F26418500924F5F /* Q1Controller2.m in Sources */,
 				457E8E281F26414F00924F5F /* QuestionBaseController.m in Sources */,
 				457E8E3D1F272B5500924F5F /* AnswerData.m in Sources */,

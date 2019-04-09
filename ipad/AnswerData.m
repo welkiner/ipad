@@ -58,20 +58,9 @@ static FMDatabase *__fmDB;
         return ;
     }
     NSString *sql = [NSString stringWithFormat:
-                     @"INSERT INTO answerTable (province, city, hospital, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10) values ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@' ) ",
-                     model.province,
-                     model.city,
-                     model.hospital,
-                     model.question1,
-                     model.question2,
-                     model.question3,
-                     model.question4,
-                     model.question5,
-                     model.question6,
-                     model.question7,
-                     model.question8,
-                     model.question9,
-                     model.question10
+                     @"INSERT INTO answerTable (choose, advice) values ('%@', '%@' ) ",
+                     model.choose,
+                     model.advice
                      ];
     
     BOOL res = [__fmDB executeUpdate:sql];
@@ -98,49 +87,8 @@ static FMDatabase *__fmDB;
         NSMutableDictionary *resultRow = [results resultDictionary].mutableCopy;
         
         NSString *q3str = resultRow[@"question1"];
-        if ([q3str containsString:@"A"]) {
-            resultRow[@"question1_A"] = @"√";
-        }
-        if ([q3str containsString:@"B"]) {
-            resultRow[@"question1_B"] = @"√";
-        }
-        if ([q3str containsString:@"C"]) {
-            resultRow[@"question1_C"] = @"√";
-        }
-        if ([q3str containsString:@"D"]) {
-            resultRow[@"question1_D"] = @"√";
-        }
-        if ([q3str containsString:@"E"]) {
-            resultRow[@"question1_E"] = @"√";
-        }
         
-        
-        if ([resultRow[@"question3"] length] == 4) {
-            resultRow[@"question3_A"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(0, 1)];
-            resultRow[@"question3_B"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(1, 1)];
-            resultRow[@"question3_C"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(2, 1)];
-            resultRow[@"question3_D"] = [resultRow[@"question3"] substringWithRange:NSMakeRange(3, 1)];
-        }
-        if ([resultRow[@"question4"] length] == 5) {
-            resultRow[@"question4_A"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(0, 1)];
-            resultRow[@"question4_B"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(1, 1)];
-            resultRow[@"question4_C"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(2, 1)];
-            resultRow[@"question4_D"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(3, 1)];
-            resultRow[@"question4_E"] = [resultRow[@"question4"] substringWithRange:NSMakeRange(4, 1)];
-        }
-        if ([resultRow[@"question5"] length] == 4) {
-            resultRow[@"question5_A"] = [resultRow[@"question5"] substringWithRange:NSMakeRange(0, 1)];
-            resultRow[@"question5_B"] = [resultRow[@"question5"] substringWithRange:NSMakeRange(1, 1)];
-            resultRow[@"question5_C"] = [resultRow[@"question5"] substringWithRange:NSMakeRange(2, 1)];
-            resultRow[@"question5_D"] = [resultRow[@"question5"] substringWithRange:NSMakeRange(3, 1)];
-        }
-        if ([resultRow[@"question6"] length] == 4) {
-            resultRow[@"question6_A"] = [resultRow[@"question6"] substringWithRange:NSMakeRange(0, 1)];
-            resultRow[@"question6_B"] = [resultRow[@"question6"] substringWithRange:NSMakeRange(1, 1)];
-            resultRow[@"question6_C"] = [resultRow[@"question6"] substringWithRange:NSMakeRange(2, 1)];
-            resultRow[@"question6_D"] = [resultRow[@"question6"] substringWithRange:NSMakeRange(3, 1)];
-        }
-        NSArray *orderedKeys =@[@"id",
+        NSArray *orderedKeys =@[@"id\题号",
                                 @"province",
                                 @"city",
                                 @"hospital",

@@ -20,6 +20,10 @@
 @property (strong, nonatomic) Button1* answerBtn5;
 @property (strong, nonatomic)UserModel *model;
 
+@property (strong, nonatomic) UIButton* backBtn;
+@property (strong, nonatomic) UIButton* nextBtn;
 
+#define kHeight 50
 -(NSString *)answerStr;
+-(void)nextBtnClick;
 @end

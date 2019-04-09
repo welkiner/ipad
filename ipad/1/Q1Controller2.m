@@ -7,44 +7,59 @@
 //
 
 #import "Q1Controller2.h"
-#import "Q1Controller3.h"
-@interface Q1Controller2 ()
 
-@end
+@implementation Q1Controller2 @end
 
-@implementation Q1Controller2
+//@interface Q1Controller3 : QuestionBaseController @end
+//@implementation Q1Controller3 @end
+//
+//@interface Q1Controller4 : QuestionBaseController @end
+//@implementation Q1Controller4 @end
+//
+//@interface Q1Controller5 : QuestionBaseController @end
+//@implementation Q1Controller5 @end
+//
+//@interface Q1Controller6 : QuestionBaseController @end
+//@implementation Q1Controller6 @end
+//
+//@interface Q1Controller7 : QuestionBaseController @end
+//@implementation Q1Controller7 @end
+//
+//@interface Q1Controller8 : QuestionBaseController @end
+//@implementation Q1Controller8 @end
+//
+//@interface Q1Controller9 : QuestionBaseController @end
+//@implementation Q1Controller9 @end
+//
+//@interface Q1Controller10 : QuestionBaseController @end
+//@implementation Q1Controller10 @end
+//
+//@interface Q1Controller11 : QuestionBaseController @end
+//@implementation Q1Controller11 @end
+//
+//@interface Q1Controller12 : QuestionBaseController @end
+//@implementation Q1Controller12 @end
+//
+//@interface Q1Controller13 : QuestionBaseController @end
+//@implementation Q1Controller13 @end
+//
+//@interface Q1Controller14 : QuestionBaseController @end
+//@implementation Q1Controller14 @end
+//
+//@interface Q1Controller15 : QuestionBaseController @end
+//@implementation Q1Controller15 @end
+//
+//@interface Q1Controller16 : QuestionBaseController @end
+//@implementation Q1Controller16 @end
+//
+//@interface Q1Controller17 : QuestionBaseController @end
+//@implementation Q1Controller17 @end
+//
+//@interface Q1Controller18 : QuestionBaseController @end
+//@implementation Q1Controller18 @end
+//
+//@interface Q1Controller19 : QuestionBaseController @end
+//@implementation Q1Controller19 @end
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-- (IBAction)nextBtnClick:(id)sender {
-    self.model.question2 = [self answerStr];
-    if (self.model.question2.length == 0) {
-        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [view show];
-        return;
-    }
-    Q1Controller3 *con = [Q1Controller3 controllerWithModel:self.model];
-    [self.navigationController pushViewController:con animated:YES];
-}
-- (IBAction)backBtnClick:(id)sender {
-    self.model.question2 = nil;
-    [self.navigationController popViewControllerAnimated:YES];
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-@end

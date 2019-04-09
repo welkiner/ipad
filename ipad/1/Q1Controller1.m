@@ -7,7 +7,7 @@
 //
 
 #import "Q1Controller1.h"
-#import "Q1Controller2.h"
+#import "Masonry.h"
 @interface Q1Controller1 ()
 
 @end
@@ -16,37 +16,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.backBtn.hidden = YES;
+    self.backImageView.image = [UIImage imageNamed:@"问题1"];
+    [self.answerBtn1 mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(350);
+        make.height.mas_equalTo(kHeight);
+        make.left.equalTo(self.view.mas_left).offset(220);
+        make.right.equalTo(self.view.mas_right).offset(-220);
+    }];
+    [self.answerBtn1 setTitle:@"是" forState:UIControlStateNormal];
+    [self.answerBtn2 setTitle:@"否" forState:UIControlStateNormal];
+    self.answerBtn3.hidden = YES;
+    self.answerBtn4.hidden = YES;
+    self.answerBtn5.hidden = YES;
     // Do any additional setup after loading the view.
 }
-//-(void)answerBtnsClick:(Button1 *)btn{
-//    btn.selected = !btn.selected;
-//}
-- (IBAction)nextBtnClick:(id)sender {
-    self.model.question1 = [self answerStr];
-    if (self.model.question1.length == 0) {
-        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请选择" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [view show];
-        return;
-    }
-    Q1Controller2 *con = [Q1Controller2 controllerWithModel:self.model];
-    [self.navigationController pushViewController:con animated:YES];
-}
--(BOOL)mutiAnswer{
-    return YES;
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

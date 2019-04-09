@@ -7,7 +7,7 @@
 //
 
 #import "FinishController.h"
-
+#import "Masonry.h"
 @interface FinishController ()
 
 @end
@@ -16,12 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"电子问卷-end"]];
+    [self.view addSubview:imageV];
+    [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController popToRootViewControllerAnimated:true];
+    });
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)backBtnClick:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

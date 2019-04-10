@@ -159,8 +159,8 @@ static NSDictionary *__dicName(){
     [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).offset(-83);
         make.height.mas_equalTo(kPageHeight);
-        make.width.mas_equalTo(kPageHeight*1.54);
-        make.left.equalTo(self.view.mas_left).offset(75);
+        make.width.mas_equalTo(kPageHeight*1.49);
+        make.left.equalTo(self.view.mas_left).offset(78);
     }];
     
     self.nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -169,8 +169,8 @@ static NSDictionary *__dicName(){
     [self.nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).offset(-83);
         make.height.mas_equalTo(kPageHeight);
-        make.width.mas_equalTo(kPageHeight*1.54);
-        make.right.equalTo(self.view.mas_right).offset(-75);
+        make.width.mas_equalTo(kPageHeight*1.49);
+        make.right.equalTo(self.view.mas_right).offset(-78);
     }];
     [self.nextBtn addTarget:self action:@selector(nextBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];

@@ -24,8 +24,8 @@
         make.left.equalTo(self.view.mas_left).offset(220);
         make.right.equalTo(self.view.mas_right).offset(-220);
     }];
-    [self.answerBtn1 setTitle:@"是" forState:UIControlStateNormal];
-    [self.answerBtn2 setTitle:@"否" forState:UIControlStateNormal];
+    [self.answerBtn1 setTitle:@"A：是" forState:UIControlStateNormal];
+    [self.answerBtn2 setTitle:@"B：否" forState:UIControlStateNormal];
     self.answerBtn3.hidden = YES;
     self.answerBtn4.hidden = YES;
     self.answerBtn5.hidden = YES;

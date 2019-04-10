@@ -33,7 +33,7 @@
     [self.nextBtn setImage:[UIImage imageNamed:@"提交"] forState:UIControlStateNormal];
     [self.view addSubview:self.nextBtn];
     [self.nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view.mas_bottom).offset(-55);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-70);
         make.height.mas_equalTo(64);
         make.width.mas_equalTo(182);
         make.centerX.equalTo(self.view);
@@ -58,6 +58,7 @@
     if (_textView.text.length > 0) {
         self.model.advice = _textView.text;
     }
+    self.model.dateStr = [self dateToString:[NSDate date]];
     [AnswerData saveData:self.model];
     [self.navigationController pushViewController:FinishController.new animated:true];
 }
@@ -66,6 +67,26 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
+}
+
+-(NSDateFormatter *)dateFormatter{
+    static NSDateFormatter *_dateFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _dateFormatter = [[NSDateFormatter alloc] init];
+    });
+    return _dateFormatter;
+}
+
+- (NSString *)dateToString: (NSDate *)date {
+    
+    NSAssert(date, @"Parameter 'date' should not be nil");
+    
+    NSDateFormatter *_dateFormatter = [self dateFormatter];
+    
+    [_dateFormatter setDateFormat: @"yyyy-MM-dd HH:mm"];
+    NSString *dateStr= [_dateFormatter stringFromDate: date];
+    return dateStr;
 }
 /*
 #pragma mark - Navigation

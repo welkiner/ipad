@@ -12,6 +12,7 @@
 
 @property (nonatomic,strong)NSMutableString * choose;
 @property (nonatomic,copy)NSString *advice;
+@property (nonatomic,copy)NSString *dateStr;
 -(void)change:(NSString *)s index:(NSInteger)index;
 -(void)clearIndex:(NSInteger)index;
 @end

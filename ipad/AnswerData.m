@@ -58,9 +58,10 @@ static FMDatabase *__fmDB;
         return ;
     }
     NSString *sql = [NSString stringWithFormat:
-                     @"INSERT INTO answerTable (choose, advice) values ('%@', '%@' ) ",
+                     @"INSERT INTO answerTable (choose, advice, dateStr) values ('%@', '%@', '%@') ",
                      model.choose,
-                     model.advice
+                     model.advice,
+                     model.dateStr
                      ];
     
     BOOL res = [__fmDB executeUpdate:sql];
@@ -80,16 +81,16 @@ static FMDatabase *__fmDB;
     FMResultSet *results = [__fmDB executeQuery:@"SELECT * FROM answerTable"];
     
     NSOutputStream *stream = [NSOutputStream outputStreamToFileAtPath:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:@"answers.csv"] append:NO];
-    
-//    CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:NSUTF8StringEncoding delimiter:COMMAA];
-    
+        
     NSStringEncoding enc=CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+//    NSStringEncoding enc = NSUTF8StringEncoding;
     CHCSVWriter *csvWriter = [[CHCSVWriter alloc] initWithOutputStream:stream encoding:enc delimiter:COMMAA];
     BOOL isFirst = YES;
     while([results next]) {
         NSDictionary *resultRow = [results resultDictionary];
         
         NSArray *orderedKeys =@[@"id",
+                                @"答题时间",
                                 @"题目1",
                                 @"题目2",
                                 @"题目3",
@@ -126,12 +127,24 @@ static FMDatabase *__fmDB;
         }
         [csvWriter writeField:s];
         
+        s = resultRow[@"dateStr"];
+        if (!s || [s isKindOfClass:[NSNull class]] ) {
+            s = @"";
+        }
+        [csvWriter writeField:s];
+        
+        
         NSRange range ;
         NSString *theString = resultRow[@"choose"];
+        
         //方法三(正确，可打印emoji)
         for(int i=0; i<theString.length; i+=range.length){
             range = [theString rangeOfComposedCharacterSequenceAtIndex:i];
             NSString *s = [theString substringWithRange:range];
+            if (!s || [s isKindOfClass:[NSNull class]]) {
+                s = @"";
+            }
+            s = __dicName()[s];
             if (!s || [s isKindOfClass:[NSNull class]]) {
                 s = @"";
             }
@@ -146,6 +159,9 @@ static FMDatabase *__fmDB;
     }
     [csvWriter closeStream];
     [__fmDB close];
+}
+static NSDictionary *__dicName(){
+    return @{@"1":@"满意",@"2":@"较满意",@"3":@"一般",@"4":@"较不满意",@"5":@"不满意"};
 }
 @end
 

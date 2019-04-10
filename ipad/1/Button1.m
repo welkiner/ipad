@@ -10,16 +10,17 @@
 
 @implementation Button1
 - (void)setCornerRadius:(CGFloat)cornerRadius {
-    self.layer.cornerRadius = cornerRadius;
-    self.layer.masksToBounds = cornerRadius > 0;
+//    self.layer.cornerRadius = cornerRadius;
+//    self.layer.masksToBounds = cornerRadius > 0;
 //    self.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.4];
 }
 +(instancetype)button{
     Button1 *but = [Button1 buttonWithType:UIButtonTypeCustom];
-    [but setBackgroundImage:[Button1 imageWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.3]] forState:UIControlStateHighlighted];
-    [but setBackgroundImage:[Button1 imageWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.3]] forState:UIControlStateSelected];
-    but.layer.cornerRadius = 8.f;
-    but.layer.masksToBounds = YES;
+//    [but setBackgroundImage:[Button1 imageWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.3]] forState:UIControlStateHighlighted];
+//    [but setBackgroundImage:[Button1 imageWithColor:[[UIColor blackColor] colorWithAlphaComponent:0.3]] forState:UIControlStateSelected];
+//    but.layer.cornerRadius = 8.f;
+//    but.layer.masksToBounds = YES;
+    [but setTitleColor:[UIColor colorWithRed:0.165 green:0.992 blue:0.471 alpha:1.000] forState:UIControlStateSelected];
     return but;
 }
 + (UIImage *)imageWithColor:(UIColor *)color {

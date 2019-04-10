@@ -136,11 +136,13 @@ static NSArray *__ArrayName(){
         [obj setTitle:__dicName()[a] forState:UIControlStateNormal];
         
         obj.titleLabel.font = [UIFont systemFontOfSize:26];
+        obj.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        obj.titleEdgeInsets = UIEdgeInsetsMake(0, 80, 0, 80);
     }];
     
 }
 static NSDictionary *__dicName(){
-    return @{@"101":@"满意",@"102":@"较满意",@"103":@"一般",@"104":@"较不满意",@"105":@"不满意"};
+    return @{@"101":@"A：满意",@"102":@"B：较满意",@"103":@"C：一般",@"104":@"D：较不满意",@"105":@"E：不满意"};
 }
 -(void)answerBtnsClick:(Button1 *)btn{
     for (UIButton *btn in self.answerBtns) {
@@ -155,20 +157,20 @@ static NSDictionary *__dicName(){
     [self.backBtn setImage:[UIImage imageNamed:@"上一题"] forState:UIControlStateNormal];
     [self.view addSubview:self.backBtn];
     [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view.mas_bottom).offset(-55);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-83);
         make.height.mas_equalTo(kPageHeight);
         make.width.mas_equalTo(kPageHeight*1.54);
-        make.left.equalTo(self.view.mas_left).offset(40);
+        make.left.equalTo(self.view.mas_left).offset(75);
     }];
     
     self.nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.nextBtn setImage:[UIImage imageNamed:@"下一题"] forState:UIControlStateNormal];
     [self.view addSubview:self.nextBtn];
     [self.nextBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view.mas_bottom).offset(-55);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-83);
         make.height.mas_equalTo(kPageHeight);
         make.width.mas_equalTo(kPageHeight*1.54);
-        make.right.equalTo(self.view.mas_right).offset(-40);
+        make.right.equalTo(self.view.mas_right).offset(-75);
     }];
     [self.nextBtn addTarget:self action:@selector(nextBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];

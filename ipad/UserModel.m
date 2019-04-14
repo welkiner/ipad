@@ -19,7 +19,7 @@
 -(instancetype)init{
     if (self = [super init]) {
         self.choose = @"".mutableCopy;
-        for (NSInteger i = 0; i< 19; i++) {
+        for (NSInteger i = 0; i< 12; i++) {
             [self.choose appendString:@"0"];
         }
     }

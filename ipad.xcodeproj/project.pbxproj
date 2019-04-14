@@ -32,7 +32,7 @@
 		72760E761F231DF500377839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72760E741F231DF500377839 /* LaunchScreen.storyboard */; };
 		72FA82101F28382A00B6F371 /* WifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FA820F1F28382A00B6F371 /* WifiView.m */; };
 		72FA82121F2838B700B6F371 /* WifiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72FA82111F2838B700B6F371 /* WifiView.xib */; };
-		72FCBC0F225CC4E500969879 /* Q1Controller20.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FCBC0E225CC4E500969879 /* Q1Controller20.m */; };
+		72FCBC0F225CC4E500969879 /* Q1Controller13.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FCBC0E225CC4E500969879 /* Q1Controller13.m */; };
 		72FCBC12225CCF6100969879 /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FCBC10225CCF6100969879 /* UITextView+Utils.m */; };
 		72FCBC15225CCFAE00969879 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FCBC14225CCFAE00969879 /* NSString+Utils.m */; };
 /* End PBXBuildFile section */
@@ -80,8 +80,8 @@
 		72FA820E1F28382A00B6F371 /* WifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiView.h; sourceTree = "<group>"; };
 		72FA820F1F28382A00B6F371 /* WifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiView.m; sourceTree = "<group>"; };
 		72FA82111F2838B700B6F371 /* WifiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiView.xib; sourceTree = "<group>"; };
-		72FCBC0D225CC4E500969879 /* Q1Controller20.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller20.h; sourceTree = "<group>"; };
-		72FCBC0E225CC4E500969879 /* Q1Controller20.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller20.m; sourceTree = "<group>"; };
+		72FCBC0D225CC4E500969879 /* Q1Controller13.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q1Controller13.h; sourceTree = "<group>"; };
+		72FCBC0E225CC4E500969879 /* Q1Controller13.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Q1Controller13.m; sourceTree = "<group>"; };
 		72FCBC10225CCF6100969879 /* UITextView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Utils.m"; sourceTree = "<group>"; };
 		72FCBC11225CCF6100969879 /* UITextView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Utils.h"; sourceTree = "<group>"; };
 		72FCBC13225CCFAE00969879 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
@@ -138,8 +138,8 @@
 				457E8E2A1F26416E00924F5F /* Q1Controller1.m */,
 				457E8E2C1F26418500924F5F /* Q1Controller2.h */,
 				457E8E2D1F26418500924F5F /* Q1Controller2.m */,
-				72FCBC0D225CC4E500969879 /* Q1Controller20.h */,
-				72FCBC0E225CC4E500969879 /* Q1Controller20.m */,
+				72FCBC0D225CC4E500969879 /* Q1Controller13.h */,
+				72FCBC0E225CC4E500969879 /* Q1Controller13.m */,
 			);
 			path = 1;
 			sourceTree = "<group>";
@@ -234,6 +234,7 @@
 				72760E601F231DF500377839 /* Frameworks */,
 				72760E611F231DF500377839 /* Resources */,
 				70AA7E753106C3B3035322C9 /* [CP] Copy Pods Resources */,
+				92A31D43D2CBC49A0075C0C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,7 +305,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ipad/Pods-ipad-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ipad/Pods-ipad-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -313,7 +314,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ipad/Pods-ipad-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipad/Pods-ipad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92A31D43D2CBC49A0075C0C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ipad/Pods-ipad-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A2FD41374FBEF49875A41A70 /* [CP] Check Pods Manifest.lock */ = {
@@ -344,7 +364,7 @@
 				4527919D1F25D78700010996 /* HETAddressInfo.m in Sources */,
 				457E8E3A1F2728E500924F5F /* FinishController.m in Sources */,
 				4527919E1F25D78700010996 /* HETAddressPicker.m in Sources */,
-				72FCBC0F225CC4E500969879 /* Q1Controller20.m in Sources */,
+				72FCBC0F225CC4E500969879 /* Q1Controller13.m in Sources */,
 				452791951F25D57E00010996 /* HETPublicPickerView.m in Sources */,
 				72760E6B1F231DF500377839 /* AppDelegate.m in Sources */,
 				72FCBC12225CCF6100969879 /* UITextView+Utils.m in Sources */,

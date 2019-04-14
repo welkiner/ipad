@@ -6,19 +6,19 @@
 //  Copyright © 2019 welkiner. All rights reserved.
 //
 
-#import "Q1Controller20.h"
+#import "Q1Controller13.h"
 #import "AnswerData.h"
 #import "FinishController.h"
 #import "Masonry.h"
 #import "UITextView+Utils.h"
-@interface Q1Controller20 (){
+@interface Q1Controller13 (){
     
     UITextView *_textView;
 }
 
 @end
 
-@implementation Q1Controller20
+@implementation Q1Controller13
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -8,6 +8,6 @@
 
 #import "QuestionBaseController.h"
 
-@interface Q1Controller20 : QuestionBaseController
+@interface Q1Controller13 : QuestionBaseController
 
 @end

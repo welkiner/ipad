@@ -6,7 +6,7 @@ PODS:
   - GCDWebServer (3.4):
     - GCDWebServer/Core (= 3.4)
   - GCDWebServer/Core (3.4)
-  - IQKeyboardManager (6.2.1)
+  - IQKeyboardManager (6.2.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - ReactiveCocoa (2.4.7):
@@ -26,25 +26,15 @@ DEPENDENCIES:
   - MBProgressHUD (= 1.0.0)
   - ReactiveCocoa (= 2.4.7)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - CHCSVParser
-    - FMDB
-    - GCDWebServer
-    - IQKeyboardManager
-    - Masonry
-    - MBProgressHUD
-    - ReactiveCocoa
-
 SPEC CHECKSUMS:
   CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GCDWebServer: 20d53c3181b3c78d865e93e326faf506306f5338
-  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
 
 PODFILE CHECKSUM: afd74b6af106ce2b9311382e58f0cc8d6940646d
 
-COCOAPODS: 1.7.0.beta.3
+COCOAPODS: 1.4.0
